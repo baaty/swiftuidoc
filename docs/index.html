@@ -1,0 +1,28 @@
+---
+description: "SwiftUIの基本から機能の詳細までわかりやすく解説。機能ごとに使用できるメソッドや使用例などを多く記載"
+---
+{%- include header.html %}
+<main class="col-12 sm-col-10">
+  <h2>SwiftUIドキュメント</h2>
+  <div class="row">
+  <div class="sm-col-2 col-4">
+    <amp-img src="assets/images/opg.png" alt="SwiftUIドキュメント" width="300" height="300" layout="responsive"></amp-img>
+  </div>
+  <div class="sm-col-10 col-8">
+  <ul>
+    <li>SwiftUIの基本から機能の詳細までわかりやすく解説</li>
+    <li>機能ごとに使用できるメソッドや使用例などを多く記載</li>
+  </ul>
+  </div>
+  </div>
+  <h2>カテゴリ</h2>
+  <table class="table-borderless">
+  {%- for i in site.data.categories %}
+  <tr>
+    <td><a href="/{{i.english_name}}">{{i.name}}</a></td>
+    <td>{{i.description}}</td>
+  </tr>
+  {%- endfor %}
+  </table>
+</main>
+{%- include footer.html %}

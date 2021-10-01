@@ -1,0 +1,37 @@
+---
+title: "状態とデータの流れ"
+description: "状態とデータの流れの説明、使い方、メソッド、使用例など"
+---
+{% include header.html %}
+<main class="col-12 sm-col-8">
+<article>
+<h1>状態とデータの流れ</h1>
+{%- for i in site.data.pages -%}
+  {% if i[1].category_id != 7 %}{% continue %}{% endif %}
+  {% capture markdownStr %}{% capture new_var %}page/{{i[0]}}.md{% endcapture %}{% include_relative {{new_var}} %}{% endcapture %}
+<section>
+  <h2 id="{{i[0]}}"><a href="page/{{i[0]}}">{{i[1].title}}</a></h2>
+  {{ markdownStr | remove_first: "---" | remove_first: "layout: page" | remove_first: "---" | markdownify }}
+</section>
+{% endfor %}
+</article>
+</main>
+<aside class="xs-hide sm-col-2">
+  <h3>目次</h3>
+  <h4>タグ一覧</h4>
+  <ol>
+    {%- for i in site.data.pages -%}
+      {% if i[1].category_id != 7 %}{% continue %}{% endif %}
+      {%- if i[1].method == "" -%}{% continue %}{%- endif -%}
+      <li><a href="#{{i[0]}}">{{i[1].method}}</a></li>
+    {% endfor %}
+  </ol>
+  <h4>逆引き</h4>
+  <ol>
+    {%- for i in site.data.pages -%}
+      {% if i[1].category_id != 7 %}{% continue %}{% endif %}
+      <li><a href="#{{i[0]}}">{{i[1].title}}</a></li>
+    {% endfor %}
+  </ol>
+</aside>
+{% include footer.html %}

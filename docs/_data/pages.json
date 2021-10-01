@@ -1,0 +1,1363 @@
+{
+  "swiftui_info": {
+    "category_id": 1,
+    "title": "SwiftUIとは",
+    "method": ""
+  },
+  "uikit_to_swiftui": {
+    "category_id": 1,
+    "title": "UIKitからSwiftUIへ",
+    "method": ""
+  },
+  "action_sheet": {
+    "category_id": 2,
+    "title": "アクションシート",
+    "method": "ActionSheet",
+    "versions": [
+      "iOS 13.0–15.0",
+      "Mac Catalyst 13.0–15.0",
+      "tvOS 13.0–15.0",
+      "watchOS 6.0–8.0"
+    ]
+  },
+  "alert": {
+    "category_id": 2,
+    "title": "アラート",
+    "method": "Alert",
+    "versions": [
+      "iOS 13.0–15.0",
+      "macOS 10.15–12.0",
+      "Mac Catalyst 13.0–15.0",
+      "tvOS 13.0–15.0",
+      "watchOS 6.0–8.0"
+    ]
+  },
+  "anchor": {
+    "category_id": 5,
+    "title": "アンカーソースと特定のビューから得られる任意な型の値",
+    "method": "Anchor",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "angle": {
+    "category_id": 5,
+    "title": "幾何学的な角度",
+    "method": "Angle",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "angular_gradient": {
+    "category_id": 5,
+    "title": "角度のあるグラデーション",
+    "method": "AngularGradient",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "animatable_pair": {
+    "category_id": 5,
+    "title": "複数プロパティをアニメーション",
+    "method": "AnimatablePair",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "animation": {
+    "category_id": 5,
+    "title": "再利用可能なアクションを作成",
+    "method": "Animation",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "any_gesture": {
+    "category_id": 8,
+    "title": "型が無いジェスチャー",
+    "method": "AnyGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "any_transition": {
+    "category_id": 5,
+    "title": "type-erasedの変遷",
+    "method": "AnyTransition",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "any_view": {
+    "category_id": 3,
+    "title": "型が無いView",
+    "method": "AnyView",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "app_storage": {
+    "category_id": 7,
+    "title": "UserDefaultsの値を反映しそのユーザーデフォルトの値が変更されたときにビューを無効にするプロパティのラッパータイプ",
+    "method": "AppStorage",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "background_style": {
+    "category_id": 5,
+    "title": "現在のコンテキストに基づいて背景の正しい塗りつぶしを表示するスタイル",
+    "method": "BackgroundStyle",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "binding": {
+    "category_id": 7,
+    "title": "値を読み書きできるプロパティのラッパータイプ",
+    "method": "Binding",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "button": {
+    "category_id": 2,
+    "title": "ボタンを押したときにアクションを実行するコントロール",
+    "method": "Button",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "capsule": {
+    "category_id": 5,
+    "title": "カプセル形状はビューのフレーム内に整列",
+    "method": "Capsule",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "circle": {
+    "category_id": 5,
+    "title": "ビューのフレームを中心とした円",
+    "method": "Circle",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "color_picker": {
+    "category_id": 2,
+    "title": "色を選択するためのコントロール",
+    "method": "ColorPicker",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+"
+    ]
+  },
+  "color": {
+    "category_id": 5,
+    "title": "カラー",
+    "method": "Color",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "container_relative_shape": {
+    "category_id": 5,
+    "title": "現在のコンテナ形状のインセットバージョンで置き換えられる形状",
+    "method": "ContainerRelativeShape",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "date_picker": {
+    "category_id": 2,
+    "title": "絶対日付を選択するためのコントロール",
+    "method": "DatePicker",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+"
+    ]
+  },
+  "disclosure_group": {
+    "category_id": 3,
+    "title": "開示コントロールの状態に応じて別のコンテンツビューを表示または非表示にするビュー",
+    "method": "DisclosureGroup",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+"
+    ]
+  },
+  "divider": {
+    "category_id": 3,
+    "title": "他のコンテンツを分離するために使用できる視覚要素",
+    "method": "Divider",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "drag_gesture": {
+    "category_id": 8,
+    "title": "ドラッグ・イベント・シーケンスの変化に応じてアクションを起動するドラッグ・モーション",
+    "method": "DragGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "edit_button": {
+    "category_id": 2,
+    "title": "編集モードを切り替えるボタン",
+    "method": "EditButton",
+    "versions": [
+      "iOS 13.0+",
+      "Mac Catalyst 13.0+"
+    ]
+  },
+  "ellipse": {
+    "category_id": 5,
+    "title": "楕円はビューのフレーム内に整列",
+    "method": "Ellipse",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "empty_animatable_data": {
+    "category_id": 5,
+    "title": "アニメーション可能なデータのための空の型",
+    "method": "EmptyAnimatableData",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "empty_view": {
+    "category_id": 3,
+    "title": "コンテンツを含まないビュー",
+    "method": "EmptyView",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "environment_object": {
+    "category_id": 7,
+    "title": "親ビューや祖先ビューから提供されるobservableオブジェクトのプロパティラッパータイプ",
+    "method": "EnvironmentObject",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "environment_values": {
+    "category_id": 7,
+    "title": "ビュー階層を介して伝達される環境値のコレクション",
+    "method": "EnvironmentValues",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "environment": {
+    "category_id": 7,
+    "title": "ビューの環境から値を読み取るプロパティラッパー",
+    "method": "Environment",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "equatable_view": {
+    "category_id": 3,
+    "title": "自分自身を以前の値と比較し新しい値が以前の値と同じであれば子の更新を阻止するビュータイプ",
+    "method": "EquatableView",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "exclusive_gesture": {
+    "category_id": 8,
+    "title": "2つのジェスチャーで構成されておりどちらか一方しか成功しないジェスチャー",
+    "method": "ExclusiveGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "fetch_request": {
+    "category_id": 7,
+    "title": "フェッチリクエストを行いCore Dataストアから結果を取得するプロパティのラッパータイプ",
+    "method": "FetchRequest",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "fetched_results": {
+    "category_id": 7,
+    "title": "FetchedResultsコレクションタイプはフェッチリクエストの実行結果",
+    "method": "FetchedResults",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "fill_style": {
+    "category_id": 5,
+    "title": "ベクトル図形をラスタライズするためのスタイル",
+    "method": "FillStyle",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "focused_binding": {
+    "category_id": 5,
+    "title": "フォーカスされたビューまたはその祖先の1つから状態バインディングを観察し自動的にアンラップするための便利なプロパティラッパー",
+    "method": "FocusedBinding",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "focused_value": {
+    "category_id": 5,
+    "title": "フォーカスされたビューまたはその先祖の1つから値を観察するためのプロパティラッパー",
+    "method": "FocusedValue",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "for_each": {
+    "category_id": 4,
+    "title": "識別されたデータの基礎となるコレクションから必要に応じてビューを計算する構造",
+    "method": "ForEach",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "foreground_style": {
+    "category_id": 5,
+    "title": "現在のコンテキストに基づいて前景の正しい塗りつぶしを表示するスタイル",
+    "method": "ForegroundStyle",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "form": {
+    "category_id": 4,
+    "title": "設定やインスペクターなどのデータ入力に使用されるコントロールをグループ化するためのコンテナー",
+    "method": "Form",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "gauge": {
+    "category_id": 2,
+    "title": "範囲内の値を表示するビュー",
+    "method": "Gauge",
+    "versions": [
+      "watchOS 7.0+"
+    ]
+  },
+  "geometry_proxy": {
+    "category_id": 5,
+    "title": "コンテナビューのサイズと座標空間（アンカー解像度用）にアクセスするためのプロキシ",
+    "method": "GeometryProxy",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "geometry_reader": {
+    "category_id": 5,
+    "title": "自身のサイズと座標空間の関数としてコンテンツを定義するコンテナビュー",
+    "method": "GeometryReader",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "gesture_mask": {
+    "category_id": 8,
+    "title": "ジェスチャーをビューに追加することでビューとそのサブビューで認識される他のジェスチャーへの影響を制御するオプション",
+    "method": "GestureMask",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "gesture_state_gesture": {
+    "category_id": 8,
+    "title": "ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー",
+    "method": "GestureStateGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "gesture_state": {
+    "category_id": 8,
+    "title": "ユーザーがジェスチャーを行っている間にプロパティを更新しジェスチャーが終わるとプロパティを初期状態に戻すプロパティのラッパータイプ",
+    "method": "GestureState",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "gesture": {
+    "category_id": 8,
+    "title": "一連のイベントをジェスチャーにマッチさせその状態ごとに値のストリームを返すインスタンス",
+    "method": "Gesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "gradient": {
+    "category_id": 5,
+    "title": "各々がパラメトリックな位置値を持つカラーストップの配列として表現されたカラーグラデーション",
+    "method": "Gradient",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "grid_item": {
+    "category_id": 4,
+    "title": "1つのグリッドアイテム(行や列など)の説明",
+    "method": "GridItem",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "group_box": {
+    "category_id": 4,
+    "title": "コンテンツの論理的なグループに関連付けられたオプションのラベルを持つスタイル化されたビュー",
+    "method": "GroupBox",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 14.0+"
+    ]
+  },
+  "group": {
+    "category_id": 4,
+    "title": "ビューコンテンツをグループ化",
+    "method": "Group",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "h_split_view": {
+    "category_id": 4,
+    "title": "子を横一列に並べその間に置かれた仕切りでサイズを変更できるレイアウトコンテナ",
+    "method": "HSplitView",
+    "versions": [
+      "macOS 10.15+"
+    ]
+  },
+  "h_stack": {
+    "category_id": 4,
+    "title": "子を水平線に配置するビュー",
+    "method": "HStack",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "image_paint": {
+    "category_id": 5,
+    "title": "画像の一部分を繰り返して形状を埋めるシェイプスタイル",
+    "method": "ImagePaint",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "image": {
+    "category_id": 3,
+    "title": "画像を表示するビュー",
+    "method": "Image",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "label": {
+    "category_id": 3,
+    "title": "ラベルは画像とテキストを並べて表示するビュー",
+    "method": "Label",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "lazy_h_grid": {
+    "category_id": 4,
+    "title": "水平方向に拡大するグリッドに子ビューを配置し必要な場合にのみアイテムを作成するコンテナービュー",
+    "method": "LazyHGrid",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "lazy_h_stack": {
+    "category_id": 4,
+    "title": "水平方向に伸びる行に子を配置し必要な場合にのみアイテムを作成するビュー",
+    "method": "LazyHStack",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "lazy_v_grid": {
+    "category_id": 4,
+    "title": "垂直方向に拡大するグリッドに子ビューを配置し必要な場合にのみアイテムを作成するコンテナービュー",
+    "method": "LazyVGrid",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "lazy_v_stack": {
+    "category_id": 4,
+    "title": "垂直方向に伸びる行に子を配置し必要な場合にのみアイテムを作成するビュー",
+    "method": "LazyVStack",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "linear_gradient": {
+    "category_id": 5,
+    "title": "直線的なグラデーション",
+    "method": "LinearGradient",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "link": {
+    "category_id": 2,
+    "title": "URLに移動するためのコントロール",
+    "method": "Link",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "list": {
+    "category_id": 4,
+    "title": "単一の列に配置されたデータの行を表すコンテナー",
+    "method": "List",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "long_press_gesture": {
+    "category_id": 8,
+    "title": "ユーザーが長押しすると成功するジェスチャー",
+    "method": "LongPressGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 14.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "magnification_gesture": {
+    "category_id": 8,
+    "title": "拡大動作を認識し拡大量を追跡するジェスチャー",
+    "method": "MagnificationGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+"
+    ]
+  },
+  "menu": {
+    "category_id": 2,
+    "title": "アクションのメニューを表示するためのコントロール",
+    "method": "Menu",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+"
+    ]
+  },
+  "navigation_link": {
+    "category_id": 4,
+    "title": "ナビゲーションの表示を制御するビュー",
+    "method": "NavigationLink",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "navigation_view": {
+    "category_id": 4,
+    "title": "ナビゲーション階層の可視パスを表すビューのスタックを表示するためのビュー",
+    "method": "NavigationView",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "ns_application_delegate_adaptor": {
+    "category_id": 6,
+    "title": "AppKitからのデリゲートを提供するためにAppで使用されるプロパティ・ラッパー",
+    "method": "NSApplicationDelegateAdaptor",
+    "versions": [
+      "macOS 11.0+"
+    ]
+  },
+  "ns_hosting_controller": {
+    "category_id": 6,
+    "title": "SwiftUIのビュー階層をホストするAppKitのビューコントローラー",
+    "method": "NSHostingController",
+    "versions": [
+        "macOS 10.15+"
+    ]
+  },
+  "ns_hosting_view": {
+    "category_id": 6,
+    "title": "SwiftUIのビュー階層をホストするAppKitビュー",
+    "method": "NSHostingView",
+    "versions": [
+      "macOS 10.15+"
+    ]
+  },
+  "observed_object": {
+    "category_id": 7,
+    "title": "オブザーバブル・オブジェクトを購読しオブザーバブル・オブジェクトが変更されるとビューを無効にするプロパティ・ラッパー型",
+    "method": "ObservedObject",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "offset_shape": {
+    "category_id": 5,
+    "title": "並進オフセット変換が適用された形状",
+    "method": "OffsetShape",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "outline_group": {
+    "category_id": 4,
+    "title": "識別されたツリー構造のデータの基礎となるコレクションから必要に応じてビューと開示グループを計算する構造",
+    "method": "OutlineGroup",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+"
+    ]
+  },
+  "paste_button": {
+    "category_id": 2,
+    "title": "ペーストボードからデータを読み込んでクローザーに配信するシステムボタン",
+    "method": "PasteButton",
+    "versions": [
+      "macOS 10.15+"
+    ]
+  },
+  "path": {
+    "category_id": 5,
+    "title": "2D形状の輪郭",
+    "method": "Path",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "picker": {
+    "category_id": 2,
+    "title": "相互に排他的な値のセットから選択するためのコントロール",
+    "method": "Picker",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "preview_device": {
+    "category_id": 9,
+    "title": "プレビューを実行するシミュレータデバイス",
+    "method": "PreviewDevice",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "progress_view": {
+    "category_id": 3,
+    "title": "タスクの完了に向けた進捗状況を示すビュー",
+    "method": "ProgressView",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "projection_transform": {
+    "category_id": 5,
+    "title": "プロジェクション変換",
+    "method": "ProjectionTransform",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "radial_gradient": {
+    "category_id": 5,
+    "title": "放射状のグラデーション",
+    "method": "RadialGradient",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "rectangle": {
+    "category_id": 5,
+    "title": "矩形の形状はそれを含むビューのフレーム内に配置",
+    "method": "Rectangle",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "rotated_shape": {
+    "category_id": 5,
+    "title": "回転トランスフォームが適用されたシェイプ",
+    "method": "RotatedShape",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "rotation_gesture": {
+    "category_id": 8,
+    "title": "回転動作を認識しその角度を追跡するジェスチャー",
+    "method": "RotationGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+"
+    ]
+  },
+  "rounded_rectangle": {
+    "category_id": 5,
+    "title": "角の丸い長方形でそれを含むビューのフレーム内に配置",
+    "method": "RoundedRectangle",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "scaled_shape": {
+    "category_id": 5,
+    "title": "スケールトランスフォームが適用された形状",
+    "method": "ScaledShape",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "scene_storage": {
+    "category_id": 7,
+    "title": "シーンごとの永続的なストレージに読み書きするプロパティのラッパータイプ",
+    "method": "SceneStorage",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "scroll_view_reader": {
+    "category_id": 4,
+    "title": "プログラムによるスクロールを提供するビューでプロキシを使って既知の子ビューにスクロール",
+    "method": "ScrollViewReader",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "scroll_view": {
+    "category_id": 4,
+    "title": "スクロールビュー",
+    "method": "ScrollView",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "section": {
+    "category_id": 4,
+    "title": "特定のコレクションビューに階層を追加するために使用できるコンテナビュー",
+    "method": "Section",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "secure_field": {
+    "category_id": 2,
+    "title": "ユーザーがプライベートテキストを安全に入力するコントロール",
+    "method": "SecureField",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "selection_shape_style": {
+    "category_id": 5,
+    "title": "選択された要素の背景として使用できるスタイル",
+    "method": "SelectionShapeStyle",
+    "versions": [
+      "iOS 15.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 15.0+"
+    ]
+  },
+  "separator_shape_style": {
+    "category_id": 5,
+    "title": "前景のセパレータやボーダーラインに適したスタイル",
+    "method": "SeparatorShapeStyle",
+    "versions": [
+      "macOS 10.15+"
+    ]
+  },
+  "sequence_gesture": {
+    "category_id": 8,
+    "title": "2つのジェスチャーを連続させたジェスチャー",
+    "method": "SequenceGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "simultaneous_gesture": {
+    "category_id": 8,
+    "title": "同時に起こりうる2つのジェスチャーを含みどちらも先行しないジェスチャー",
+    "method": "SimultaneousGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "slider": {
+    "category_id": 2,
+    "title": "値の境界付き線形範囲から値を選択するためのコントロール",
+    "method": "Slider",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "spacer": {
+    "category_id": 4,
+    "title": "スタックレイアウトの主軸に沿ってまたはスタックに含まれていない場合は両方の軸に沿って拡張する柔軟なスペース",
+    "method": "Spacer",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "state_object": {
+    "category_id": 7,
+    "title": "observableオブジェクトをインスタンス化するプロパティラッパータイプ",
+    "method": "StateObject",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "state": {
+    "category_id": 7,
+    "title": "SwiftUIで管理されている値を読み書きできるプロパティのラッパータイプ",
+    "method": "State",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "stepper": {
+    "category_id": 2,
+    "title": "インクリメントとデクリメントの動作を行うコントロール",
+    "method": "Stepper",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+"
+    ]
+  },
+  "stroke_style": {
+    "category_id": 5,
+    "title": "ストロークスタイル",
+    "method": "StrokeStyle",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "tab_view": {
+    "category_id": 4,
+    "title": "対話可能なユーザーインターフェイス要素を使用して複数の子ビューを切り替えることができるビュー",
+    "method": "TabView",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 7.0+"
+    ]
+  },
+  "tap_gesture": {
+    "category_id": 8,
+    "title": "1回以上のタップを認識するジェスチャー",
+    "method": "TapGesture",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "text_editor": {
+    "category_id": 3,
+    "title": "長い形式のテキストを表示および編集できるビュー",
+    "method": "TextEditor",
+    "versions": [
+      "iOS 14.0+",
+      "macOS 11.0+",
+      "Mac Catalyst 14.0+"
+    ]
+  },
+  "text_field": {
+    "category_id": 2,
+    "title": "編集可能なテキストインターフェイスを表示",
+    "method": "TextField",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "text": {
+    "category_id": 3,
+    "title": "テキストを表示するビュー",
+    "method": "Text",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "toggle": {
+    "category_id": 2,
+    "title": "オンとオフの状態を切り替えるコントロール",
+    "method": "Toggle",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "transaction": {
+    "category_id": 7,
+    "title": "現在の状態処理の更新のコンテキスト",
+    "method": "Transaction",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "transformed_shape": {
+    "category_id": 5,
+    "title": "アフィン変換が適用された形状",
+    "method": "TransformedShape",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "tuple_view": {
+    "category_id": 3,
+    "title": "Viewの値のスイフトタプルから作成されたView",
+    "method": "TupleView",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "ui_application_delegate_adaptor": {
+    "category_id": 6,
+    "title": "UIKitからのデリゲートを提供するためにAppで使用されるプロパティ・ラッパー",
+    "method": "UIApplicationDelegateAdaptor",
+    "versions": [
+      "iOS 14.0+",
+      "Mac Catalyst 14.0+",
+      "tvOS 14.0+"
+    ]
+  },
+  "ui_hosting_controller": {
+    "category_id": 6,
+    "title": "SwiftUIのビュー階層を管理するUIKitのビューコントローラー",
+    "method": "UIHostingController",
+    "versions": [
+      "iOS 13.0+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+"
+    ]
+  },
+  "unit_point": {
+    "category_id": 5,
+    "title": "ユニットポイント",
+    "method": "UnitPoint",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "v_split_view": {
+    "category_id": 4,
+    "title": "子機を縦に並べその間に配置された仕切りでサイズを変更できるレイアウトコンテナ",
+    "method": "VSplitView",
+    "versions": [
+      "macOS 10.15+"
+    ]
+  },
+  "v_stack": {
+    "category_id": 4,
+    "title": "子を垂直線に配置するビュー",
+    "method": "VStack",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  },
+  "wk_extension_delegate_adaptor": {
+    "category_id": 6,
+    "title": "WatchKitからのデリゲートを提供するためにAppで使用されるプロパティ・ラッパー",
+    "method": "WKExtensionDelegateAdaptor",
+    "versions": [
+      "watchOS 7.0+"
+    ]
+  },
+  "wk_hosting_controller": {
+    "category_id": 6,
+    "title": "SwiftUIのビュー階層をホストするWatchKitインターフェースコントローラ",
+    "method": "WKHostingController",
+    "versions": [
+      "watchOS 6.0+"
+    ]
+  },
+  "wk_user_notification_hosting_controller": {
+    "category_id": 6,
+    "title": "SwiftUIのビュー階層をホストするWatchKitのユーザー通知インターフェースコントローラ",
+    "method": "WKUserNotificationHostingController",
+    "versions": [
+      "watchOS 6.0+"
+    ]
+  },
+  "z_stack": {
+    "category_id": 4,
+    "title": "子をオーバーレイし両方の軸で位置合わせするビュー",
+    "method": "ZStack",
+    "versions": [
+      "iOS 13.0+",
+      "macOS 10.15+",
+      "Mac Catalyst 13.0+",
+      "tvOS 13.0+",
+      "watchOS 6.0+"
+    ]
+  }
+}

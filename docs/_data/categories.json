@@ -1,0 +1,56 @@
+[
+    {
+        "english_name": "base",
+        "id": 1,
+        "name": "SwiftUI入門",
+        "description": "5分でわかるSwiftUIの超ざっくり基礎知識"
+    },
+    {
+        "english_name": "controller",
+        "id": 2,
+        "name": "コントローラー",
+        "description": "コントロローラーの説明、書き方、プロパティ、使用例など"
+    },
+    {
+        "english_name": "view",
+        "id": 3,
+        "name": "ビュー",
+        "description": "ビューの説明、書き方、属性、使用例など"
+    },
+    {
+        "english_name": "layout",
+        "id": 4,
+        "name": "レイアウト",
+        "description": "レイアウトの説明、書き方、属性、使用例など"
+    },
+    {
+        "english_name": "drawing_and_animation",
+        "id": 5,
+        "name": "デザインとアニメーション",
+        "description": "色や形、影を使ってビューを強調したり、ビューの状態を切り替えるアニメーションをカスタマイズすることができます。"
+    },
+    {
+        "english_name": "framework",
+        "id": 6,
+        "name": "フレームワーク",
+        "description": ""
+    },
+    {
+        "english_name": "state_and_data_flow",
+        "id": 7,
+        "name": "状態とデータの流れ",
+        "description": "アプリのモデル内のデータや変更の流れを制御"
+    },
+    {
+        "english_name": "gestures",
+        "id": 8,
+        "name": "ジェスチャー",
+        "description": "タップ、クリック、スワイプから細かなジェスチャーまで、インタラクションを定義します。"
+    },
+    {
+        "english_name": "previews",
+        "id": 9,
+        "name": "プレビュー",
+        "description": ""
+    }
+]

@@ -9,7 +9,6 @@ layout: page
 ### 使い方
 
     SimultaneousGesture(1つ目のジェスチャー(First), 2つ目のジェスチャー(Second))
-        .メソッド
 
 ### 例
 
@@ -37,7 +36,7 @@ layout: page
 | simultaneously | 別のジェスチャーを組み合わせて両方のジェスチャーを同時に認識する新しいジェスチャーを作成                           |
 | sequenced      | 別のジェスチャーを連続させて新しいジェスチャーを作成すると最初のジェスチャーが成功した後に2番目のジェスチャーがイベントを受け取るだけになる |
 | exclusively    | 1つのジェスチャーだけが成功する新しいジェスチャーを作成し最初のジェスチャーを優先                              |
-| modifiers      | ジェスチャーとキーボードモディファイアを組み合わせ                                              |
+| modifiers      | ジェスチャーとキーボードメソッドを組み合わせ                                                 |
 | map            | 与えられたクロージャーをジェスチャーにマッピングした結果のジェスチャー                                    |
 
 ### メソッド詳細
@@ -133,28 +132,28 @@ layout: page
 
 ##### 意味
 
-ジェスチャーとキーボードモディファイアを組み合わせ
+ジェスチャーとキーボードメソッドを組み合わせ
 
 ##### 使い方
 
-    .modifiers(ユーザーが押し続ける必要のあるモディファイアキーに対応するフラグのセット(EventModifiers))
+    .modifiers(ユーザーが押し続ける必要のあるメソッドキーに対応するフラグのセット(EventModifiers))
 
-##### フラグのセットの種類(EventModifiers)
+##### EventModifiersの使い方
 
-| 名前                                              | 説明                       |
-| ----------------------------------------------- | ------------------------ |
-| .all                                            | 全て                       |
-| .capsLock                                       | Caps Lock キー             |
-| .command                                        | Commandキー                |
-| .control                                        | Controlキー                |
-| .function                                       | Functionキー               |
-| .numericPad                                     | テンキー                     |
-| .option                                         | Optionキー                 |
-| .shift                                          | Shiftキー                  |
-| EventModifiers()                                | 空のオプションセットを作成            |
-| EventModifiers<Sequence>(Sequence) | アイテムの有限のシーケンスから新しいセットを作成 |
-| EventModifiers(arrayLiteral: Self.Element...)   | 与えられた配列リテラルの要素を含むセットを作成  |
-| EventModifiers(rawValue: Int)                   | 生の値から新しいセットを作成           |
+| 名前                                            | 説明                       |
+| --------------------------------------------- | ------------------------ |
+| .all                                          | 全て                       |
+| .capsLock                                     | Caps Lock キー             |
+| .command                                      | Commandキー                |
+| .control                                      | Controlキー                |
+| .function                                     | Functionキー               |
+| .numericPad                                   | テンキー                     |
+| .option                                       | Optionキー                 |
+| .shift                                        | Shiftキー                  |
+| EventModifiers()                              | 空のオプションセットを作成            |
+| EventModifiers<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
+| EventModifiers(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成  |
+| EventModifiers(rawValue: Int)                 | 生の値から新しいセットを作成           |
 
 ##### 例
 

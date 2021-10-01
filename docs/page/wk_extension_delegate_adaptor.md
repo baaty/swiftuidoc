@@ -4,12 +4,11 @@ layout: page
 
 ### 説明
 
-WatchKitからのデリゲートを提供するためにAppで使用されるプロパティ・ラッパー
+WatchKitからのデリゲートを提供するためにAppで使用されるプロパティラッパー
 
 ### 使い方
 
     WKExtensionDelegateAdaptor(WKExtensionDelegateのタイプ(DelegateType.Type) = DelegateType.self)
-        .メソッド
 
 ### 例
 

@@ -4,19 +4,17 @@ layout: page
 
 ### 説明
 
-UserDefaultsの値を反映しそのユーザーデフォルトの値が変更されたときにビューを無効にするプロパティのラッパータイプ
+UserDefaultsの値を反映しそのユーザーデフォルトの値が変更されたときにビューを無効にするプロパティラッパー
 
 ### 使い方
 
 #### UserDefaultsを読み書きできるプロパティを作成
 
     AppStorage("デフォルトストアで値を読み書きするためのキー", store: デフォルトのストア(UserDefaults) = nil)
-        .メソッド
 
 #### 文字列ユーザーのデフォルトを読み書きできるプロパティを作成
 
     AppStorage(wrappedValue: デフォルト値(Value), "デフォルトストアで値を読み書きするためのキー", store: デフォルトのストア(UserDefaults) = nil)
-        .メソッド
 
 ### 例
 

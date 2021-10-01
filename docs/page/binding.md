@@ -4,31 +4,23 @@ layout: page
 
 ### 説明
 
-値を読み書きできるプロパティのラッパータイプ
+値を他のビューと双方向で読み書きできるプロパティラッパー
 
 ### 使い方
 
-#### ベースとなる値をアンラップされた値に投影してバインディングを作成
+#### 作成
 
-    Binding(投影するための値(Binding<Value?>))
-        .メソッド
-
-#### ベースの値をオプションの値に投影することでバインディングを作成
-
-    Binding(任意の値に投影する値(Binding<V>))
-        .メソッド
+    @Binding var 変数名: 型
 
 #### バインディング値からの読み込みを行うクロージャとバインディング値への書き込み時にトランザクションを適用するクロージャを持つバインディングを作成
 
-    Binding(get: {
-        バインディングの値を取得するためのクロージャー
-    }) {
-        バインディング値を設定するためのクロージャー
-    }
-        .メソッド
-
-    Binding(get: バインディングの値を取得するためのクロージャー, set: バインディング値を設定するためのクロージャー)
-        .メソッド
+    Binding(
+        get: {
+            バインディングの値を取得するためのクロージャー
+        }, set: {
+            バインディング値を設定するためのクロージャー
+        }
+    )
 
 ### 例
 
@@ -79,7 +71,8 @@ layout: page
 
 ##### 例
 
-    Binding()
+    @Binding var isPlaying: Bool
+    isPlaying
         .update()
 
 #### animation
@@ -94,7 +87,8 @@ layout: page
 
 ##### 例
 
-    Binding()
+    @Binding var isPlaying: Bool
+    isPlaying
         .animation()
 
 #### transaction
@@ -109,7 +103,9 @@ layout: page
 
 ##### 例
 
-    Binding()
+    @Binding var isPlaying: Bool
+    isPlaying
+        .transaction {_ in }
 
 ### 参考サイト
 

@@ -1,56 +1,68 @@
 [
     {
-        "english_name": "base",
-        "id": 1,
-        "name": "SwiftUI入門",
-        "description": "5分でわかるSwiftUIの超ざっくり基礎知識"
-    },
-    {
-        "english_name": "controller",
+        "english_name": "layout",
         "id": 2,
-        "name": "コントローラー",
-        "description": "コントロローラーの説明、書き方、プロパティ、使用例など"
+        "name": "レイアウト",
+        "description": "レイアウトの説明、書き方、メソッド、使用例など"
     },
     {
         "english_name": "view",
         "id": 3,
-        "name": "ビュー",
-        "description": "ビューの説明、書き方、属性、使用例など"
+        "name": "コントローラーとビュー",
+        "description": "コントロローラーとビューの説明、書き方、プロパティ、使用例など"
     },
     {
-        "english_name": "layout",
+        "english_name": "form",
         "id": 4,
-        "name": "レイアウト",
-        "description": "レイアウトの説明、書き方、属性、使用例など"
-    },
-    {
-        "english_name": "drawing_and_animation",
-        "id": 5,
-        "name": "デザインとアニメーション",
-        "description": "色や形、影を使ってビューを強調したり、ビューの状態を切り替えるアニメーションをカスタマイズすることができます。"
-    },
-    {
-        "english_name": "framework",
-        "id": 6,
-        "name": "フレームワーク",
-        "description": ""
+        "name": "フォームと入力関連",
+        "description": "フォームと入力関連の説明、書き方、プロパティ、使用例など"
     },
     {
         "english_name": "state_and_data_flow",
-        "id": 7,
+        "id": 5,
         "name": "状態とデータの流れ",
         "description": "アプリのモデル内のデータや変更の流れを制御"
     },
     {
-        "english_name": "gestures",
+        "english_name": "shape",
+        "id": 6,
+        "name": "図形を描く",
+        "description": "色々な図形の書き方、使用例など"
+    },
+    {
+        "english_name": "paints",
+        "id": 7,
+        "name": "色を塗る",
+        "description": "単色やグラデーションで色を塗る方法、使用例など"
+    },
+    {
+        "english_name": "animation",
         "id": 8,
+        "name": "アニメーション",
+        "description": "アニメーションの説明、使い方、メソッド、使用例など"
+    },
+    {
+        "english_name": "style",
+        "id": 9,
+        "name": "スタイル",
+        "description": "色々なスタイル"
+    },
+    {
+        "english_name": "gestures",
+        "id": 10,
         "name": "ジェスチャー",
         "description": "タップ、クリック、スワイプから細かなジェスチャーまで、インタラクションを定義します。"
     },
     {
-        "english_name": "previews",
-        "id": 9,
-        "name": "プレビュー",
-        "description": ""
+        "english_name": "framework",
+        "id": 11,
+        "name": "フレームワーク",
+        "description": "UIKitなどのSwiftUI以外のフレームワークと接続するための仕組みなど"
+    },
+    {
+        "english_name": "etc",
+        "id": 12,
+        "name": "その他",
+        "description": "分類できない様々なビュー"
     }
 ]

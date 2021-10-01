@@ -4,12 +4,11 @@ layout: page
 
 ### 説明
 
-UIKitからのデリゲートを提供するためにAppで使用されるプロパティ・ラッパー
+UIKitからのデリゲートを提供するためにAppで使用されるプロパティラッパー
 
 ### 使い方
 
     UIApplicationDelegateAdaptor(UIApplicationDelegateのタイプ(DelegateType.Type) = DelegateType.self)
-        .メソッド
 
 ### 例
 

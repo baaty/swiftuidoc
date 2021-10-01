@@ -9,24 +9,22 @@ FetchedResultsコレクションタイプはフェッチリクエストの実行
 ### 使い方
 
     var X: FetchedResults<NSNumber>()
-    X.メソッド
 
 ### 引数について
 
 #### NSFetchRequestResultで使えるタイプ
 
-- NSObjectProtocol
-- NSDictionary
-- NSManagedObject
-- NSManagedObjectID
-- NSNumber
+-   NSObjectProtocol
+-   NSDictionary
+-   NSManagedObject
+-   NSManagedObjectID
+-   NSNumber
 
 ### 例
 
 #### 基本的な使い方
 
     let cast = ["Vivien", "Marlon", "Kim", "Karl"]
-    cast.メソッド
 
 ### 宣言
 
@@ -60,7 +58,7 @@ FetchedResultsコレクションタイプはフェッチリクエストの実行
 | dropLast                         | 指定された数の最終要素以外を含むサブシーケンス                                 |
 | elementsEqual                    | このシーケンスと別のシーケンスが同じ要素を同じ順序で含んでいるか                        |
 | enumerated                       | nは0から始まる連続した整数を表しxはシーケンスの要素                             |
-| fill                             | 現在のNSGraphicsContext内の矩形のリストをその矩形に関連付けられた色で塗りつぶす      |
+| fill                             | 現在のNSGraphicsContext内の矩形のリストをその矩形に関連付けられた色で塗りつぶす        |
 | filter                           | 与えられた述語を満たすシーケンスの要素を順番に並べた配列                            |
 | first                            | 与えられた述語を満たすシーケンスの最初の要素                                  |
 | firstIndex                       | コレクション内で指定した値が出現する最初のインデックス                             |
@@ -500,7 +498,7 @@ for-inループと同じ順序でシーケンスの各要素に対して与え�
 ##### 使い方
 
     .prefix(最大長(Int))
-    
+
     .prefix(through: 含める最後の要素のインデックス(Self.Index))
 
     .prefix(upTo: 部分列の過去の終わりのインデックス(Self.Index))
@@ -699,7 +697,6 @@ body(p)を呼び出す
 ##### 使い方
 
     .withContiguousStorageIfAvailable(body((UnsafeBufferPointer<Self.Element>) throws -> R))
-
 
 ### 参考サイト
 

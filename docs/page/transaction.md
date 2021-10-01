@@ -11,12 +11,10 @@ layout: page
 #### トランザクションを作成
 
     Transaction()
-        .メソッド
 
 #### トランザクションを作成しそのアニメーションプロパティを割り当てる
 
     Transaction(animation: 状態が変化したときに実行するアニメーション(Animation))
-        .メソッド
 
 ### 例
 

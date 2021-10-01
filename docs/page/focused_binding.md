@@ -9,7 +9,6 @@ layout: page
 ### 使い方
 
     FocusedBinding(フォーカス値を読み取るためのキーパス(KeyPath<FocusedValues, Binding<Value>?>))
-        .メソッド
 
 ### 例
 

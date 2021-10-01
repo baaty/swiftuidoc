@@ -4,12 +4,11 @@ layout: page
 
 ### 説明
 
-ビューの環境から値を読み取るプロパティラッパー
+ビューの環境値を読み取るプロパティラッパー
 
 ### 使い方
 
-    Environment(キーパス(KeyPath<EnvironmentValues, Value>))
-        .メソッド
+    @Environment(環境値) var 変数名
 
 ### 例
 

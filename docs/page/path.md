@@ -4,57 +4,47 @@ layout: page
 
 ### 説明
 
-2D形状の輪郭
+パスで構成された線を描画
 
 ### 使い方
 
 #### 空のパスを作成
 
     Path()
-        .メソッド
 
 #### 空のパスを作成しクロージャを実行して初期要素を追加
 
     Path {
         コールバック
     }
-        .メソッド
 
     Path(コールバック)
-        .メソッド
 
 #### コピーからパスを作成
 
     Path(パス(CGMutablePath))
-        .メソッド
 
 #### 不変のシェイプパスからパスを作成
 
     Path(パス(CGPath))
-        .メソッド
 
 #### 以前のPath.stringRepresentationの呼び出しの結果から初期化
 
     Path(文字列(String))
-        .メソッド
 
 #### 与えられた矩形のパスを作成
 
     Path(矩形(CGRect))
-        .メソッド
 
 #### 与えられた矩形に内接する楕円のパスを作成
 
     Path(ellipseIn: 矩形(CGRect))
-        .メソッド
 
 #### 与えられた丸みを帯びた四角形のパスを作成
 
     Path(roundedRect: 丸みを帯びた矩形(CGRect), cornerRadius: 半径(CGFloat), style: スタイル(RoundedCornerStyle) = .circular)
-        .メソッド
 
     Path(roundedRect: 丸みを帯びた矩形(CGRect), cornerSize: サイズ(CGSize), style: スタイル(RoundedCornerStyle) = .circular)
-        .メソッド
 
 ### 例
 
@@ -62,12 +52,16 @@ layout: page
 
     Path()
 
+### 宣言
+
+    @frozen struct Path
+
 ### プロパティ
 
 | 名前             | 型                   | 説明                         |
 | -------------- | ------------------- | -------------------------- |
 | animatableData | EmptyAnimatableData | アニメーションするためのデータ            |
-| boundingRect   | CGRect              | すべてのパスセグメントを含む矩形           |
+| boundingRect   | CGRect              | すべてのパスを含む矩形                |
 | cgPath         | CGPath              | パス内の要素を表す不変のパス             |
 | currentPoint   | CGPoint?            | パスの最後のポイント                 |
 | description    | String              | パスを再作成する際に使用される可能性のあるパスの説明 |
@@ -75,27 +69,27 @@ layout: page
 
 ### メソッド
 
-| 名前             | 説明                           |
-| -------------- | ---------------------------- |
-| addArc         | 半径と角度で指定した円の弧をパスに追加          |
-| addCurve       | 三次ベジエ曲線をパスに追加                |
-| addEllipse     | パスに楕円を追加                     |
-| addLine        | 現在の点から指定した点までの直線セグメントを追加     |
-| addLines       | パスに一連の接続された直線セグメントを追加        |
-| addPath        | 与えられたパスのコピーをこのパスに追加          |
-| addQuadCurve   | 指定された終点と制御点を持つ二次ベジエ曲線をパスに追加  |
-| addRect        | パスに長方形のサブパスを追加               |
-| addRects       | 矩形のサブパスの列をパスに追加              |
-| addRelativeArc | 半径と角度の差で指定した円の弧をパスに追加        |
-| addRoundedRect | パスに丸みを帯びた矩形を追加               |
-| applying       | パスのすべての点にトランスフォームを適用して作成したパス |
-| closeSubpath   | 現在のサブパスを閉じて完了                |
-| contains       | パスに指定したポイントが含まれているか          |
-| forEach        | パスの各要素でボディを呼び出し              |
-| move           | 指定されたポイントで新しいサブパスを開始         |
-| offsetBy       | (dx, dy)だけ平行移動させたパス          |
-| strokedPath    | パスのストロークされたコピー               |
-| trimmedPath    | パスの部分的なコピー                   |
+| 名前             | 説明                          |
+| -------------- | --------------------------- |
+| addArc         | 半径と角度で指定した円の弧をパスに追加         |
+| addCurve       | 三次ベジエ曲線をパスに追加               |
+| addEllipse     | パスに楕円を追加                    |
+| addLine        | 現在の点から指定した点までの直線パスを追加       |
+| addLines       | パスに一連の接続された直線パスを追加          |
+| addPath        | 与えられたパスのコピーをこのパスに追加         |
+| addQuadCurve   | 指定された終点と制御点を持つ二次ベジエ曲線をパスに追加 |
+| addRect        | パスに長方形のサブパスを追加              |
+| addRects       | 矩形のサブパスの列をパスに追加             |
+| addRelativeArc | 半径と角度の差で指定した円の弧をパスに追加       |
+| addRoundedRect | パスに丸みを帯びた矩形を追加              |
+| applying       | パスに対してアフィン変換を適用             |
+| closeSubpath   | 現在のサブパスを閉じて完了               |
+| contains       | パスに指定したポイントが含まれているか         |
+| forEach        | パスの各要素でボディを呼び出し             |
+| move           | 指定されたポイントで新しいサブパスを開始        |
+| offsetBy       | (dx, dy)だけ平行移動させたパス         |
+| strokedPath    | パスのストロークされたコピー              |
+| trimmedPath    | パスの部分的なコピー                  |
 
 ### ビュー共通メソッド
 
@@ -123,7 +117,7 @@ layout: page
 | minimumScaleFactor                 | 使用可能なスペースに収まるように縮小する最小値を設定                            |
 | truncationMode                     | スペースに収まらないテキストの切り捨てモードを設定                             |
 | flipsForRightToLeftLayoutDirection | レイアウト方向が右から左の場合に水平に反転するかどうかを設定                        |
-| lineLimit                          | 占有できる最大行数を設定                                          |
+| lineLimit                          | テキストの最大行数                                             |
 | lineSpacing                        | 行間のスペースを設定                                            |
 | multilineTextAlignment             | 複数行テキストの配置を設定                                         |
 | keyboardType                       | キーボードタイプを設定                                           |
@@ -143,7 +137,7 @@ layout: page
 | navigationBarBackButtonHidden      | ビューのナビゲーションバーの戻るボタンを非表示                               |
 | navigationBarTitleDisplayMode      | タイトル表示モードを設定                                          |
 | toolbar                            | ツールバーやナビゲーションバーに入力されたビューを表示                           |
-| tabItem                            | 関連付けられたタブバー項目を設定                                      |
+| tabItem                            | タブバーに表示するビューを指定                                       |
 | help                               | ヘルプテキストを追加                                            |
 | contextMenu                        | コンテキストメニューをビューに追加                                     |
 | statusBar                          | ステータスバーの可視性を設定                                        |
@@ -168,7 +162,7 @@ layout: page
 | presentedWindowStyle               | インタラクションで作成されるウィンドウのスタイルを設定                           |
 | presentedWindowToolbarStyle        | インタラクションで作成されるウィンドウのツールバーのスタイルを設定                     |
 | frame                              | 指定されたサイズに設定                                           |
-| fixedSize                          | 理想的なサイズに修正                                            |
+| fixedSize                          | 最適なサイズに修正                                             |
 | layoutPriority                     | 親レイアウトがこの子にスペースを配分する優先順位を設定                           |
 | position                           | 親の座標空間のに配置                                            |
 | offset                             | 水平および垂直のオフセット                                         |
@@ -178,20 +172,20 @@ layout: page
 | overlay                            | 前にセカンダリビューを重ねる                                        |
 | background                         | ビューの背景に設定                                             |
 | zIndex                             | 重なり合うビューの表示順序を制御                                      |
-| border                             | 指定されたスタイルと幅でボーダーを追加                                   |
+| border                             | 指定されたスタイルと幅で境界線を追加                                    |
 | accentColor                        | アクセントカラーを設定                                           |
 | preferredColorScheme               | 優先カラースキームを設定                                          |
 | unredacted                         | リダクションを適用する理由をすべて削除                                   |
 | mask                               | 指定されたビューのアルファチャネルを使用してマスク                             |
-| clipped                            | 外接する長方形のフレームにクリップ                                     |
+| clipped                            | 長方形のフレームに切り取る                                         |
 | clipShape                          | クリッピング形状を設定                                           |
-| cornerRadius                       | 指定されたコーナー半径で境界フレームにクリップ                               |
+| cornerRadius                       | 指定されたコーナー半径で境界フレームを切り取る                               |
 | scaledToFill                       | スケーリングしてその親を塗りつぶします                                   |
 | scaledToFit                        | スケーリングして親に合わせます                                       |
 | scaleEffect                        | レンダリングされた出力をアンカーポイントを基準にしてスケーリング                      |
 | imageScale                         | 利用可能な相対サイズの1つに従ってビュー内の画像を拡大縮小                         |
 | aspectRatio                        | 寸法を指定した値で制限                                           |
-| rotationEffect                     | レンダリングされた出力を指定された点を中心に回転                              |
+| rotationEffect                     | 指定された点を中心に回転                                          |
 | rotation3DEffect                   | レンダリングされた出力を指定された回転軸を中心に3次元で回転                        |
 | projectionEffect                   | レンダリングされた出力に投影変換を適用                                   |
 | transformEffect                    | レンダリングされた出力にアフィン変換を適用                                 |
@@ -238,8 +232,8 @@ layout: page
 | onPlayPauseCommand                 | システムの再生/一時停止コマンドに応答して実行するアクションを追加                     |
 | onCommand                          | 指定されたセレクターに応答して実行するアクションを追加                           |
 | onAppear                           | 表示されたときに実行するアクションを追加                                  |
-| onDisappear                        | 消えたときに実行するアクションを追加                                    |
-| onChange                           | 特定の値が変化したときにアクションを発生させるモディファイアを追加                     |
+| onDisappear                        | 非表示になった時に実行するアクションを追加                                 |
+| onChange                           | 特定の値が変化したときにアクションを発生させるメソッドを追加                        |
 | onReceive                          | 特定のパブリッシャーによって発行されたデータを検出したときに実行するアクションを追加            |
 | keyboardShortcut                   | 変更したコントロールにキーボードショートカットを割り当て                          |
 | onHover                            | ユーザーがポインターをビューのフレームの上または外に移動したときに実行するアクションを追加         |
@@ -273,7 +267,7 @@ layout: page
 | environment                        | 指定されたキーパスの環境値を指定された値に設定                               |
 | environmentObject                  | 用品ビューsubhierachyにObservableObject                     |
 | transformEnvironment               | 指定された関数を使用して指定されたキーパスの環境値を変換                          |
-| previewDevice                      | プレビューのためにデバイスをオーバーライド                                 |
+| previewDevice                      | プレビューに使用するデバイスを設定                                     |
 | previewDisplayName                 | エディターに表示されるユーザーに表示される名前を提供                            |
 | previewLayout                      | プレビュー用のコンテナのサイズを上書き                                   |
 | previewContext                     | プレビュー用のコンテキストを宣言                                      |
@@ -281,17 +275,17 @@ layout: page
 
 ### シェイプ共通メソッド
 
-| 名前        | 説明                                |
-| --------- | --------------------------------- |
-| path      | 長方形の枠内のパスと表現                      |
-| trim      | パスとしての表現に基づいた小数の量でトリミング           |
-| transform | アフィン変換を適用                         |
-| size      | サイズのある長方形からパスを作成                  |
-| scale     | バウンディングフレームを変更することなくこのシェイプをスケーリング |
-| rotation  | アンカーポイントを中心に指定した角度で図形を回転          |
-| offset    | 指定されたサイズでこの図形の相対的な位置を変更           |
-| stroke    | 輪郭を色やグラデーションでなぞる                  |
-| fill      | 色やグラデーションで埋める                     |
+| 名前        | 説明                              |
+| --------- | ------------------------------- |
+| path      | パスを描画                           |
+| trim      | パスとしての表現に基づいた小数の量でトリミング         |
+| transform | アフィン変換を適用                       |
+| size      | サイズのある長方形からパスを作成                |
+| scale     | バウンディングフレームを変更することなくこの図形をスケーリング |
+| rotation  | アンカーポイントを中心に指定した角度で図形を回転        |
+| offset    | 指定されたサイズでこの図形の相対的な位置を変更         |
+| stroke    | 輪郭を色やグラデーションで描画                 |
+| fill      | 色やグラデーションで塗りつぶす                 |
 
 ### メソッド詳細
 
@@ -303,9 +297,9 @@ layout: page
 
 ##### 使い方
 
-    .addArc(center: 中心(CGPoint), radius: 半径(CGFloat), startAngle: 開始角度(Angle), endAngle: 終了角度(Angle), clockwise: 時計回りか(Bool), transform: トランスフォーム(CGAffineTransform) = .identity)
+    .addArc(center: 中心(CGPoint), radius: 半径(CGFloat), startAngle: 開始角度(Angle), endAngle: 終了角度(Angle), clockwise: 時計回りか(Bool), transform: アフィン変換行列(CGAffineTransform) = .identity)
 
-    .addArc(tangent1End: 1本目の線(CGPoint), tangent2End: 2本目の線(CGPoint), radius: 半径(CGFloat), transform: トランスフォーム(CGAffineTransform) = .identity)
+    .addArc(tangent1End: 1本目の線(CGPoint), tangent2End: 2本目の線(CGPoint), radius: 半径(CGFloat), transform: アフィン変換行列(CGAffineTransform) = .identity)
 
 ##### CGPointの使い方
 
@@ -362,7 +356,7 @@ layout: page
 
 ##### 使い方
 
-    .addEllipse(in: CGRect, transform: CGAffineTransform = .identity)
+    .addEllipse(in: 楕円の長軸と短軸の長さ(CGRect), transform: アフィン変換行列(CGAffineTransform) = .identity)
 
 ##### CGRectの使い方
 
@@ -385,7 +379,7 @@ layout: page
 
 ##### 意味
 
-現在の点から指定した点までの直線セグメントを追加
+現在の点から指定した点までの直線パスを追加
 
 ##### 使い方
 
@@ -410,7 +404,7 @@ layout: page
 
 ##### 意味
 
-パスに一連の接続された直線セグメントを追加
+パスに一連の接続された直線パスを追加
 
 ##### 使い方
 
@@ -480,7 +474,7 @@ layout: page
 
 ##### 使い方
 
-    .addRect(CGRect, transform: CGAffineTransform = .identity)
+    .addRect(CGRect, transform: アフィン変換行列(CGAffineTransform) = .identity)
 
 ##### CGRectの使い方
 
@@ -607,22 +601,22 @@ layout: page
 
 ##### 意味
 
-パスのすべての点にトランスフォームを適用して作成したパス
+パスに対してアフィン変換を適用
 
 ##### 使い方
 
-    .applying(CGAffineTransform)
+    .applying(アフィン変換行列(CGAffineTransform))
 
 ##### CGAffineTransformの使い方
 
-| 名前                                                                                          | 説明  |
-| ------------------------------------------------------------------------------------------- | --- |
-| CGAffineTransform(rotationAngle: CGFloat)                                             |     |
-| CGAffineTransform(scaleX: CGFloat, y: CGFloat)                                        |     |
-| CGAffineTransform(translationX: CGFloat, y: CGFloat)                                  |     |
-| CGAffineTransform()                                                                         |     |
-| CGAffineTransform(a: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat, tx: CGFloat, ty: CGFloat) |     |
-| CGAffineTransform(from decoder: Decoder)                                                    |     |
+| 名前                                                                                          | 説明                         |
+| ------------------------------------------------------------------------------------------- | -------------------------- |
+| CGAffineTransform(rotationAngle: CGFloat)                                                   | 指定された回転値から構築されたアフィン変換行列    |
+| CGAffineTransform(scaleX: CGFloat, y: CGFloat)                                              | 指定したスケーリング値から構築されたアフィン変換行列 |
+| CGAffineTransform(translationX: CGFloat, y: CGFloat)                                        | 与えられた翻訳値から構築されたアフィン変換行列    |
+| CGAffineTransform()                                                                         | アフィン変換行列                   |
+| CGAffineTransform(a: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat, tx: CGFloat, ty: CGFloat) | アフィン変換行列                   |
+| CGAffineTransform(from decoder: Decoder)                                                    | アフィン変換行列                   |
 
 ##### 例
 
@@ -732,7 +726,7 @@ layout: page
 
 ##### 使い方
 
-    .strokedPath(StrokeStyle)
+    .strokedPath(線の種類(StrokeStyle))
 
 ##### 例
 
@@ -781,11 +775,11 @@ layout: page
 
 ##### 使い方
 
-    .accessibilityInputLabels([代替入力ラベル名(StringProtocol)])
+    .accessibilityInputLabels(代替入力ラベルの配列([StringProtocol]))
 
-    .accessibilityInputLabels([代替入力ラベル(Text)])
+    .accessibilityInputLabels(代替入力ラベルの配列([Text]))
 
-    .accessibilityInputLabels([ローカライズされた文字列キー(LocalizedStringKey)])
+    .accessibilityInputLabels(ローカライズされた文字列キーの配列([LocalizedStringKey]))
 
 ##### 例
 
@@ -802,7 +796,7 @@ layout: page
 
     .accessibilityLabeledPair(role: ラベルかコンテンツ(AccessibilityLabeledPairRole), id: "識別子", in: "ネームスペース")
 
-##### ラベルかコンテンツの種類
+##### AccessibilityLabeledPairRoleの使い方
 
 | 名前       | 説明      |
 | -------- | ------- |
@@ -818,7 +812,7 @@ layout: page
 
 ##### 意味
 
-　テキストによる説明を追加
+テキストによる説明を追加
 
 ##### 使い方
 
@@ -884,7 +878,7 @@ layout: page
 
     .accessibilityAction(named: ローカライズされた文字列キー(LocalizedStringKey), カスタムアクセシビリティアクション)
 
-##### アクションの種類(AccessibilityActionKind)
+##### AccessibilityActionKindの使い方
 
 | 名前        | 説明       |
 | --------- | -------- |
@@ -930,7 +924,7 @@ layout: page
 
 ##### 使い方
 
-    .accessibilityScrollAction() { エッジ(Edge)
+    .accessibilityScrollAction() { 辺(Edge)
         ユーザー補助のスクロールアクション
     }
 
@@ -955,20 +949,20 @@ layout: page
 
     .accessibilityActivationPoint(アクティベーションが発生するポイント(UnitPoint))
 
-##### アクティベーションが発生するポイントの種類(UnitPoint)
+##### UnitPointの使い方
 
 | 名前                                | 説明         |
 | --------------------------------- | ---------- |
-| bottom                            | 下          |
-| bottomLeading                     | 左下         |
-| bottomTrailing                    | 右下         |
-| center                            | 真ん中        |
-| leading                           | 左          |
-| top                               | 上          |
-| topLeading                        | 左上         |
-| topTrailing                       | 右上         |
-| trailing                          | 右          |
-| zero                              | 0          |
+| .bottom                           | 下          |
+| .bottomLeading                    | 左下         |
+| .bottomTrailing                   | 右下         |
+| .center                           | 中央        |
+| .leading                          | 左          |
+| .top                              | 上          |
+| .topLeading                       | 左上         |
+| .topTrailing                      | 右上         |
+| .trailing                         | 右          |
+| .zero                             | 0          |
 | UnitPoint()                       | 作成         |
 | UnitPoint(x: CGFloat, y: CGFloat) | xとyを指定して作成 |
 
@@ -987,13 +981,13 @@ layout: page
 
     .accessibilityElement(children: アクセシビリティ要素(AccessibilityChildBehavior) = .ignore)
 
-##### アクセシビリティ要素の種類(AccessibilityChildBehavior)
+##### AccessibilityChildBehaviorの使い方
 
-| 名前      | 説明      |
-| ------- | ------- |
-| combine | Combine |
-| contain | Contain |
-| ignore  | Ignore  |
+| 名前       | 説明      |
+| -------- | ------- |
+| .combine | Combine |
+| .contain | Contain |
+| .ignore  | Ignore  |
 
 ##### 例
 
@@ -1055,7 +1049,7 @@ Traitsビューを追加
 
     .accessibilityAddTraits(Traitsビュー(AccessibilityTraits))
 
-##### Traitsビューの種類(AccessibilityTraits)
+##### AccessibilityTraitsの使い方
 
 | 名前                       | 説明                                      |
 | ------------------------ | --------------------------------------- |
@@ -1090,7 +1084,7 @@ Traitsビューを削除
 
     .accessibilityRemoveTraits(Traitsビュー(AccessibilityTraits))
 
-##### Traitsビューの種類
+##### AccessibilityTraitsの使い方
 
 | 名前                       | 説明                                      |
 | ------------------------ | --------------------------------------- |
@@ -1157,7 +1151,7 @@ Smart Invert Colors設定を無視するかどうかを設定
 
     .textCase()
 
-##### 変換方式の種類(Text.Case)
+##### Text.Caseの使い方
 
 | 名前         | 説明     |
 | ---------- | ------ |
@@ -1213,13 +1207,13 @@ Smart Invert Colors設定を無視するかどうかを設定
 
     .truncationMode(切り捨てモード(Text.TruncationMode))
 
-##### 切り捨てモードの種類(Text.TruncationMode)
+##### Text.TruncationModeの使い方
 
-| 名前     | 説明        |
-| ------ | --------- |
-| head   | 行頭で切り捨て   |
-| middle | 行の途中で切り捨て |
-| tail   | 行の最後で切り捨て |
+| 名前      | 説明        |
+| ------- | --------- |
+| .head   | 行頭で切り捨て   |
+| .middle | 行の途中で切り捨て |
+| .tail   | 行の最後で切り捨て |
 
 ##### 例
 
@@ -1245,11 +1239,11 @@ Smart Invert Colors設定を無視するかどうかを設定
 
 ##### 意味
 
-占有できる最大行数を設定
+テキストの最大行数
 
 ##### 使い方
 
-    .lineLimit(ライン制限する行数(Int))
+    .lineLimit(行数(Int))
 
     .lineLimit()
 
@@ -1283,7 +1277,7 @@ Smart Invert Colors設定を無視するかどうかを設定
 
     .multilineTextAlignment(テキスト配置の種類(TextAlignment))
 
-##### テキスト配置の種類(TextAlignment)
+##### TextAlignmentの使い方
 
 | 名前        | 説明   |
 | --------- | ---- |
@@ -1306,7 +1300,7 @@ Smart Invert Colors設定を無視するかどうかを設定
 
     .keyboardType(キーボードタイプ(UIKeyboardType))
 
-##### キーボードタイプの種類(UIKeyboardType)
+##### UIKeyboardTypeの使い方
 
 | 名前                     | 説明                     |
 | ---------------------- | ---------------------- |
@@ -1355,14 +1349,14 @@ Smart Invert Colors設定を無視するかどうかを設定
 
     .autocapitalization(自動大文字設定(UITextAutocapitalizationType))
 
-##### 自動大文字設定の種類(UITextAutocapitalizationType)
+##### UITextAutocapitalizationTypeの使い方
 
-| 名前            | 説明                |
-| ------------- | ----------------- |
-| .none         | 自動大文字化を行わない       |
-| .words        | 各単語の最初の文字を自動的に大文字 |
-| sentences     | 各文の最初の文字を自動的に大文字  |
-| allCharacters | すべての文字を自動的に大文字    |
+| 名前             | 説明                |
+| -------------- | ----------------- |
+| .none          | 自動大文字化を行わない       |
+| .words         | 各単語の最初の文字を自動的に大文字 |
+| .sentences     | 各文の最初の文字を自動的に大文字  |
+| .allCharacters | すべての文字を自動的に大文字    |
 
 ##### 例
 
@@ -1382,7 +1376,7 @@ Smart Invert Colors設定を無視するかどうかを設定
 
     .textContentType()
 
-##### テキストコンテンツタイプの種類(UITextContentType)
+##### UITextContentTypeの使い方
 
 | 名前                   | 説明                                   |
 | -------------------- | ------------------------------------ |
@@ -1474,14 +1468,14 @@ Smart Invert Colors設定を無視するかどうかを設定
 
     .controlSize(コントロールサイズ(ControlSize))
 
-##### コントロールサイズの種類(ControlSize)
+##### ControlSizeの使い方
 
-| 名前      | 説明     |
-| ------- | ------ |
-| large   | 大きい    |
-| mini    | 最小     |
-| regular | デフォルト　 |
-| small   | 小さい    |
+| 名前       | 説明     |
+| -------- | ------ |
+| .large   | 大きい    |
+| .mini    | 最小     |
+| .regular | デフォルト　 |
+| .small   | 小さい    |
 
 ##### 例
 
@@ -1500,13 +1494,13 @@ Smart Invert Colors設定を無視するかどうかを設定
 
     .listRowInsets()
 
-##### パディング領域の種類(EdgeInsets)
+##### EdgeInsetsの使い方
 
 | 名前                                                                             | 説明                                      |
 | ------------------------------------------------------------------------------ | --------------------------------------- |
-| EdgeInsets()                                                                   |                                         |
+| EdgeInsets()                                                                   | エッジインセットを作成                                        |
 | EdgeInsets(NSDirectionalEdgeInsets)                                            | 同等のNSDirectionalEdgeInsetsからエッジインセットを作成 |
-| EdgeInsets(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) |                                         |
+| EdgeInsets(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) | エッジインセットを作成                                        |
 
 ##### 例
 
@@ -1528,7 +1522,7 @@ Smart Invert Colors設定を無視するかどうかを設定
 ##### 例
 
     Path()
-        .listRowBackground(Color(.blue))
+        .listRowBackground(Color.blue)
 
 #### listItemTint
 
@@ -1542,7 +1536,7 @@ Tint効果を設定
 
     .listItemTint()
 
-##### Tint効果と色の種類
+##### ListItemTintとColorの使い方
 
 | 名前           | 説明                  |
 | ------------ | ------------------- |
@@ -1653,7 +1647,7 @@ Tint効果を設定
 
     .navigationBarTitleDisplayMode(タイトルの表示に使用するスタイル(NavigationBarItem.TitleDisplayMode))
 
-##### タイトルの表示に使用するスタイルの種類(NavigationBarItem.TitleDisplayMode)
+##### NavigationBarItem.TitleDisplayModeの使い方
 
 | 名前         | 説明             |
 | ---------- | -------------- |
@@ -1703,15 +1697,15 @@ Tint効果を設定
 
 ##### 意味
 
-関連付けられたタブバー項目を設定
+タブバーに表示するビューを指定
 
 ##### 使い方
 
     .tabItem() {
-        タブバー項目(View)
+        タブバーに表示するビュー(View)
     }
 
-    .tabItem(タブバー項目(View))
+    .tabItem(タブバーに表示するビュー(View))
 
 ##### 例
 
@@ -1842,7 +1836,7 @@ Tint効果を設定
 
     .touchBarItemPresence(カスタマイズ(TouchBarItemPresence))
 
-##### カスタマイズの種類(TouchBarItemPresence)
+##### TouchBarItemPresenceの使い方
 
 | 名前        | 説明                       |
 | --------- | ------------------------ |
@@ -1912,6 +1906,17 @@ Tint効果を設定
 
     .datePickerStyle(スタイル(DatePickerStyle))
 
+##### datePickerStyleの使い方
+
+| 名前           | 説明                             |
+| ------------ | ------------------------------ |
+| .automatic    | デフォルトスタイル                      |
+| .compact      | コンパクトなテキスト形式で表示                |
+| .field        | 編集可能なフィールドに表示                  |
+| .graphical    | インタラクティブなカレンダーや時計を表示           |
+| .stepperField | 編集可能なフィールドに表示し選択肢を増減できるステッパーあり |
+| .wheel        | スクロール可能なホイールに各コンポーネントを列として表示　  |
+
 ##### 例
 
     Path()
@@ -1927,7 +1932,7 @@ Tint効果を設定
 
     .textFieldStyle(スタイル(TextFieldStyle))
 
-##### スタイルの種類(TextFieldStyle)
+##### TextFieldStyleの使い方
 
 | 名前                          | 説明          |
 | --------------------------- | ----------- |
@@ -1966,10 +1971,30 @@ Tint効果を設定
 
     .listStyle(スタイル(ListStyle))
 
+##### ListStyleの使い方
+
+| 名前                                        | 説明               |
+| ----------------------------------------- | ---------------- |
+| .automatic                                | デフォルト            |
+| .bordered                                 | 標準のボーダーを持つリスト    |
+| .bordered(alternatesRowBackgrounds: Bool) | 標準のボーダーを持つリスト    |
+| .carousel                                 | カルーセルリスト         |
+| .elliptical                               | 楕円形のリスト          |
+| .grouped                                  | グループ化されたリスト      |
+| .inset                                    | インセットリスト         |
+| .insetGrouped                             | インセットグループ化されたリスト |
+| .plain                                    | プレーンなリスト         |
+| .sidebar                                  | サイドバーリスト         |
+
+##### 例
+
+    List {Text("Hello world")}
+        .listStyle(.carousel)
+
 ##### 例
 
     Path()
-        .listStyle(DefaultListStyle())
+        .listStyle(.carousel)
 
 #### navigationViewStyle
 
@@ -2109,29 +2134,29 @@ Tint効果を設定
 
 ##### 意味
 
-非表示のフレーム内に配置
+フレームのサイズと配置位置を指定
 
 ##### 使い方
 
-    .frame(width: 幅(CGFloat) = nil, height: 高さ(CGFloat) = nil, alignment: 配置の種類 = .center)
+    .frame(width: 幅(CGFloat) = nil, height: 高さ(CGFloat) = nil, alignment: 配置の種類(Alignment) = .center)
 
-    .frame(minWidth: 最小幅(CGFloat) = nil, idealWidth: 理想的な幅(CGFloat) = nil, maxWidth: 最大幅(CGFloat) = nil, minHeight: 最小の高さ(CGFloat) = nil, idealHeight: 理想の高さ(CGFloat) = nil, maxHeight: 最大の高さ(CGFloat) = nil, alignment: 配置(Alignment) = nil)
+    .frame(minWidth: 最小幅(CGFloat) = nil, idealWidth: 最適な幅(CGFloat) = nil, maxWidth: 最大幅(CGFloat) = nil, minHeight: 最小の高さ(CGFloat) = nil, idealHeight: 最適な高さ(CGFloat) = nil, maxHeight: 最大の高さ(CGFloat) = nil, alignment: 配置(Alignment) = nil)
 
     .frame()
 
-##### 配置の種類(Alignment)
+##### Alignmentの使い方
 
-| 名前              | 説明      |
-| --------------- | ------- |
-| .bottom         | ビューの下   |
-| .bottomLeading  | ビューの左下  |
-| .bottomTrailing | ビューの右下  |
-| .center         | ビューの真ん中 |
-| .leading        | ビューの左   |
-| .top            | ビューの上   |
-| .topLeading     | ビューの左上  |
-| .topTrailing    | ビューの右上  |
-| .trailing       | ビューの右   |
+| 名前              | 説明   |
+| --------------- | ---- |
+| .bottom         | 下寄せ  |
+| .bottomLeading  | 左下寄せ |
+| .bottomTrailing | 右下寄せ |
+| .center         | 中央寄せ |
+| .leading        | 左寄せ  |
+| .top            | 上寄せ  |
+| .topLeading     | 左上寄せ |
+| .topTrailing    | 右寄せ上 |
+| .trailing       | 右寄せ  |
 
 ##### 例
 
@@ -2142,13 +2167,13 @@ Tint効果を設定
 
 ##### 意味
 
-理想的なサイズに修正
+最適なサイズに修正
 
 ##### 使い方
 
     .fixedSize()
 
-    .fixedSize(horizontal: 幅を固定するか(Bool), vertical: 高さを固定するか(Bool))
+    .fixedSize(horizontal: 横のはみ出しを許すか(Bool), vertical: 縦のはみ出しを許すか(Bool))
 
 ##### 例
 
@@ -2195,15 +2220,15 @@ Tint効果を設定
 
 ##### 意味
 
-このパラメーターをoffsetパラメーターで指定された水平および垂直の値だけオフセット
+元の位置から表示位置を移動
 
 ##### 使い方
 
     .offset(オフセット(CGSize))
 
-    .offset(x: オフセットする水平距離(CGFloat), y: オフセットする垂直距離(CGFloat))
+    .offset(x: 水平距離(CGFloat), y: 垂直距離(CGFloat))
 
-##### オフセットの種類(CGSize)
+##### CGSizeの使い方
 
 | 名前                                                   | 説明                         |
 | ---------------------------------------------------- | -------------------------- |
@@ -2241,8 +2266,7 @@ Tint効果を設定
 
 ##### 意味
 
-ビューの水平方向の配置を設定
-ビューの垂直方向の配置を設定
+ビューの水平方向、または垂直方向の配置を設定
 
 ##### 使い方
 
@@ -2262,7 +2286,7 @@ Tint効果を設定
 
 | 名前        | 説明  |
 | --------- | --- |
-| .center   | 真ん中 |
+| .center   | 中央 |
 | .leading  | 左   |
 | .trailing | 右   |
 
@@ -2272,8 +2296,8 @@ Tint効果を設定
 | ------------------ | --- |
 | .bottom            | 下   |
 | .center            | 中   |
-| .firstTextBaseline | 最上位 |
-| .lastTextBaseline  | 最下段 |
+| .firstTextBaseline | 先頭の行のベースライン |
+| .lastTextBaseline  | 最終の行のベースライン |
 | .top               | 上   |
 
 ##### 例
@@ -2285,7 +2309,7 @@ Tint効果を設定
 
 ##### 意味
 
-指定された値ですべてのエッジに沿ってビューをパディング
+指定された値で周囲に余白を追加
 
 ##### 使い方
 
@@ -2295,15 +2319,15 @@ Tint効果を設定
 
     .padding(位置の種類(Edge.Set) = .all, パディング値(CGFloat) = nil)
 
-###### パディング領域の種類(EdgeInsets)
+###### EdgeInsetsの使い方
 
 | 名前                                                                             | 説明                                      |
 | ------------------------------------------------------------------------------ | --------------------------------------- |
-| EdgeInsets()                                                                   |                                         |
+| EdgeInsets()                                                                   | エッジインセットを作成                                        |
 | EdgeInsets(NSDirectionalEdgeInsets)                                            | 同等のNSDirectionalEdgeInsetsからエッジインセットを作成 |
-| EdgeInsets(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) |                                         |
+| EdgeInsets(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) | エッジインセットを作成                                        |
 
-##### 位置の種類(Edge.Set)
+##### Edge.Setの使い方
 
 | 名前          | 説明  |
 | ----------- | --- |
@@ -2334,7 +2358,7 @@ Tint効果を設定
 
     .ignoresSafeArea(無視されるエリア(SafeAreaRegions) = .all, edges: 位置(Edge.Set) = .all)
 
-##### 無視されるエリアの種類(SafeAreaRegions)
+##### SafeAreaRegionsの使い方
 
 | 名前         | 説明                                   |
 | ---------- | ------------------------------------ |
@@ -2342,7 +2366,7 @@ Tint効果を設定
 | .container | ユーザーインターフェース内のデバイスやコンテナによって定義される安全領域 |
 | .keyboard  | ソフトウェアキーボードの現在の範囲と一致するセーフエリア         |
 
-##### 位置の種類(Edge.Set)
+##### Edge.Setの使い方
 
 | 名前          | 説明  |
 | ----------- | --- |
@@ -2363,29 +2387,29 @@ Tint効果を設定
 
 ##### 意味
 
-前にセカンダリビューを重ねます
+前に別のビューを重ねて配置
 
 ##### 使い方
 
-    .overlay(alignment: 配置(Alignment) = .center) {
-        コンテンツ(View)
+    .overlay(alignment: 重ねるビューの配置位置(Alignment) = .center) {
+        配置するビュー(View)
     }
 
-    .overlay(コンテンツ(View), alignment: 配置(Alignment) = .center)
+    .overlay(配置するビュー(View), alignment: 重ねるビューの配置位置(Alignment) = .center)
 
-##### 配置の種類(Alignment)
+##### Alignmentの使い方
 
-| 名前              | 説明      |
-| --------------- | ------- |
-| .bottom         | ビューの下   |
-| .bottomLeading  | ビューの左下  |
-| .bottomTrailing | ビューの右下  |
-| .center         | ビューの真ん中 |
-| .leading        | ビューの左   |
-| .top            | ビューの上   |
-| .topLeading     | ビューの左上  |
-| .topTrailing    | ビューの右上  |
-| .trailing       | ビューの右   |
+| 名前              | 説明   |
+| --------------- | ---- |
+| .bottom         | 下寄せ  |
+| .bottomLeading  | 左下寄せ |
+| .bottomTrailing | 右下寄せ |
+| .center         | 中央寄せ |
+| .leading        | 左寄せ  |
+| .top            | 上寄せ  |
+| .topLeading     | 左上寄せ |
+| .topTrailing    | 右寄せ上 |
+| .trailing       | 右寄せ  |
 
 ##### 例
 
@@ -2398,7 +2422,7 @@ Tint効果を設定
 
 ##### 意味
 
-指定されたビューを背後に重ねます
+指定されたビューに背後を設定
 
 ##### 使い方
 
@@ -2406,22 +2430,21 @@ Tint効果を設定
         コンテンツ(View)
     }
 
-    .background(コンテンツ(View), alignment: 配置の種類(Alignment) = .center)
-        
+    .background(コンテンツ(View), alignment: 配置の種類(Alignment) = .center)        
 
-##### 配置の種類
+##### Alignmentの使い方
 
-| 名前              | 説明      |
-| --------------- | ------- |
-| .bottom         | ビューの下   |
-| .bottomLeading  | ビューの左下  |
-| .bottomTrailing | ビューの右下  |
-| .center         | ビューの真ん中 |
-| .leading        | ビューの左   |
-| .top            | ビューの上   |
-| .topLeading     | ビューの左上  |
-| .topTrailing    | ビューの右上  |
-| .trailing       | ビューの右   |
+| 名前              | 説明   |
+| --------------- | ---- |
+| .bottom         | 下寄せ  |
+| .bottomLeading  | 左下寄せ |
+| .bottomTrailing | 右下寄せ |
+| .center         | 中央寄せ |
+| .leading        | 左寄せ  |
+| .top            | 上寄せ  |
+| .topLeading     | 左上寄せ |
+| .topTrailing    | 右寄せ上 |
+| .trailing       | 右寄せ  |
 
 ##### 例
 
@@ -2449,13 +2472,13 @@ Tint効果を設定
 
 ##### 意味
 
-指定されたスタイルと幅でボーダーを追加
+指定されたスタイルと幅で境界線を追加
 
 ##### 使い方
 
     .border(スタイル(ShapeStyle), width: 太さ(CGFloat))
 
-##### スタイルの種類(ShapeStyle)
+##### ShapeStyleの使い方
 
 | 名前                                                                                                                 | 説明                         |
 | ------------------------------------------------------------------------------------------------------------------ | -------------------------- |
@@ -2487,18 +2510,18 @@ Tint効果を設定
 | Color(cgColor: CGColor)                                                                                            | 色のカスタマイズ                   |
 | Gradient(colors: [Color])                                                                                          | カラーグラデーション                 |
 | Gradient(stops: [Gradient.Stop])                                                                                   | カラーグラデーション                 |
-| AngularGradient.angularGradient(Gradient, center: UnitPoint, startAngle: Angle, endAngle: Angle)                   | 角度のあるグラデーション               |
-| AngularGradient.angularGradient(colors: [Color], center: UnitPoint, startAngle: Angle, endAngle: Angle)            | 角度のあるグラデーション               |
-| AngularGradient.angularGradient(stops: [Gradient.Stop], center: UnitPoint, startAngle: Angle, endAngle: Angle)     | 角度のあるグラデーション               |
-| AngularGradient.conicGradient(Gradient, center: UnitPoint, angle: Angle = .zero)                                   | 角度のあるグラデーション               |
-| AngularGradient.conicGradient(colors: [Color], center: UnitPoint, angle: Angle = .zero)                            | 角度のあるグラデーション               |
-| AngularGradient.conicGradient(stops: [Gradient.Stop], center: UnitPoint, angle: Angle = .zero)                     | 角度のあるグラデーション               |
+| AngularGradient.angularGradient(Gradient, center: UnitPoint, startAngle: Angle, endAngle: Angle)                   | 円形グラデーション                  |
+| AngularGradient.angularGradient(colors: [Color], center: UnitPoint, startAngle: Angle, endAngle: Angle)            | 円形グラデーション                  |
+| AngularGradient.angularGradient(stops: [Gradient.Stop], center: UnitPoint, startAngle: Angle, endAngle: Angle)     | 円形グラデーション                  |
+| AngularGradient.conicGradient(Gradient, center: UnitPoint, angle: Angle = .zero)                                   | 円形グラデーション                  |
+| AngularGradient.conicGradient(colors: [Color], center: UnitPoint, angle: Angle = .zero)                            | 円形グラデーション                  |
+| AngularGradient.conicGradient(stops: [Gradient.Stop], center: UnitPoint, angle: Angle = .zero)                     | 円形グラデーション                  |
 | LinearGradient.linearGradient(Gradient, startPoint: UnitPoint, endPoint: UnitPoint)                                | 直線的なグラデーション                |
 | LinearGradient.linearGradient(colors: [Color], startPoint: UnitPoint, endPoint: UnitPoint)                         | 直線的なグラデーション                |
 | LinearGradient.linearGradient(stops: [Gradient.Stop], startPoint: UnitPoint, endPoint: UnitPoint)                  | 直線的なグラデーション                |
-| RadialGradient.radialGradient(Gradient, center: UnitPoint, startRadius: CGFloat, endRadius: CGFloat)               | 放射状のグラデーション                |
-| RadialGradient.radialGradient(colors: [Color], center: UnitPoint, startRadius: CGFloat, endRadius: CGFloat)        | 放射状のグラデーション                |
-| RadialGradient.radialGradient(stops: [Gradient.Stop], center: UnitPoint, startRadius: CGFloat, endRadius: CGFloat) | 放射状のグラデーション                |
+| RadialGradient.radialGradient(Gradient, center: UnitPoint, startRadius: CGFloat, endRadius: CGFloat)               | 放射状グラデーション                 |
+| RadialGradient.radialGradient(colors: [Color], center: UnitPoint, startRadius: CGFloat, endRadius: CGFloat)        | 放射状グラデーション                 |
+| RadialGradient.radialGradient(stops: [Gradient.Stop], center: UnitPoint, startRadius: CGFloat, endRadius: CGFloat) | 放射状グラデーション                 |
 | ImagePaint(image: Image, sourceRect: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1), scale: CGFloat = 1)         | 画像の一部分を繰り返して形状を埋めるシェイプスタイル |
 
 ##### 例
@@ -2518,29 +2541,29 @@ Tint効果を設定
 
     .accentColor()
 
-##### 色の種類(Color)
+##### Colorの使い方
 
 | 名前                                                                                                | 説明                  |
 | ------------------------------------------------------------------------------------------------- | ------------------- |
-| Color.primary                                                                                     | メインカラー              |
-| Color.secondary                                                                                   | サブカラー               |
-| Color.accentColor                                                                                 | システムまたはアプリのアクセントカラー |
-| Color.black                                                                                       | 黒色                  |
-| Color.blue                                                                                        | 青色                  |
-| Color.brown                                                                                       | 茶色                  |
-| Color.clear                                                                                       | 透明色                 |
-| Color.cyan                                                                                        | シアン色                |
-| Color.gray                                                                                        | 灰色                  |
-| Color.green                                                                                       | 緑色                  |
-| Color.indigo                                                                                      | インディゴ色              |
-| Color.mint                                                                                        | ミント色                |
-| Color.orange                                                                                      | オレンジ色               |
-| Color.pink                                                                                        | ピンク色                |
-| Color.purple                                                                                      | 紫色                  |
-| Color.red                                                                                         | 赤色                  |
-| Color.teal                                                                                        | ティール色               |
-| Color.white                                                                                       | 白色                  |
-| Color.yellow                                                                                      | 黄色                  |
+| .primary                                                                                          | メインカラー              |
+| .secondary                                                                                        | サブカラー               |
+| .accentColor                                                                                      | システムまたはアプリのアクセントカラー |
+| .black                                                                                            | 黒色                  |
+| .blue                                                                                             | 青色                  |
+| .brown                                                                                            | 茶色                  |
+| .clear                                                                                            | 透明色                 |
+| .cyan                                                                                             | シアン色                |
+| .gray                                                                                             | 灰色                  |
+| .green                                                                                            | 緑色                  |
+| .indigo                                                                                           | インディゴ色              |
+| .mint                                                                                             | ミント色                |
+| .orange                                                                                           | オレンジ色               |
+| .pink                                                                                             | ピンク色                |
+| .purple                                                                                           | 紫色                  |
+| .red                                                                                              | 赤色                  |
+| .teal                                                                                             | ティール色               |
+| .white                                                                                            | 白色                  |
+| .yellow                                                                                           | 黄色                  |
 | Color(Color.RGBColorSpace = .sRGB, red: Double, green: Double, blue: Double, opacity: Double = 1) | 個別作成                |
 | Color(Color.RGBColorSpace = .sRGB, white: Double, opacity: Double = 1)                            | 個別作成                |
 | Color(hue: Double, saturation: Double, brightness: Double, opacity: Double = 1)                   | 個別作成                |
@@ -2562,12 +2585,12 @@ Tint効果を設定
 
     .preferredColorScheme()
 
-##### カラースキームの種類(ColorScheme)
+##### ColorSchemeの使い方
 
-| 名前    | 説明  |
-| ----- | --- |
-| dark  | ダーク |
-| light | ライト |
+| 名前     | 説明  |
+| ------ | --- |
+| .dark  | ダーク |
+| .light | ライト |
 
 ##### 例
 
@@ -2632,7 +2655,7 @@ Tint効果を設定
 
 ##### 意味
 
-外接する長方形のフレームにクリップ
+長方形のフレームに切り取る
 
 ##### 使い方
 
@@ -2662,17 +2685,17 @@ Tint効果を設定
 | ContainerRelativeShape()                                                                | 現在のコンテナ形状のインセットバージョンで置き換えられる形状 |
 | Ellipse()                                                                               | 楕円はそれを含むビューのフレーム内に整列           |
 | OffsetShape(shape: Content, offset: CGSize)                                             | 並進オフセット変換が適用された形状              |
-| Path()                                                                                  | 2D形状のアウトライン                    |
-| Path((inout Path))                                                                      | 2D形状のアウトライン                    |
-| Path(CGMutablePath)                                                                     | 2D形状のアウトライン                    |
-| Path(CGPath)                                                                            | 2D形状のアウトライン                    |
-| Path(String)                                                                            | 2D形状のアウトライン                    |
-| Path(CGRect)                                                                            | 2D形状のアウトライン                    |
-| Path(ellipseIn rect: CGRect)                                                            | 2D形状のアウトライン                    |
-| Path(roundedRect: CGRect, cornerRadius: CGFloat, style: RoundedCornerStyle = .circular) | 2D形状のアウトライン                    |
-| Path(roundedRect: CGRect, cornerSize: CGSize, style: RoundedCornerStyle = .circular)    | 2D形状のアウトライン                    |
+| Path()                                                                                  | 任意のパスにあわせて描画                   |
+| Path((inout Path))                                                                      | 任意のパスにあわせて描画                   |
+| Path(CGMutablePath)                                                                     | 任意のパスにあわせて描画                   |
+| Path(CGPath)                                                                            | 任意のパスにあわせて描画                   |
+| Path(String)                                                                            | 任意のパスにあわせて描画                   |
+| Path(CGRect)                                                                            | 任意のパスにあわせて描画                   |
+| Path(ellipseIn rect: CGRect)                                                            | 任意のパスにあわせて描画                   |
+| Path(roundedRect: CGRect, cornerRadius: CGFloat, style: RoundedCornerStyle = .circular) | 任意のパスにあわせて描画                   |
+| Path(roundedRect: CGRect, cornerSize: CGSize, style: RoundedCornerStyle = .circular)    | 任意のパスにあわせて描画                   |
 | Path()                                                                                  | 矩形の形状はそれを含むビューのフレーム内に配置        |
-| RotatedShape(shape: Content, angle: Angle, anchor: UnitPoint = .center)                 | 回転トランスフォームが適用されたシェイプ           |
+| RotatedShape(shape: Content, angle: Angle, anchor: UnitPoint = .center)                 | 回転トランスフォームが適用された図形             |
 | RoundedRectangle(cornerRadius: CGFloat, style: RoundedCornerStyle = .circular)          | 角の丸い長方形でそれを含むビューのフレーム内に配置      |
 | RoundedRectangle(cornerSize: CGSize, style: RoundedCornerStyle = .circular)             | 角の丸い長方形でそれを含むビューのフレーム内に配置      |
 | ScaledShape(shape: Content, scale: CGSize, anchor: UnitPoint = .center)                 | スケールトランスフォームが適用された形状           |
@@ -2693,7 +2716,7 @@ Tint効果を設定
 
 ##### 意味
 
-指定されたコーナー半径で境界フレームにクリップ
+指定されたコーナー半径で境界フレームを切り取る
 
 ##### 使い方
 
@@ -2738,7 +2761,7 @@ Tint効果を設定
 
 ##### 意味
 
-レンダリングされた出力をアンカーポイントを基準にして水平方向と垂直方向の両方に指定された値でスケーリング
+水平方向と垂直方向の両方に指定された値でスケーリング
 
 ##### 使い方
 
@@ -2748,7 +2771,7 @@ Tint効果を設定
 
     .scaleEffect(x: 水平方向の値(CGFloat) = 1.0, y: 垂直方向の値(CGFloat) = 1.0, anchor: 開始位置(UnitPoint) = .center)
 
-##### 値の種類(CGSize)
+##### CGSizeの使い方
 
 | 名前                                                   | 説明                         |
 | ---------------------------------------------------- | -------------------------- |
@@ -2759,20 +2782,20 @@ Tint効果を設定
 | CGSize(width: CGFloat, height: CGFloat)              | CGFloatの値で指定された寸法を持つサイズを作成 |
 | CGSize(width: Int, height: Int)                      | 整数値で指定された寸法を持つサイズを作成       |
 
-##### 開始位置の種類(UnitPoint)
+##### UnitPointの使い方
 
 | 名前                                | 説明         |
 | --------------------------------- | ---------- |
-| bottom                            | 下          |
-| bottomLeading                     | 左下         |
-| bottomTrailing                    | 右下         |
-| center                            | 真ん中        |
-| leading                           | 左          |
-| top                               | 上          |
-| topLeading                        | 左上         |
-| topTrailing                       | 右上         |
-| trailing                          | 右          |
-| zero                              | 0          |
+| .bottom                           | 下          |
+| .bottomLeading                    | 左下         |
+| .bottomTrailing                   | 右下         |
+| .center                           | 中央        |
+| .leading                          | 左          |
+| .top                              | 上          |
+| .topLeading                       | 左上         |
+| .topTrailing                      | 右上         |
+| .trailing                         | 右          |
+| .zero                             | 0          |
 | UnitPoint()                       | 作成         |
 | UnitPoint(x: CGFloat, y: CGFloat) | xとyを指定して作成 |
 
@@ -2791,13 +2814,13 @@ Tint効果を設定
 
 ##### 意味
 
-小、中、大の画像サイズを含む利用可能な相対サイズの1つに従ってビュー内の画像を拡大縮小
+画像スケールを設定
 
 ##### 使い方
 
     .imageScale(相対サイズ(Image.Scale))
 
-##### 相対サイズの種類(Image.Scale)
+##### Image.Scaleの使い方
 
 | 名前      | 説明    |
 | ------- | ----- |
@@ -2822,7 +2845,7 @@ Tint効果を設定
 
     .aspectRatio(サイズ(CGSize), contentMode: 親コンテキストに収まるか(ContentMode))
 
-##### サイズの種類(CGSize)
+##### CGSizeの使い方
 
 | 名前                                                   | 説明                         |
 | ---------------------------------------------------- | -------------------------- |
@@ -2833,7 +2856,7 @@ Tint効果を設定
 | CGSize(width: CGFloat, height: CGFloat)              | CGFloatの値で指定された寸法を持つサイズを作成 |
 | CGSize(width: Int, height: Int)                      | 整数値で指定された寸法を持つサイズを作成       |
 
-##### 親コンテキストに適合するかの種類(ContentMode)
+##### ContentModeの使い方
 
 | 名前    | 説明                  |
 | ----- | ------------------- |
@@ -2849,33 +2872,33 @@ Tint効果を設定
 
 ##### 意味
 
-レンダリングされた出力を指定された点を中心に回転
+指定された点を中心に回転
 
 ##### 使い方
 
     .rotationEffect(角度(Angle), anchor: 位置(UnitPoint) = .center)
 
-##### 角度の種類(Angle)
+##### Angleの使い方
 
 | 名前               | 説明      |
 | ---------------- | ------- |
 | .degrees(Double) | 度を指定    |
 | .radians(Double) | ラジアンを指定 |
 
-##### 位置の種類(UnitPoint)
+##### UnitPointの使い方
 
 | 名前                                | 説明         |
 | --------------------------------- | ---------- |
-| bottom                            | 下          |
-| bottomLeading                     | 左下         |
-| bottomTrailing                    | 右下         |
-| center                            | 真ん中        |
-| leading                           | 左          |
-| top                               | 上          |
-| topLeading                        | 左上         |
-| topTrailing                       | 右上         |
-| trailing                          | 右          |
-| zero                              | 0          |
+| .bottom                           | 下          |
+| .bottomLeading                    | 左下         |
+| .bottomTrailing                   | 右下         |
+| .center                           | 中央        |
+| .leading                          | 左          |
+| .top                              | 上          |
+| .topLeading                       | 左上         |
+| .topTrailing                      | 右上         |
+| .trailing                         | 右          |
+| .zero                             | 0          |
 | UnitPoint()                       | 作成         |
 | UnitPoint(x: CGFloat, y: CGFloat) | xとyを指定して作成 |
 
@@ -2894,27 +2917,27 @@ Tint効果を設定
 
     .rotation3DEffect(角度(Angle), axis: (x: x軸要素(CGFloat), y: y軸要素(CGFloat), z: z軸要素(CGFloat)), anchor: 位置(UnitPoint) = .center, anchorZ: 回転の固定位置(CGFloat) = 0, perspective: 相対消失点(CGFloat) = 1)
 
-##### 角度の種類(Angle)
+##### Angleの使い方
 
 | 名前               | 説明      |
 | ---------------- | ------- |
 | .degrees(Double) | 度を指定    |
 | .radians(Double) | ラジアンを指定 |
 
-##### 位置の種類(UnitPoint)
+##### UnitPointの使い方
 
 | 名前                                | 説明         |
 | --------------------------------- | ---------- |
-| bottom                            | 下          |
-| bottomLeading                     | 左下         |
-| bottomTrailing                    | 右下         |
-| center                            | 真ん中        |
-| leading                           | 左          |
-| top                               | 上          |
-| topLeading                        | 左上         |
-| topTrailing                       | 右上         |
-| trailing                          | 右          |
-| zero                              | 0          |
+| .bottom                           | 下          |
+| .bottomLeading                    | 左下         |
+| .bottomTrailing                   | 右下         |
+| .center                           | 中央        |
+| .leading                          | 左          |
+| .top                              | 上          |
+| .topLeading                       | 左上         |
+| .topTrailing                      | 右上         |
+| .trailing                         | 右          |
+| .zero                             | 0          |
 | UnitPoint()                       | 作成         |
 | UnitPoint(x: CGFloat, y: CGFloat) | xとyを指定して作成 |
 
@@ -2933,13 +2956,13 @@ Tint効果を設定
 
     .projectionEffect(変換条件(ProjectionTransform))
 
-##### 変換条件の種類(ProjectionTransform)
+##### ProjectionTransformの使い方
 
-| 名前                                     | 説明                   |
-| -------------------------------------- | -------------------- |
-| ProjectionTransform()                  | 引数なし                 |
-| ProjectionTransform(CGAffineTransform) | CGAffineTransformを指定 |
-| ProjectionTransform(CATransform3D)     | 　CATransform3Dを指定    |
+| 名前                                     | 説明               |
+| -------------------------------------- | ---------------- |
+| ProjectionTransform()                  | 引数なし             |
+| ProjectionTransform(CGAffineTransform) | アフィン変換行列を指定      |
+| ProjectionTransform(CATransform3D)     | CATransform3Dを指定 |
 
 ##### 例
 
@@ -2954,18 +2977,18 @@ Tint効果を設定
 
 ##### 使い方
 
-    .transformEffect(変換条件(CGAffineTransform))
+    .transformEffect(アフィン変換行列(CGAffineTransform))
 
-##### 変換条件の種類(CGAffineTransform)
+##### CGAffineTransformの使い方
 
-| 名前                                                                                          | 説明  |
-| ------------------------------------------------------------------------------------------- | --- |
-| CGAffineTransform(rotationAngle: CGFloat)                                                   |     |
-| CGAffineTransform(scaleX: CGFloat, y: CGFloat)                                              |     |
-| CGAffineTransform(translationX: CGFloat, y: CGFloat)                                        |     |
-| CGAffineTransform()                                                                         |     |
-| CGAffineTransform(a: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat, tx: CGFloat, ty: CGFloat) |     |
-| CGAffineTransform(from decoder: Decoder)                                                    |     |
+| 名前                                                                                          | 説明                         |
+| ------------------------------------------------------------------------------------------- | -------------------------- |
+| CGAffineTransform(rotationAngle: CGFloat)                                                   | 指定された回転値から構築されたアフィン変換行列    |
+| CGAffineTransform(scaleX: CGFloat, y: CGFloat)                                              | 指定したスケーリング値から構築されたアフィン変換行列 |
+| CGAffineTransform(translationX: CGFloat, y: CGFloat)                                        | 与えられた翻訳値から構築されたアフィン変換行列    |
+| CGAffineTransform()                                                                         | アフィン変換行列                   |
+| CGAffineTransform(a: CGFloat, b: CGFloat, c: CGFloat, d: CGFloat, tx: CGFloat, ty: CGFloat) | アフィン変換行列                   |
+| CGAffineTransform(from decoder: Decoder)                                                    | アフィン変換行列                   |
 
 ##### 例
 
@@ -3065,29 +3088,29 @@ Tint効果を設定
 
     .colorMultiply(色(Color))
 
-##### 色の種類(Color)
+##### Colorの使い方
 
 | 名前                                                                                                | 説明                  |
 | ------------------------------------------------------------------------------------------------- | ------------------- |
-| Color.primary                                                                                     | メインカラー              |
-| Color.secondary                                                                                   | サブカラー               |
-| Color.accentColor                                                                                 | システムまたはアプリのアクセントカラー |
-| Color.black                                                                                       | 黒色                  |
-| Color.blue                                                                                        | 青色                  |
-| Color.brown                                                                                       | 茶色                  |
-| Color.clear                                                                                       | 透明色                 |
-| Color.cyan                                                                                        | シアン色                |
-| Color.gray                                                                                        | 灰色                  |
-| Color.green                                                                                       | 緑色                  |
-| Color.indigo                                                                                      | インディゴ色              |
-| Color.mint                                                                                        | ミント色                |
-| Color.orange                                                                                      | オレンジ色               |
-| Color.pink                                                                                        | ピンク色                |
-| Color.purple                                                                                      | 紫色                  |
-| Color.red                                                                                         | 赤色                  |
-| Color.teal                                                                                        | ティール色               |
-| Color.white                                                                                       | 白色                  |
-| Color.yellow                                                                                      | 黄色                  |
+| .primary                                                                                          | メインカラー              |
+| .secondary                                                                                        | サブカラー               |
+| .accentColor                                                                                      | システムまたはアプリのアクセントカラー |
+| .black                                                                                            | 黒色                  |
+| .blue                                                                                             | 青色                  |
+| .brown                                                                                            | 茶色                  |
+| .clear                                                                                            | 透明色                 |
+| .cyan                                                                                             | シアン色                |
+| .gray                                                                                             | 灰色                  |
+| .green                                                                                            | 緑色                  |
+| .indigo                                                                                           | インディゴ色              |
+| .mint                                                                                             | ミント色                |
+| .orange                                                                                           | オレンジ色               |
+| .pink                                                                                             | ピンク色                |
+| .purple                                                                                           | 紫色                  |
+| .red                                                                                              | 赤色                  |
+| .teal                                                                                             | ティール色               |
+| .white                                                                                            | 白色                  |
+| .yellow                                                                                           | 黄色                  |
 | Color(Color.RGBColorSpace = .sRGB, red: Double, green: Double, blue: Double, opacity: Double = 1) | 個別作成                |
 | Color(Color.RGBColorSpace = .sRGB, white: Double, opacity: Double = 1)                            | 個別作成                |
 | Color(hue: Double, saturation: Double, brightness: Double, opacity: Double = 1)                   | 個別作成                |
@@ -3137,7 +3160,7 @@ Tint効果を設定
 
     .hueRotation(角度(Angle))
 
-##### 角度の種類(Angle)
+##### Angleの使い方
 
 | 名前               | 説明      |
 | ---------------- | ------- |
@@ -3174,29 +3197,29 @@ Tint効果を設定
 
     .shadow(color: 影の色(Color) = Color(.sRGBLinear, white: 0, opacity: 0.33), radius: 影のサイズ(CGFloat), x: 水平位置(CGFloat) = 0, y: 垂直位置(CGFloat) = 0)
 
-##### 色の種類(Color)
+##### Colorの使い方
 
 | 名前                                                                                                | 説明                  |
 | ------------------------------------------------------------------------------------------------- | ------------------- |
-| Color.primary                                                                                     | メインカラー              |
-| Color.secondary                                                                                   | サブカラー               |
-| Color.accentColor                                                                                 | システムまたはアプリのアクセントカラー |
-| Color.black                                                                                       | 黒色                  |
-| Color.blue                                                                                        | 青色                  |
-| Color.brown                                                                                       | 茶色                  |
-| Color.clear                                                                                       | 透明色                 |
-| Color.cyan                                                                                        | シアン色                |
-| Color.gray                                                                                        | 灰色                  |
-| Color.green                                                                                       | 緑色                  |
-| Color.indigo                                                                                      | インディゴ色              |
-| Color.mint                                                                                        | ミント色                |
-| Color.orange                                                                                      | オレンジ色               |
-| Color.pink                                                                                        | ピンク色                |
-| Color.purple                                                                                      | 紫色                  |
-| Color.red                                                                                         | 赤色                  |
-| Color.teal                                                                                        | ティール色               |
-| Color.white                                                                                       | 白色                  |
-| Color.yellow                                                                                      | 黄色                  |
+| .primary                                                                                          | メインカラー              |
+| .secondary                                                                                        | サブカラー               |
+| .accentColor                                                                                      | システムまたはアプリのアクセントカラー |
+| .black                                                                                            | 黒色                  |
+| .blue                                                                                             | 青色                  |
+| .brown                                                                                            | 茶色                  |
+| .clear                                                                                            | 透明色                 |
+| .cyan                                                                                             | シアン色                |
+| .gray                                                                                             | 灰色                  |
+| .green                                                                                            | 緑色                  |
+| .indigo                                                                                           | インディゴ色              |
+| .mint                                                                                             | ミント色                |
+| .orange                                                                                           | オレンジ色               |
+| .pink                                                                                             | ピンク色                |
+| .purple                                                                                           | 紫色                  |
+| .red                                                                                              | 赤色                  |
+| .teal                                                                                             | ティール色               |
+| .white                                                                                            | 白色                  |
+| .yellow                                                                                           | 黄色                  |
 | Color(Color.RGBColorSpace = .sRGB, red: Double, green: Double, blue: Double, opacity: Double = 1) | 個別作成                |
 | Color(Color.RGBColorSpace = .sRGB, white: Double, opacity: Double = 1)                            | 個別作成                |
 | Color(hue: Double, saturation: Double, brightness: Double, opacity: Double = 1)                   | 個別作成                |
@@ -3216,7 +3239,7 @@ Tint効果を設定
 
     .blendMode(モード(BlendMode))
 
-##### モードの種類(BlendMode)
+##### BlendModeの使い方
 
 | 名前               | 説明         |
 | ---------------- | ---------- |
@@ -3272,7 +3295,7 @@ Tint効果を設定
 
     .drawingGroup(opaque: 不透明かどうか(Bool) = false, colorMode: フォーマット(ColorRenderingMode) = .nonLinear)
 
-##### フォーマットの種類(ColorRenderingMode)
+##### ColorRenderingModeの使い方
 
 | 名前              | 説明                                          |
 | --------------- | ------------------------------------------- |
@@ -3289,7 +3312,7 @@ Tint効果を設定
 
 ##### 意味
 
-指定されたアニメーションをすべてのアニメート可能な値に適用
+指定されたアニメーションを設定
 
 ##### 使い方
 
@@ -3301,7 +3324,7 @@ Tint効果を設定
 
     .animation()
 
-##### アニメーションの種類(Animation)
+##### Animationの使い方
 
 | 名前                                                                                                          | 説明       |
 | ----------------------------------------------------------------------------------------------------------- | -------- |
@@ -3313,11 +3336,11 @@ Tint効果を設定
 | .easeIn(duration: Double)                                                                                   | 徐々に加速    |
 | .easeInOut(duration: Double)                                                                                | 加速してから減速 |
 | .easeOut(duration: Double)                                                                                  | 徐々に減速    |
-| .interactiveSpring(response: Double = 0.15, dampingFraction: Double = 0.86, blendDuration: Double = 0.25)   |          |
-| .interpolatingSpring(mass: Double = 1.0, stiffness: Double, damping: Double, initialVelocity: Double = 0.0) |          |
+| .interactiveSpring(response: Double = 0.15, dampingFraction: Double = 0.86, blendDuration: Double = 0.25)   | レスポンス値の低いスプリング          |
+| .interpolatingSpring(mass: Double = 1.0, stiffness: Double, damping: Double, initialVelocity: Double = 0.0) | 補間スプリングアニメーション         |
 | .linear(duration: Double)                                                                                   | 等速で変化    |
-| .spring(response: Double = 0.55, dampingFraction: Double = 0.825, blendDuration: Double = 0)                |          |
-| .timingCurve(Double, Double, Double, Double, duration: Double = 0.35)                                       |          |
+| .spring(response: Double = 0.55, dampingFraction: Double = 0.825, blendDuration: Double = 0)                | 永続的なスプリングアニメーション         |
+| .timingCurve(Double, Double, Double, Double, duration: Double = 0.35)                                       | タイミングカーブ         |
 
 ##### 例
 
@@ -3332,9 +3355,9 @@ Tint効果を設定
 
 ##### 使い方
 
-    .transition(遷移(AnyTransition))
+    .transition(トランジション効果(AnyTransition))
 
-##### 遷移の種類(AnyTransition)
+##### AnyTransitionの使い方
 
 | 名前                                                                    | 説明                                                     |
 | --------------------------------------------------------------------- | ------------------------------------------------------ |
@@ -3342,9 +3365,9 @@ Tint効果を設定
 | .opacity                                                              | 挿入時には透明から不透明へ取り出し時には不透明から透明へと変化                        |
 | .scale                                                                |                                                        |
 | .slide                                                                | リーディングエッジからインすることで挿入しトレーリングエッジに向かってアウトすることで除去するトランジション |
-| .asymmetric(insertion: AnyTransition, removal: AnyTransition)         |                                                        |
-| .modifier<ViewModifier>(active: ViewModifier, identity: ViewModifier) |                                                        |
-| .move(edge: Edge)                                                     |                                                        |
+| .asymmetric(insertion: AnyTransition, removal: AnyTransition)         | 挿入と削除で異なるトランジションを使用する複合トランジション                                                       |
+| .modifier<ViewModifier>(active: ViewModifier, identity: ViewModifier) | アクティブモディファイアとアイデンティティモディファイアの間で定義されているトランジション                                                       |
+| .move(edge: Edge)                                                     | ビューの指定されたエッジに向かってビューを遠ざけるトランジション                                                       |
 | .offset(CGSize)                                                       |                                                        |
 | .offset(x: CGFloat = 0, y: CGFloat = 0)                               |                                                        |
 | .scale(scale: CGFloat, anchor: UnitPoint = .center)                   |                                                        |
@@ -3364,11 +3387,11 @@ Tint効果を設定
 
     .matchedGeometryEffect(id: "識別子(Hashable)", in: ネームスペースID(Namespace.ID), properties: ソースビューからコピーするプロパティ(MatchedGeometryProperties) = .frame, anchor: 相対的な位置(UnitPoint) = .center, isSource: 他のビューのジオメトリのソースとしてビューを使用する場合か(Bool) = true)
 
-##### ソースビューからコピーするプロパティ(MatchedGeometryProperties)
+##### MatchedGeometryPropertiesの使い方
 
 | 名前                                                       | 説明                       |
 | -------------------------------------------------------- | ------------------------ |
-| .frame                                                   | 位置と大きさの両方の特性             |
+| .frame                                                   | サイズと配置位置                 |
 | .position                                                | ビューの位置をウィンドウ座標で表示        |
 | .size                                                    | ローカル座標でのビューのサイズ          |
 | MatchedGeometryProperties()                              | 空のオプションセットを作成            |
@@ -3376,20 +3399,20 @@ Tint効果を設定
 | MatchedGeometryProperties(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成  |
 | MatchedGeometryProperties(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成 |
 
-##### 相対的な位置の種類(UnitPoint)
+##### 相対的なUnitPointの使い方
 
 | 名前                                | 説明         |
 | --------------------------------- | ---------- |
-| bottom                            | 下          |
-| bottomLeading                     | 左下         |
-| bottomTrailing                    | 右下         |
-| center                            | 真ん中        |
-| leading                           | 左          |
-| top                               | 上          |
-| topLeading                        | 左上         |
-| topTrailing                       | 右上         |
-| trailing                          | 右          |
-| zero                              | 0          |
+| .bottom                           | 下          |
+| .bottomLeading                    | 左下         |
+| .bottomTrailing                   | 右下         |
+| .center                           | 中央        |
+| .leading                          | 左          |
+| .top                              | 上          |
+| .topLeading                       | 左上         |
+| .topTrailing                      | 右上         |
+| .trailing                         | 右          |
+| .zero                             | 0          |
 | UnitPoint()                       | 作成         |
 | UnitPoint(x: CGFloat, y: CGFloat) | xとyを指定して作成 |
 
@@ -3452,11 +3475,11 @@ Tint効果を設定
 
 ##### 使い方
 
-    .onTapGesture(count: 閾値(Int) = 1) {
+    .onTapGesture(count: タップ回数(Int) = 1) {
         実装するアクション(View)
     }
 
-    .onTapGesture(count: 閾値(Int) = 1, perform: 実装するアクション(View))
+    .onTapGesture(count: タップ回数(Int) = 1, perform: 実装するアクション(View))
 
 ##### 例
 
@@ -3496,28 +3519,28 @@ Tint効果を設定
 
 ##### 意味
 
-ビューで定義されたジェスチャよりも優先順位が低いジェスチャをビューにアタッチ
+カスタムジェスチャを追加
 
 ##### 使い方
 
     .gesture(ジェスチャ(Gesture), including: イベントのマスク(GestureMask) = .all)
 
-##### ジェスチャの種類(Gesture)
+##### Gestureの使い方
 
-| 名前                                                                                                                                                               | 説明                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                               |
-| DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ・イベント・シーケンスの変化に応じてアクションを起動するドラッグ・モーション |
-| ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー         |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー      |
-| LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                     |
-| MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                     |
-| RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー                  |
-| SequenceGesture(First, Second)                                                                                                                                   | 2つのジェスチャーを連続させたジェスチャー                      |
-| SimultaneousGesture(First, Second)                                                                                                                               | 同時に起こりうる2つのジェスチャーを含みどちらも先行しないジェスチャー        |
-| TapGesture(count: Int = 1)                                                                                                                                       | 1回または複数回のタップを認識するジェスチャー                    |
+| 名前                                                                                                                                                               | 説明                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
+| ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
+| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
+| MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
+| RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
+| SequenceGesture(First, Second)                                                                                                                                   | 2つのジェスチャーを連続させたジェスチャー                 |
+| SimultaneousGesture(First, Second)                                                                                                                               | 同時に起こりうる2つのジェスチャーを含みどちらも先行しないジェスチャー   |
+| TapGesture(count: Int = 1)                                                                                                                                       | 1回または複数回のタップを認識するジェスチャー               |
 
-##### イベントのマスクの種類(GestureMask)
+##### GestureMaskの使い方
 
 | 名前                                         | 説明                                    |
 | ------------------------------------------ | ------------------------------------- |
@@ -3545,22 +3568,22 @@ Tint効果を設定
 
     .highPriorityGesture(ジェスチャ(Gesture), including: イベントのマスク(GestureMask) = .all)
 
-##### ジェスチャの種類(Gesture)
+##### Gestureの使い方
 
-| 名前                                                                                                                                                               | 説明                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                               |
-| DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ・イベント・シーケンスの変化に応じてアクションを起動するドラッグ・モーション |
-| ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー         |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー      |
-| LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                     |
-| MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                     |
-| RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー                  |
-| SequenceGesture(First, Second)                                                                                                                                   | 2つのジェスチャーを連続させたジェスチャー                      |
-| SimultaneousGesture(First, Second)                                                                                                                               | 同時に起こりうる2つのジェスチャーを含みどちらも先行しないジェスチャー        |
-| TapGesture(count: Int = 1)                                                                                                                                       | 1回または複数回のタップを認識するジェスチャー                    |
+| 名前                                                                                                                                                               | 説明                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
+| ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
+| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
+| MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
+| RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
+| SequenceGesture(First, Second)                                                                                                                                   | 2つのジェスチャーを連続させたジェスチャー                 |
+| SimultaneousGesture(First, Second)                                                                                                                               | 同時に起こりうる2つのジェスチャーを含みどちらも先行しないジェスチャー   |
+| TapGesture(count: Int = 1)                                                                                                                                       | 1回または複数回のタップを認識するジェスチャー               |
 
-##### イベントのマスクの種類(GestureMask)
+##### GestureMaskの使い方
 
 | 名前                                         | 説明                                    |
 | ------------------------------------------ | ------------------------------------- |
@@ -3588,22 +3611,22 @@ Tint効果を設定
 
     .simultaneousGesture(ジェスチャ(Gesture), including: イベントのマスク(GestureMask) = .all)
 
-##### ジェスチャの種類(Gesture)
+##### Gestureの使い方
 
-| 名前                                                                                                                                                               | 説明                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                               |
-| DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ・イベント・シーケンスの変化に応じてアクションを起動するドラッグ・モーション |
-| ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー         |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー      |
-| LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                     |
-| MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                     |
-| RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー                  |
-| SequenceGesture(First, Second)                                                                                                                                   | 2つのジェスチャーを連続させたジェスチャー                      |
-| SimultaneousGesture(First, Second)                                                                                                                               | 同時に起こりうる2つのジェスチャーを含みどちらも先行しないジェスチャー        |
-| TapGesture(count: Int = 1)                                                                                                                                       | 1回または複数回のタップを認識するジェスチャー                    |
+| 名前                                                                                                                                                               | 説明                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
+| ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
+| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
+| MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
+| RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
+| SequenceGesture(First, Second)                                                                                                                                   | 2つのジェスチャーを連続させたジェスチャー                 |
+| SimultaneousGesture(First, Second)                                                                                                                               | 同時に起こりうる2つのジェスチャーを含みどちらも先行しないジェスチャー   |
+| TapGesture(count: Int = 1)                                                                                                                                       | 1回または複数回のタップを認識するジェスチャー               |
 
-##### イベントのマスクの種類(GestureMask)
+##### GestureMaskの使い方
 
 | 名前                                         | 説明                                    |
 | ------------------------------------------ | ------------------------------------- |
@@ -3760,9 +3783,9 @@ Tint効果を設定
         ドラッグ可能なデータ(NSItemProvider)
     }
 
-    .onDrag(of: ユニフォームタイプ識別子([UTType]), delegate: デリゲート(DropDelegate))
+    .onDrag(of: ユニフォームタイプ識別子の配列([UTType]), delegate: デリゲート(DropDelegate))
 
-    .onDrop(of: ユニフォームタイプ識別子([UTType]), isTargeted: 更新されるバインディング(Binding<Bool>)?) { プロバイダー[NSItemProvider] in
+    .onDrop(of: ユニフォームタイプ識別子の配列([UTType]), isTargeted: 更新されるバインディング(Binding<Bool>)?) { プロバイダー[NSItemProvider] in
         アクション
     }
 
@@ -3999,7 +4022,7 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 意味
 
-消えたときに実行するアクションを追加
+非表示になった時に実行するアクションを追加
 
 ##### 使い方
 
@@ -4022,7 +4045,7 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 意味
 
-特定の値が変化したときにアクションを発生させるモディファイアを追加
+特定の値が変化したときにアクションを発生させるメソッドを追加
 
 ##### 使い方
 
@@ -4067,7 +4090,7 @@ URLを受信したときに起動するハンドラを登録
 
     .keyboardShortcut(キー(KeyEquivalent), イベント(EventModifiers) = .command)
 
-##### キーボードショートカットの種類(KeyboardShortcut)
+##### KeyboardShortcutの使い方
 
 | 名前                                                                    | 説明                                     |
 | --------------------------------------------------------------------- | -------------------------------------- |
@@ -4075,7 +4098,7 @@ URLを受信したときに起動するハンドラを登録
 | .defaultAction                                                        | Returnキー                               |
 | KeyboardShortcut(KeyEquivalent, modifiers: EventModifiers = .command) | 与えられた同等のキーと修飾キーのセットで新しいキーボードショートカットを作成 |
 
-##### イベントの種類(EventModifiers)
+##### EventModifiersの使い方
 
 | 名前                                            | 説明                       |
 | --------------------------------------------- | ------------------------ |
@@ -4128,7 +4151,7 @@ URLを受信したときに起動するハンドラを登録
 
     .hoverEffect(ポインターホバー効果(HoverEffect) = .automatic)
 
-##### ポインターホバー効果の種類(HoverEffect)
+##### HoverEffectの使い方
 
 | 名前         | 説明    |
 | ---------- | ----- |
@@ -4215,9 +4238,9 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 使い方
 
-    .digitalCrownRotation(更新される値(Binding<V>))
+    .digitalCrownRotation($更新される値(Binding<V>))
 
-    .digitalCrownRotation(更新される値(Binding<V>), from: 範囲の下限(BinaryFloatingPoint), through: 範囲の上限(BinaryFloatingPoint), by: 倍数(V.Stride) = nil, sensitivity: 回転量(DigitalCrownRotationalSensitivity) = .high, isContinuous: 連続(Bool) = false, isHapticFeedbackEnabled: フィードバックが有効か(Bool) = ture)
+    .digitalCrownRotation($更新される値(Binding<V>), from: 範囲の下限(BinaryFloatingPoint), through: 範囲の上限(BinaryFloatingPoint), by: 倍数(V.Stride) = nil, sensitivity: 回転量(DigitalCrownRotationalSensitivity) = .high, isContinuous: 連続(Bool) = false, isHapticFeedbackEnabled: フィードバックが有効か(Bool) = ture)
 
 ##### 例
 
@@ -4261,17 +4284,17 @@ URLを受信したときに起動するハンドラを登録
 | ContainerRelativeShape()                                                                | 現在のコンテナ形状のインセットバージョンで置き換えられる形状 |
 | Ellipse()                                                                               | 楕円はそれを含むビューのフレーム内に整列           |
 | OffsetShape(shape: Content, offset: CGSize)                                             | 並進オフセット変換が適用された形状              |
-| Path()                                                                                  | 2D形状のアウトライン                    |
-| Path((inout Path))                                                                      | 2D形状のアウトライン                    |
-| Path(CGMutablePath)                                                                     | 2D形状のアウトライン                    |
-| Path(CGPath)                                                                            | 2D形状のアウトライン                    |
-| Path(String)                                                                            | 2D形状のアウトライン                    |
-| Path(CGRect)                                                                            | 2D形状のアウトライン                    |
-| Path(ellipseIn rect: CGRect)                                                            | 2D形状のアウトライン                    |
-| Path(roundedRect: CGRect, cornerRadius: CGFloat, style: RoundedCornerStyle = .circular) | 2D形状のアウトライン                    |
-| Path(roundedRect: CGRect, cornerSize: CGSize, style: RoundedCornerStyle = .circular)    | 2D形状のアウトライン                    |
+| Path()                                                                                  | 任意のパスにあわせて描画                   |
+| Path((inout Path))                                                                      | 任意のパスにあわせて描画                   |
+| Path(CGMutablePath)                                                                     | 任意のパスにあわせて描画                   |
+| Path(CGPath)                                                                            | 任意のパスにあわせて描画                   |
+| Path(String)                                                                            | 任意のパスにあわせて描画                   |
+| Path(CGRect)                                                                            | 任意のパスにあわせて描画                   |
+| Path(ellipseIn rect: CGRect)                                                            | 任意のパスにあわせて描画                   |
+| Path(roundedRect: CGRect, cornerRadius: CGFloat, style: RoundedCornerStyle = .circular) | 任意のパスにあわせて描画                   |
+| Path(roundedRect: CGRect, cornerSize: CGSize, style: RoundedCornerStyle = .circular)    | 任意のパスにあわせて描画                   |
 | Path()                                                                                  | 矩形の形状はそれを含むビューのフレーム内に配置        |
-| RotatedShape(shape: Content, angle: Angle, anchor: UnitPoint = .center)                 | 回転トランスフォームが適用されたシェイプ           |
+| RotatedShape(shape: Content, angle: Angle, anchor: UnitPoint = .center)                 | 回転トランスフォームが適用された図形             |
 | RoundedRectangle(cornerRadius: CGFloat, style: RoundedCornerStyle = .circular)          | 角の丸い長方形でそれを含むビューのフレーム内に配置      |
 | RoundedRectangle(cornerSize: CGSize, style: RoundedCornerStyle = .circular)             | 角の丸い長方形でそれを含むビューのフレーム内に配置      |
 | ScaledShape(shape: Content, scale: CGSize, anchor: UnitPoint = .center)                 | スケールトランスフォームが適用された形状           |
@@ -4286,7 +4309,7 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 意味
 
-特定の条件がtrueの場合にアクションシートを表示
+指定したビューをアクションシート表示
 
 ##### 使い方
 
@@ -4322,13 +4345,13 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 意味
 
-特定の条件がtrueの場合にシートを表示
+指定したビューをモーダル表示
 
 ##### 使い方
 
-    .sheet(isPresented: シートが表示されるか(Binding<Bool>), onDismiss: シートを閉じるときに実行するクロージャー(() -> Void), content: シートの内容を返すクロージャー(Content))
+    .sheet(isPresented: $シートが表示されるか(Binding<Bool>), onDismiss: モーダルを閉じるときに実行する処理(() -> Void), content: モーダル表示するビュー(Content))
 
-    .sheet(item: バインディング(Binding<Item?>), onDismiss: 閉じるときに実行されるクロージャ(() -> Void), content: コンテンツを返すクロージャー(Content)) 
+    .sheet(item: バインディング(Binding<Item?>), onDismiss: モーダルを閉じるときに実行する処理(() -> Void), content: モーダル表示するビュー(Content)) 
 
 ##### 例
 
@@ -4345,9 +4368,9 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 使い方
 
-    .fullScreenCover(isPresented: シートを表示するかどうかを決定する値(Binding<Bool>), onDismiss: モーダルビューを閉じるときに実行するクロージャー(() -> Void) = nil, content: モーダルビューのコンテンツを返すクロージャー(Content))
+    .fullScreenCover(isPresented: $シートを表示するかどうかを決定する値(Binding<Bool>), onDismiss: モーダルビューを閉じるときに実行するクロージャー(() -> Void) = nil, content: モーダルビューのモーダル表示するビュー(Content))
 
-    .fullScreenCover(item: バインディング値(Binding<Bool>), onDismiss: モーダルビューを閉じるときに実行するクロージャー(() -> Void) = nil, content: モーダルビューのコンテンツを返すクロージャー(Content))
+    .fullScreenCover(item: バインディング値(Binding<Bool>), onDismiss: モーダルビューを閉じるときに実行するクロージャー(() -> Void) = nil, content: モーダルビューのモーダル表示するビュー(Content))
 
 ##### 例
 
@@ -4397,19 +4420,19 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 使い方
 
-    .popover(isPresented: 表示されるか(Binding<Bool>), attachmentAnchor: 位置決めアンカー(PopoverAttachmentAnchor) = .rect(.bounds), arrowEdge: エッジ(Edge) = .top) {
+    .popover(isPresented: 表示されるか(Binding<Bool>), attachmentAnchor: 位置決めアンカー(PopoverAttachmentAnchor) = .rect(.bounds), arrowEdge: 辺(Edge) = .top) {
         クロージャー(Content)
     }
 
-    .popover(isPresented: 表示されるか(Binding<Bool>), attachmentAnchor: 位置決めアンカー(PopoverAttachmentAnchor) = .rect(.bounds), arrowEdge: エッジ(Edge) = .top, content: クロージャー(Content))
+    .popover(isPresented: 表示されるか(Binding<Bool>), attachmentAnchor: 位置決めアンカー(PopoverAttachmentAnchor) = .rect(.bounds), arrowEdge: 辺(Edge) = .top, content: クロージャー(Content))
 
-    .popover(item: バインディング(Binding<Item?>), attachmentAnchor: 位置決めアンカー(PopoverAttachmentAnchor) = .rect(.bounds), arrowEdge: エッジ(Edge) = .top) {
+    .popover(item: バインディング(Binding<Item?>), attachmentAnchor: 位置決めアンカー(PopoverAttachmentAnchor) = .rect(.bounds), arrowEdge: 辺(Edge) = .top) {
         クロージャー(Content)
     }
 
-    .popover(item: バインディング(Binding<Item?>), attachmentAnchor: 位置決めアンカー(PopoverAttachmentAnchor) = .rect(.bounds), arrowEdge: エッジ(Edge) = .top, content: クロージャー(Content))
+    .popover(item: バインディング(Binding<Item?>), attachmentAnchor: 位置決めアンカー(PopoverAttachmentAnchor) = .rect(.bounds), arrowEdge: 辺(Edge) = .top, content: クロージャー(Content))
 
-##### 位置決めアンカーの種類(PopoverAttachmentAnchor)
+##### PopoverAttachmentAnchorの使い方
 
 | 名前     | 説明                                |
 | ------ | --------------------------------- |
@@ -4455,11 +4478,11 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 使い方
 
-    .fileImporter(isPresented: インターフェイスを表示するかどうかのバインディング(Binding<Bool>), allowedContentTypes: インポート可能なサポートされているコンテンツタイプのリスト([UTType]), allowsMultipleSelection: ユーザーが複数のファイルを選択してインポートできるかどうか(Bool)) {
+    .fileImporter(isPresented: $インターフェイスを表示するかどうかのバインディング(Binding<Bool>), allowedContentTypes: インポート可能なサポートされているコンテンツタイプのリスト([UTType]), allowsMultipleSelection: ユーザーが複数のファイルを選択してインポートできるかどうか(Bool)) {
         成功または失敗したときに呼び出されるコールバック
     }
 
-    .fileImporter(isPresented: インターフェイスを表示するかどうかのバインディング(Binding<Bool>), allowedContentTypes: インポート可能なサポートされているコンテンツタイプのリスト([UTType]), allowsMultipleSelection: ユーザーが複数のファイルを選択してインポートできるかどうか(Bool), onCompletion: 成功または失敗したときに呼び出されるコールバック)
+    .fileImporter(isPresented: $インターフェイスを表示するかどうかのバインディング(Binding<Bool>), allowedContentTypes: インポート可能なサポートされているコンテンツタイプのリスト([UTType]), allowsMultipleSelection: ユーザーが複数のファイルを選択してインポートできるかどうか(Bool), onCompletion: 成功または失敗したときに呼び出されるコールバック)
 
 ##### 例
 
@@ -4744,15 +4767,15 @@ IDを指定されたプロキシ値にバインド
 
 ##### 意味
 
-プレビューのためにデバイスをオーバーライド
+プレビューに使用するデバイスを設定
 
 ##### 使い方
 
-    .previewDevice(プレビューデバイス(PreviewDevice))
+    .previewDevice(デバイス名(PreviewDevice))
 
     .previewDevice()
 
-##### プレビューデバイスの種類(PreviewDevice)
+##### PreviewDeviceの使い方
 
 | 名前                                                                                 | 説明                     |
 | ---------------------------------------------------------------------------------- | ---------------------- |
@@ -4787,13 +4810,13 @@ IDを指定されたプロキシ値にバインド
 
 ##### 意味
 
-プレビューレイアウトのサイズを上書き
+プレビューレイアウトのサイズを設定
 
 ##### 使い方
 
     .previewLayout(プレビューレイアウトのサイズ(PreviewLayout))
 
-##### プレビューレイアウトのサイズの種類(PreviewLayout)
+##### PreviewLayoutの使い方
 
 | 名前                                      | 説明                     |
 | --------------------------------------- | ---------------------- |
@@ -4840,13 +4863,13 @@ IDを指定されたプロキシ値にバインド
 
 ##### 意味
 
-長方形の枠内のパスと表現
+パスを描画
 
 ##### 使い方
 
     .path(in: 基準となるフレーム(CGRect))
 
-##### 基準となるフレームの種類(CGRect)
+##### CGRectの使い方
 
 | 名前                                                              | 説明                        |
 | --------------------------------------------------------------- | ------------------------- |
@@ -4905,7 +4928,7 @@ IDを指定されたプロキシ値にバインド
 
     .size(width: 幅(CGFloat), height: 高さ(CGFloat))
 
-##### サイズの種類(CGSize)
+##### CGSizeの使い方
 
 | 名前                                                   | 説明                         |
 | ---------------------------------------------------- | -------------------------- |
@@ -4925,7 +4948,7 @@ IDを指定されたプロキシ値にバインド
 
 ##### 意味
 
-バウンディングフレームを変更することなくこのシェイプをスケーリング
+バウンディングフレームを変更することなくこの図形をスケーリング
 
 ##### 使い方
 
@@ -4933,20 +4956,20 @@ IDを指定されたプロキシ値にバインド
 
     .scale(x: X軸(CGFloat) = 1, y: Y軸(CGFloat) = 1, anchor: 開始位置(UnitPoint) = .center)
 
-##### 開始位置の種類(UnitPoint)
+##### UnitPointの使い方
 
 | 名前                                | 説明         |
 | --------------------------------- | ---------- |
-| bottom                            | 下          |
-| bottomLeading                     | 左下         |
-| bottomTrailing                    | 右下         |
-| center                            | 真ん中        |
-| leading                           | 左          |
-| top                               | 上          |
-| topLeading                        | 左上         |
-| topTrailing                       | 右上         |
-| trailing                          | 右          |
-| zero                              | 0          |
+| .bottom                           | 下          |
+| .bottomLeading                    | 左下         |
+| .bottomTrailing                   | 右下         |
+| .center                           | 中央        |
+| .leading                          | 左          |
+| .top                              | 上          |
+| .topLeading                       | 左上         |
+| .topTrailing                      | 右上         |
+| .trailing                         | 右          |
+| .zero                             | 0          |
 | UnitPoint()                       | 作成         |
 | UnitPoint(x: CGFloat, y: CGFloat) | xとyを指定して作成 |
 
@@ -4964,7 +4987,7 @@ IDを指定されたプロキシ値にバインド
 
     .rotation(角度(Angle), anchor: 開始位置(UnitPoint) = .center)
 
-##### 角度の種類(Angle)
+##### Angleの使い方
 
 | 名前               | 説明      |
 | ---------------- | ------- |
@@ -4989,7 +5012,7 @@ IDを指定されたプロキシ値にバインド
 
     .offset(x: X軸(CGFloat) = 0, y: Y軸(CGFloat) = 0)
 
-##### オフセットの種類(CGSize)
+##### CGSizeの使い方
 
 | 名前                                                   | 説明                         |
 | ---------------------------------------------------- | -------------------------- |
@@ -5009,13 +5032,13 @@ IDを指定されたプロキシ値にバインド
 
 ##### 意味
 
-輪郭を色やグラデーションでなぞる
+輪郭を色やグラデーションで描画
 
 ##### 使い方
 
-    .stroke(色またはグラデーション(ShapeStyle), lineWidth: 幅(CGFloat) = 1)
+    .stroke(描画方法を指定(ShapeStyle), lineWidth: 幅(CGFloat) = 1)
 
-    .stroke(色またはグラデーション(ShapeStyle), style: スタイル(StrokeStyle))
+    .stroke(描画方法を指定(ShapeStyle), style: スタイル(StrokeStyle))
 
     .stroke(lineWidth: 幅(CGFloat) = 1)
 
@@ -5030,11 +5053,11 @@ IDを指定されたプロキシ値にバインド
 
 ##### 意味
 
-色やグラデーションで埋める
+色やグラデーションで塗りつぶす
 
 ##### 使い方
 
-    .fill(色またはグラデーション(ShapeStyle), style: スタイル(FillStyle) = FillStyle())
+    .fill(描画方法を指定(ShapeStyle), style: スタイル(FillStyle) = FillStyle())
 
     .fill(style: スタイル(FillStyle) = FillStyle())
 
@@ -5042,10 +5065,6 @@ IDを指定されたプロキシ値にバインド
 
     Path()
         .fill()
-
-### 宣言
-
-    @frozen struct Path
 
 ### 参考サイト
 

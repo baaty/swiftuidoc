@@ -9,7 +9,6 @@ layout: page
 ### 使い方
 
     GridItem(サイズ(GridItem.Size) = .flexible(), spacing: 間隔(CGFloat) = nil, alignment: 配置(Alignment) = nil)
-        .メソッド
 
 ### 引数の使い方
 
@@ -23,17 +22,17 @@ layout: page
 
 #### Alignment
 
-| 名前              | 説明      |
-| --------------- | ------- |
-| .bottom         | ビューの下   |
-| .bottomLeading  | ビューの左下  |
-| .bottomTrailing | ビューの右下  |
-| .center         | ビューの真ん中 |
-| .leading        | ビューの左   |
-| .top            | ビューの上   |
-| .topLeading     | ビューの左上  |
-| .topTrailing    | ビューの右上  |
-| .trailing       | ビューの右   |
+| 名前              | 説明   |
+| --------------- | ---- |
+| .bottom         | 下寄せ  |
+| .bottomLeading  | 左下寄せ |
+| .bottomTrailing | 右下寄せ |
+| .center         | 中央寄せ |
+| .leading        | 左寄せ  |
+| .top            | 上寄せ  |
+| .topLeading     | 左上寄せ |
+| .topTrailing    | 右寄せ上 |
+| .trailing       | 右寄せ  |
 
 ### 例
 

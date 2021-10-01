@@ -11,7 +11,7 @@ body {
 }
 header {
   width: 100%;
-  background-color: #e1302b;
+  background-color: #005AF0;
   padding: 4px 12px;
   font-weight: bold;
   display: flex;
@@ -26,13 +26,14 @@ header h1 {
   margin-bottom: 4px;
   display: inline-block;
   color: #fff;
+  font-size: 1.8em;
 }
 header .block {
   margin-top: 16px;
 }
 footer {
   width: 100%;
-  background-color: #e1302b;
+  background-color: #005AF0;
   color: #fff;
   text-align: right;
   padding: 4px 12px;
@@ -55,13 +56,13 @@ main h2 a {
   text-decoration: none;
 }
 main h2, #search-lightbox h2 {
-  background-color: #2bdce1;
+  background-color: #F8E71C;
   padding: 2px 8px;
 }
 main h3, #search-lightbox h3 {
   margin-top: 8px;
   margin-bottom: 4px;
-  border-bottom: solid #e1302b 2px;
+  border-bottom: solid #005AF0 2px;
   display: inline-block;
 }
 main h4, #search-lightbox h4 {
@@ -71,7 +72,12 @@ main h4, #search-lightbox h4 {
 main h5 {
   margin-top: 4px;
   margin-bottom: 4px;
-  color: #636e72;
+  font-size: 90%;
+  border-left: solid #F8E71C 4px;
+  padding-left: 4px;
+}
+main h6 {
+  font-size: 90%;
 }
 aside {
   padding: 0 8px;
@@ -105,9 +111,10 @@ code {
 pre {
 	white-space: pre-wrap;
   word-break : break-all;
+  margin-bottom: 24px;
 }
 em {
-  color: #e1302b;
+  color: #005AF0;
 }
 article {
   margin-bottom: 32px;
@@ -126,6 +133,9 @@ article ul {
 article aside {
   padding-left: 0;
   padding-right: 0;
+}
+section {
+  margin-bottom: 32px;
 }
 main .tag {
   display: inline-block;
@@ -175,7 +185,7 @@ main .tag a {
   cursor: pointer;
 }
 .search h3 {
-  border-bottom: solid #e1302b 2px;
+  border-bottom: solid #005AF0 2px;
 }
 .search h3 a, .search h4 a {
   text-decoration: none;
@@ -198,7 +208,7 @@ main .tag a {
   fill: #fff;
 }
 .lightbox-close {
-  background-color: #e1302b;
+  background-color: #005AF0;
   border-radius: 50%;
   position: absolute;
   right: 24px;
@@ -213,6 +223,12 @@ main .tag a {
   fill: #fff;
   color: #fff;
   display: inline-block;
+}
+.page_info {
+  width: 100%;
+  margin: 24px 0 12px 0;
+  font-size: 95%;
+  text-align: right;
 }
 .row {
   display: flex;

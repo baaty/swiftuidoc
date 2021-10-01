@@ -4,12 +4,11 @@ layout: page
 
 ### 説明
 
-SwiftUIのビュー階層をホストするWatchKitインターフェースコントローラ
+SwiftUIのビュー階層をホストするWatchKitインターフェースコントローラクラス
 
 ### 使い方
 
     WKHostingController()
-    	.メソッド
 
 ### 例
 

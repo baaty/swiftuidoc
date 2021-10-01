@@ -4,24 +4,25 @@ layout: page
 
 ### 説明
 
-SwiftUIで管理されている値を読み書きできるプロパティのラッパータイプ
+SwiftUIで管理されている値を他のビューと双方向で読み書きできるプロパティラッパー
 
 ### 使い方
 
 #### 初期値のない状態を作成
 
+    @State var 変数名: 型
+
     State()
-        .メソッド
+
+#### 初期値を持つ状態を作成
+
+    @State var 変数名: 型 = 初期値
+
+    State(initialValue: 初期値(Value))
 
 #### ラップされた初期値を持つステートを作成
 
     State(wrappedValue: 初期のラップドバリュー(Value))
-        .メソッド
-
-#### 初期値を持つ状態を作成
-
-    State(initialValue: 初期値(Value))
-        .メソッド
 
 ### 例
 

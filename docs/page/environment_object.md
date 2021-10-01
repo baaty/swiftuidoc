@@ -4,18 +4,17 @@ layout: page
 
 ### 説明
 
-親ビューや祖先ビューから提供されるobservableオブジェクトのプロパティラッパータイプ
+ビュー階層をまたいでデータを参照するためのプロパティラッパー
 
 ### 使い方
 
-    EnvironmentObject()
-        .メソッド
+    @EnvironmentObject var 変数名: 型
 
 ### 例
 
 #### 基本的な使い方
 
-    @EnvironmentObject var store : Store
+    @EnvironmentObject var store: Store
 
 ### 宣言
 

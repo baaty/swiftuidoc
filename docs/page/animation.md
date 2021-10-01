@@ -80,7 +80,7 @@ layout: page
 
     Animation.easeOut(duration: 2)
 
-#### interactiveSpring(response: Double = 0.15, dampingFraction: Double = 0.86, blendDuration: Double = 0.25)
+#### interactiveSpring
 
 ##### 意味
 

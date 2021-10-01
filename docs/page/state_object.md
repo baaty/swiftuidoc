@@ -4,12 +4,11 @@ layout: page
 
 ### 説明
 
-observableオブジェクトをインスタンス化するプロパティラッパータイプ
+observableオブジェクトをインスタンス化するプロパティラッパー
 
 ### 使い方
 
     @StateObject var 変数名: 型
-    変数名.メソッド
 
 ### 例
 

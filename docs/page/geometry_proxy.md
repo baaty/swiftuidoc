@@ -9,7 +9,6 @@ layout: page
 ### 使い方
 
     GeometryProxy()
-        .メソッド
 
 ### 例
 

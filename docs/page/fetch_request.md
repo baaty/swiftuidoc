@@ -4,19 +4,17 @@ layout: page
 
 ### 説明
 
-フェッチリクエストを行いCore Dataストアから結果を取得するプロパティのラッパータイプ
+フェッチリクエストを行いCore Dataストアから結果を取得するプロパティラッパー
 
 ### 使い方
 
 #### パラメータに基づいてフェッチ・リクエストを定義することでインスタンスを作成
 
     FetchRequest(entity: モデル化されたオブジェクトの種類(NSEntityDescription), sortDescriptors: フェッチされた結果のソート順を定義([NSSortDescriptor]), predicate: フェッチされた結果に対するフィルタを定義(NSPredicate) = nil, animation: 結果を変更する際に使用するアニメーション(Animation) = nil)
-        .メソッド
 
 #### パラメータに基づいてフェッチ・リクエストを定義することでインスタンスを作成
 
     FetchRequest(sortDescriptors: フェッチされた結果のソート順を定義([NSSortDescriptor]), predicate: フェッチされた結果に対するフィルタを定義(NSPredicate) = nil, animation: 結果を変更する際に使用するアニメーション(Animation) = nil)
-        .メソッド
 
 #### フェッチ・リクエストからインスタンスを作成
 

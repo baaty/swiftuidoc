@@ -3,5 +3,610 @@
   "url": "page/amp_3d_gltf",
   "method": "amp-3d-gltf",
   "title": "glTFの3Dモデルを表示"
+},
+{
+  "url": "page/v_stack",
+  "title": "子ビューを下方向に並べて配置し必要な場合にのみ作成するコンテナビュー",
+  "method": "VStack"
+},
+{
+  "url": "page/lazy_v_stack",
+  "title": "垂直方向に伸びる行に子を配置し必要な場合にのみアイテムを作成するビュー",
+  "method": "LazyVStack"
+},
+{
+  "url": "page/h_stack",
+  "title": "子ビューを右方向に並べて配置し必要な場合にのみ作成するコンテナビュー",
+  "method": "HStack"
+},
+{
+  "url": "page/lazy_h_stack",
+  "title": "水平方向に伸びる行に子を配置し必要な場合にのみアイテムを作成するビュー",
+  "method": "LazyHStack"
+},
+{
+  "url": "page/z_stack",
+  "title": "子ビューを重ねて配置するコンテナビュー",
+  "method": "ZStack"
+},
+{
+  "url": "page/spacer",
+  "title": "伸縮するスペースを作るビュー",
+  "method": "Spacer"
+},
+{
+  "url": "page/divider",
+  "title": "他のコンテンツを分離するために使用できる視覚要素",
+  "method": "Divider"
+},
+{
+  "url": "page/geometry_reader",
+  "title": "自身のサイズと座標空間の関数としてコンテンツを定義するコンテナビュー",
+  "method": "GeometryReader"
+},
+{
+  "url": "page/lazy_h_grid",
+  "title": "水平方向に拡大するグリッドに子ビューを配置し必要な場合にのみアイテムを作成するコンテナビュー",
+  "method": "LazyHGrid"
+},
+{
+  "url": "page/lazy_v_grid",
+  "title": "垂直方向に拡大するグリッドに子ビューを配置し必要な場合にのみアイテムを作成するコンテナビュー",
+  "method": "LazyVGrid"
+},
+{
+  "url": "page/grid_item",
+  "title": "1つのグリッドアイテム(行や列など)の説明",
+  "method": "GridItem"
+},
+{
+  "url": "page/h_split_view",
+  "title": "子を横一列に並べその間に置かれた仕切りでサイズを変更できるレイアウトコンテナ",
+  "method": "HSplitView"
+},
+{
+  "url": "page/v_split_view",
+  "title": "子機を縦に並べその間に配置された仕切りでサイズを変更できるレイアウトコンテナ",
+  "method": "VSplitView"
+},
+{
+  "url": "page/section",
+  "title": "特定のコレクションビューに階層を追加するために使用できるコンテナビュー",
+  "method": "Section"
+},
+{
+  "url": "page/text",
+  "title": "テキストを表示するビュー",
+  "method": "Text"
+},
+{
+  "url": "page/image",
+  "title": "画像を表示するビュー",
+  "method": "Image"
+},
+{
+  "url": "page/color",
+  "title": "カラー",
+  "method": "Color"
+},
+{
+  "url": "page/link",
+  "title": "URLに移動するためのコントロール",
+  "method": "Link"
+},
+{
+  "url": "page/list",
+  "title": "リスト",
+  "method": "List"
+},
+{
+  "url": "page/menu",
+  "title": "アクションのメニューを表示するためのコントロール",
+  "method": "Menu"
+},
+{
+  "url": "page/navigation_view",
+  "title": "ナビゲーションの画面遷移を管理するためのコンテナビュー",
+  "method": "NavigationView"
+},
+{
+  "url": "page/navigation_link",
+  "title": "ナビゲーションの表示を制御するビュー",
+  "method": "NavigationLink"
+},
+{
+  "url": "page/group",
+  "title": "ビューコンテンツをグループ化",
+  "method": "Group"
+},
+{
+  "url": "page/outline_group",
+  "title": "階層的なデータから必要に応じてビューを表示",
+  "method": "OutlineGroup"
+},
+{
+  "url": "page/disclosure_group",
+  "title": "展開したり折りたたんだりするビュー",
+  "method": "DisclosureGroup"
+},
+{
+  "url": "page/gauge",
+  "title": "範囲内の値を表示するビュー",
+  "method": "Gauge"
+},
+{
+  "url": "page/progress_view",
+  "title": "タスクの完了に向けた進捗状況を示すビュー",
+  "method": "ProgressView"
+},
+{
+  "url": "page/scroll_view",
+  "title": "スクロールビュー",
+  "method": "ScrollView"
+},
+{
+  "url": "page/scroll_view_reader",
+  "title": "スクロールを制御するための機能を提供するビュー",
+  "method": "ScrollViewReader"
+},
+{
+  "url": "page/control_group",
+  "title": "視覚的に似ているビューをまとめるコンテナビュー",
+  "method": "ControlGroup"
+},
+{
+  "url": "page/tab_view",
+  "title": "タブを使用して複数の子ビューを切り替えることができるコンテナビュー",
+  "method": "TabView"
+},
+{
+  "url": "page/alert",
+  "title": "アラート",
+  "method": "Alert"
+},
+{
+  "url": "page/action_sheet",
+  "title": "アクションシート",
+  "method": "ActionSheet"
+},
+{
+  "url": "page/empty_view",
+  "title": "コンテンツを含まないビュー",
+  "method": "EmptyView"
+},
+{
+  "url": "page/any_view",
+  "title": "型が無いView",
+  "method": "AnyView"
+},
+{
+  "url": "page/equatable_view",
+  "title": "自分自身を以前の値と比較し新しい値が以前の値と同じであれば子の更新を阻止するビュータイプ",
+  "method": "EquatableView"
+},
+{
+  "url": "page/tuple_view",
+  "title": "Viewの値のスイフトタプルから作成されたView",
+  "method": "TupleView"
+},
+{
+  "url": "page/form",
+  "title": "設定やインスペクターなどのデータ入力に使用されるコントロールをグループ化するためのコンテナ",
+  "method": "Form"
+},
+{
+  "url": "page/text_field",
+  "title": "文字を入力するためのテキストインターフェイスを表示",
+  "method": "TextField"
+},
+{
+  "url": "page/text_editor",
+  "title": "長い形式のテキストを表示および編集できるビュー",
+  "method": "TextEditor"
+},
+{
+  "url": "page/secure_field",
+  "title": "ユーザーがプライベートテキストを安全に入力するコントロール",
+  "method": "SecureField"
+},
+{
+  "url": "page/button",
+  "title": "ボタンを押したときにアクションを実行するコントロール",
+  "method": "Button"
+},
+{
+  "url": "page/edit_button",
+  "title": "編集モードを切り替えるボタン",
+  "method": "EditButton"
+},
+{
+  "url": "page/paste_button",
+  "title": "ペーストボードからデータを読み込んでクローザーに配信するシステムボタン",
+  "method": "PasteButton"
+},
+{
+  "url": "page/color_picker",
+  "title": "色を選択するためのコントロール",
+  "method": "ColorPicker"
+},
+{
+  "url": "page/date_picker",
+  "title": "絶対日付を選択するためのコントロール",
+  "method": "DatePicker"
+},
+{
+  "url": "page/label",
+  "title": "ラベルは画像とテキストを並べて表示するビュー",
+  "method": "Label"
+},
+{
+  "url": "page/group_box",
+  "title": "似ているコンテンツをグルーピングするためのビュー",
+  "method": "GroupBox"
+},
+{
+  "url": "page/toggle",
+  "title": "オンとオフの状態を切り替えるコントロール",
+  "method": "Toggle"
+},
+{
+  "url": "page/slider",
+  "title": "値の境界付き線形範囲から値を選択するためのコントロール",
+  "method": "Slider"
+},
+{
+  "url": "page/picker",
+  "title": "相互に排他的な値のセットから選択するためのコントロール",
+  "method": "Picker"
+},
+{
+  "url": "page/stepper",
+  "title": "インクリメントとデクリメントの動作を行うコントロール",
+  "method": "Stepper"
+},
+{
+  "url": "page/state",
+  "title": "SwiftUIで管理されている値を他のビューと双方向で読み書きできるプロパティラッパー",
+  "method": "State"
+},
+{
+  "url": "page/binding",
+  "title": "値を他のビューと双方向で読み書きできるプロパティラッパー",
+  "method": "Binding"
+},
+{
+  "url": "page/observed_object",
+  "title": "外部からのデータを管理するプロパティラッパー",
+  "method": "ObservedObject"
+},
+{
+  "url": "page/environment_object",
+  "title": "親ビューや祖先ビューから提供されるobservableオブジェクトのプロパティラッパー",
+  "method": "EnvironmentObject"
+},
+{
+  "url": "page/environment",
+  "title": "ビューの環境から値を読み取るプロパティラッパー",
+  "method": "Environment"
+},
+{
+  "url": "page/environment_values",
+  "title": "ビュー階層を介して伝達される環境値のコレクション",
+  "method": "EnvironmentValues"
+},
+{
+  "url": "page/focused_binding",
+  "title": "フォーカスされたビューまたはその祖先の1つから状態バインディングを観察し自動的にアンラップするための便利なプロパティラッパー",
+  "method": "FocusedBinding"
+},
+{
+  "url": "page/focused_value",
+  "title": "フォーカスされたビューまたはその先祖の1つから値を観察するためのプロパティラッパー",
+  "method": "FocusedValue"
+},
+{
+  "url": "page/app_storage",
+  "title": "UserDefaultsの値を反映しそのユーザーデフォルトの値が変更されたときにビューを無効にするプロパティラッパー",
+  "method": "AppStorage"
+},
+{
+  "url": "page/fetch_request",
+  "title": "フェッチリクエストを行いCore Dataストアから結果を取得するプロパティラッパー",
+  "method": "FetchRequest"
+},
+{
+  "url": "page/fetched_results",
+  "title": "FetchedResultsコレクションタイプはフェッチリクエストの実行結果",
+  "method": "FetchedResults"
+},
+{
+  "url": "page/scene_storage",
+  "title": "シーンごとの永続的なストレージに読み書きするプロパティラッパー",
+  "method": "SceneStorage"
+},
+{
+  "url": "page/state_object",
+  "title": "observableオブジェクトをインスタンス化するプロパティラッパー",
+  "method": "StateObject"
+},
+{
+  "url": "page/transaction",
+  "title": "現在の状態処理の更新のコンテキスト",
+  "method": "Transaction"
+},
+{
+  "url": "page/circle",
+  "title": "ビューのフレームを中心とした円",
+  "method": "Circle"
+},
+{
+  "url": "page/ellipse",
+  "title": "楕円はビューのフレーム内に整列",
+  "method": "Ellipse"
+},
+{
+  "url": "page/rectangle",
+  "title": "矩形の形状はそれを含むビューのフレーム内に配置",
+  "method": "Rectangle"
+},
+{
+  "url": "page/rounded_rectangle",
+  "title": "角の丸い長方形でそれを含むビューのフレーム内に配置",
+  "method": "RoundedRectangle"
+},
+{
+  "url": "page/capsule",
+  "title": "カプセル形状はビューのフレーム内に整列",
+  "method": "Capsule"
+},
+{
+  "url": "page/path",
+  "title": "パスで構成された線を描画",
+  "method": "Path"
+},
+{
+  "url": "page/rotated_shape",
+  "title": "回転トランスフォームが適用された図形",
+  "method": "RotatedShape"
+},
+{
+  "url": "page/scaled_shape",
+  "title": "スケールトランスフォームが適用された形状",
+  "method": "ScaledShape"
+},
+{
+  "url": "page/transformed_shape",
+  "title": "アフィン変換が適用された形状",
+  "method": "TransformedShape"
+},
+{
+  "url": "page/container_relative_shape",
+  "title": "現在のコンテナ形状のインセットバージョンで置き換えられる形状",
+  "method": "ContainerRelativeShape"
+},
+{
+  "url": "page/offset_shape",
+  "title": "並進オフセット変換が適用された形状",
+  "method": "OffsetShape"
+},
+{
+  "url": "page/canvas",
+  "title": "Canvasモード",
+  "method": "Canvas"
+},
+{
+  "url": "page/angle",
+  "title": "幾何学的な角度",
+  "method": "Angle"
+},
+{
+  "url": "page/projection_transform",
+  "title": "プロジェクション変換",
+  "method": "ProjectionTransform"
+},
+{
+  "url": "page/gradient",
+  "title": "グラデーションの設定",
+  "method": "Gradient"
+},
+{
+  "url": "page/linear_gradient",
+  "title": "直線的なグラデーション",
+  "method": "LinearGradient"
+},
+{
+  "url": "page/angular_gradient",
+  "title": "円形グラデーション",
+  "method": "AngularGradient"
+},
+{
+  "url": "page/radial_gradient",
+  "title": "放射状グラデーション",
+  "method": "RadialGradient"
+},
+{
+  "url": "page/image_paint",
+  "title": "画像の一部分を繰り返して形状を埋めるシェイプスタイル",
+  "method": "ImagePaint"
+},
+{
+  "url": "page/animation",
+  "title": "再利用可能なアクションを作成",
+  "method": "Animation"
+},
+{
+  "url": "page/animatable_pair",
+  "title": "複数プロパティをアニメーション",
+  "method": "AnimatablePair"
+},
+{
+  "url": "page/empty_animatable_data",
+  "title": "アニメーション可能なデータのための空の型",
+  "method": "EmptyAnimatableData"
+},
+{
+  "url": "page/any_transition",
+  "title": "type-erasedの変遷",
+  "method": "AnyTransition"
+},
+{
+  "url": "page/unit_point",
+  "title": "ユニットポイント",
+  "method": "UnitPoint"
+},
+{
+  "url": "page/stroke_style",
+  "title": "ストロークスタイル",
+  "method": "StrokeStyle"
+},
+{
+  "url": "page/background_style",
+  "title": "現在のコンテキストに基づいて背景の正しい塗りつぶしを表示するスタイル",
+  "method": "BackgroundStyle"
+},
+{
+  "url": "page/fill_style",
+  "title": "ベクトル図形をラスタライズするためのスタイル",
+  "method": "FillStyle"
+},
+{
+  "url": "page/foreground_style",
+  "title": "現在のコンテキストに基づいて前景の正しい塗りつぶしを表示するスタイル",
+  "method": "ForegroundStyle"
+},
+{
+  "url": "page/selection_shape_style",
+  "title": "選択された要素の背景として使用できるスタイル",
+  "method": "SelectionShapeStyle"
+},
+{
+  "url": "page/separator_shape_style",
+  "title": "前景のセパレータやボーダーラインに適したスタイル",
+  "method": "SeparatorShapeStyle"
+},
+{
+  "url": "page/gesture",
+  "title": "一連のイベントをジェスチャーにマッチさせその状態ごとに値のストリームを返すインスタンス",
+  "method": "Gesture"
+},
+{
+  "url": "page/any_gesture",
+  "title": "型が無いジェスチャー",
+  "method": "AnyGesture"
+},
+{
+  "url": "page/drag_gesture",
+  "title": "ドラッグ処理",
+  "method": "DragGesture"
+},
+{
+  "url": "page/long_press_gesture",
+  "title": "ユーザーが長押しすると成功するジェスチャー",
+  "method": "LongPressGesture"
+},
+{
+  "url": "page/magnification_gesture",
+  "title": "拡大動作を認識し拡大量を追跡するジェスチャー",
+  "method": "MagnificationGesture"
+},
+{
+  "url": "page/rotation_gesture",
+  "title": "回転動作を認識しその角度を追跡するジェスチャー",
+  "method": "RotationGesture"
+},
+{
+  "url": "page/tap_gesture",
+  "title": "1回以上のタップを認識するジェスチャー",
+  "method": "TapGesture"
+},
+{
+  "url": "page/exclusive_gesture",
+  "title": "2つのジェスチャーで構成されておりどちらか一方しか成功しないジェスチャー",
+  "method": "ExclusiveGesture"
+},
+{
+  "url": "page/simultaneous_gesture",
+  "title": "同時に起こりうる2つのジェスチャーを含みどちらも先行しないジェスチャー",
+  "method": "SimultaneousGesture"
+},
+{
+  "url": "page/sequence_gesture",
+  "title": "2つのジェスチャーを連続させたジェスチャー",
+  "method": "SequenceGesture"
+},
+{
+  "url": "page/gesture_mask",
+  "title": "ジェスチャーをビューに追加することでビューとそのサブビューで認識される他のジェスチャーへの影響を制御するオプション",
+  "method": "GestureMask"
+},
+{
+  "url": "page/gesture_state",
+  "title": "ユーザーがジェスチャーを行っている間にプロパティを更新しジェスチャーが終わるとプロパティを初期状態に戻すプロパティラッパー",
+  "method": "GestureState"
+},
+{
+  "url": "page/gesture_state_gesture",
+  "title": "ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー",
+  "method": "GestureStateGesture"
+},
+{
+  "url": "page/ui_hosting_controller",
+  "title": "SwiftUIのビュー階層を管理するUIKitのビューコントローラークラス",
+  "method": "UIHostingController"
+},
+{
+  "url": "page/ui_application_delegate_adaptor",
+  "title": "UIKitからのデリゲートを提供するためにAppで使用されるプロパティラッパー",
+  "method": "UIApplicationDelegateAdaptor"
+},
+{
+  "url": "page/ns_application_delegate_adaptor",
+  "title": "AppKitからのデリゲートを提供するためにAppで使用されるプロパティラッパー",
+  "method": "NSApplicationDelegateAdaptor"
+},
+{
+  "url": "page/ns_hosting_controller",
+  "title": "SwiftUIのビュー階層をホストするAppKitのビューコントローラークラス",
+  "method": "NSHostingController"
+},
+{
+  "url": "page/ns_hosting_view",
+  "title": "SwiftUIのビュー階層をホストするAppKitビュークラス",
+  "method": "NSHostingView"
+},
+{
+  "url": "page/wk_extension_delegate_adaptor",
+  "title": "WatchKitからのデリゲートを提供するためにAppで使用されるプロパティラッパー",
+  "method": "WKExtensionDelegateAdaptor"
+},
+{
+  "url": "page/wk_hosting_controller",
+  "title": "SwiftUIのビュー階層をホストするWatchKitインターフェースコントローラクラス",
+  "method": "WKHostingController"
+},
+{
+  "url": "page/wk_user_notification_hosting_controller",
+  "title": "SwiftUIのビュー階層をホストするWatchKitのユーザー通知インターフェースコントローラクラス",
+  "method": "WKUserNotificationHostingController"
+},
+{
+  "url": "page/preview_device",
+  "title": "プレビューを実行するシミュレータデバイス",
+  "method": "PreviewDevice"
+},
+{
+  "url": "page/anchor",
+  "title": "アンカーソースと特定のビューから得られる任意な型の値",
+  "method": "Anchor"
+},
+{
+  "url": "page/geometry_proxy",
+  "title": "コンテナビューのサイズと座標空間（アンカー解像度用）にアクセスするためのプロキシ",
+  "method": "GeometryProxy"
+},
+{
+  "url": "page/for_each",
+  "title": "識別されたデータの基礎となるコレクションから必要に応じてビューを計算する構造",
+  "method": "ForEach"
 }
 ]}

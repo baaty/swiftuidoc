@@ -29,7 +29,7 @@ layout: page
 | bottom         | UnitPoint                | 下               |
 | bottomLeading  | UnitPoint                | 左下              |
 | bottomTrailing | UnitPoint                | 右下              |
-| center         | UnitPoint                | 真ん中             |
+| center         | UnitPoint                | 中央             |
 | leading        | UnitPoint                | 左               |
 | top            | UnitPoint                | 上               |
 | topLeading     | UnitPoint                | 左上              |
@@ -45,7 +45,7 @@ layout: page
 
 | 名前   | 説明                   |
 | ---- | -------------------- |
-| hash | 与えられたハッシャーに入力してハッシュ化 |
+| hash | ハッシュ化 |
 
 ### 参考サイト
 

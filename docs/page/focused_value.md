@@ -9,7 +9,6 @@ layout: page
 ### 使い方
 
     FocusedValue(フォーカス値を読み取るためのキーパス(KeyPath<FocusedValues, Value?>))
-        .メソッド
 
 ### 例
 

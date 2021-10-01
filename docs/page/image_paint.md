@@ -9,7 +9,6 @@ layout: page
 ### 使い方
 
     ImagePaint(image: 画像(Image), sourceRect: ソース画像のどの部分を描画するかを定義(CGRect) = CGRect(x: 0, y: 0, width: 1, height: 1), scale: 拡大率(CGFloat) = 1)
-        .メソッド
 
 ### 引数の使い方
 

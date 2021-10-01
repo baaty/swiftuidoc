@@ -8,7 +8,7 @@ layout: page
 
 ### 使い方
 
-    LinearGradient(gradient: グラデーション(Gradient), startPoint: 開始位置(UnitPoint), endPoint: 終了位置(UnitPoint))
+    LinearGradient(gradient: グラデーション構造体(Gradient), startPoint: 開始位置(UnitPoint), endPoint: 終了位置(UnitPoint))
 
 ### 引数の使い方
 
@@ -23,16 +23,16 @@ layout: page
 
 | 名前                                | 説明         |
 | --------------------------------- | ---------- |
-| bottom                            | 下          |
-| bottomLeading                     | 左下         |
-| bottomTrailing                    | 右下         |
-| center                            | 真ん中        |
-| leading                           | 左          |
-| top                               | 上          |
-| topLeading                        | 左上         |
-| topTrailing                       | 右上         |
-| trailing                          | 右          |
-| zero                              | 0          |
+| .bottom                           | 下          |
+| .bottomLeading                    | 左下         |
+| .bottomTrailing                   | 右下         |
+| .center                           | 中央        |
+| .leading                          | 左          |
+| .top                              | 上          |
+| .topLeading                       | 左上         |
+| .topTrailing                      | 右上         |
+| .trailing                         | 右          |
+| .zero                             | 0          |
 | UnitPoint()                       | 作成         |
 | UnitPoint(x: CGFloat, y: CGFloat) | xとyを指定して作成 |
 

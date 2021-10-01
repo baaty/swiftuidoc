@@ -4,7 +4,7 @@ layout: page
 
 ### 説明
 
-SwiftUIのビュー階層をホストするAppKitのビューコントローラー
+SwiftUIのビュー階層をホストするAppKitのビューコントローラークラス
 
 ### 使い方
 
@@ -13,30 +13,24 @@ SwiftUIのビュー階層をホストするAppKitのビューコントローラ�
     NSHostingController {
         ルートビュー(Content)
     }
-        .メソッド
 
     NSHostingController(rootView: ルートビュー(Content))
-        .メソッド
 
 #### アーカイブと指定されたSwiftUIビューからホスティングコントローラオブジェクトを作成
 
     NSHostingController(coder: 初期化時に使用するデコーダ(NSCoder)) {
         ルートビュー(Content)
     }
-        .メソッド
 
     NSHostingController(coder: 初期化時に使用するデコーダ(NSCoder), rootView: ルートビュー(Content))
-        .メソッド
 
 #### 指定されたnibファイルの内容からホスティングコントローラオブジェクトを作成
 
     NSHostingController(nibName: nibファイルの名前(NSNib.Name)?, bundle: nibファイルを検索するバンドル(Bundle)?)
-        .メソッド
 
 #### 指定されたアーカイブのコンテンツからホスティングコントローラオブジェクトを作成
 
     NSHostingController(coder: 初期化時に使用するデコーダー(NSCoder))
-        .メソッド
 
 ### 例
 

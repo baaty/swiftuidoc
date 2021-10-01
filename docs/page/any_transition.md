@@ -21,15 +21,15 @@ type-erasedの変遷
 
 ### メソッド
 
-| 名前                       | 説明                                            |            |
-| ------------------------ | --------------------------------------------- | ---------- |
-| AnyTransition.asymmetric | 挿入と削除で異なるトランジションを使用する複合トランジション                |            |
-| AnyTransition.modifier   | アクティブモディファイアとアイデンティティモディファイアの間で定義されているトランジション |            |
-| AnyTransition.move       | ビューの指定されたエッジに向かってビューを遠ざけるトランジション              |            |
-| AnyTransition.offset     | オフセット                                         |            |
-| AnyTransition.scale      | スケール                                          |            |
-| animation                |                                               | アニメーションを付加 |
-| combined                 | 両方のトランジションを適用した結果である新しいトランジション                |            |
+| 名前                       | 説明                                      |
+| ------------------------ | --------------------------------------- |
+| AnyTransition.asymmetric | 挿入と削除で異なるトランジションを使用する複合トランジション          |
+| AnyTransition.modifier   | アクティブメソッドとアイデンティティメソッドの間で定義されているトランジション |
+| AnyTransition.move       | ビューの指定された辺に向かってビューを遠ざけるトランジション          |
+| AnyTransition.offset     | オフセット                                   |
+| AnyTransition.scale      | スケール                                    |
+| animation                | アニメーションを付加                              |
+| combined                 | 両方のトランジションを適用した結果である新しいトランジション          |
 
 ### メソッド詳細
 
@@ -37,11 +37,11 @@ type-erasedの変遷
 
 ##### 意味
 
-挿入と削除で異なるトランジションを使用する複合トランジション
+表示と非表示で異なるトランジションを使用する複合トランジション
 
 ##### 使い方
 
-    .asymmetric(insertion: 追加するトランザクション(AnyTransition), removal: 削除するトランザクション(AnyTransition))
+    .asymmetric(insertion: 追加するトランジション(AnyTransition), removal: 削除するトランジション(AnyTransition))
 
 ##### 例
 
@@ -53,11 +53,11 @@ type-erasedの変遷
 
 ##### 意味
 
-アクティブモディファイアとアイデンティティモディファイアの間で定義されているトランジション
+アクティブメソッドとアイデンティティメソッドの間で定義されているトランジション
 
 ##### 使い方
 
-    .modifier(active: アクティブモディファイア(ViewModifier), identity: アイデンティティモディファイア(ViewModifier))
+    .modifier(active: アクティブメソッド(ViewModifier), identity: アイデンティティメソッド(ViewModifier))
 
 ##### 例
 
@@ -67,11 +67,11 @@ type-erasedの変遷
 
 ##### 意味
 
-ビューの指定されたエッジに向かってビューを遠ざけるトランジション
+ビューの指定された辺に向かってビューを遠ざけるトランジション
 
 ##### 使い方
 
-    .move(edge: エッジ(Edge))
+    .move(edge: 辺(Edge))
 
 ##### 例
 
@@ -89,7 +89,7 @@ type-erasedの変遷
 
     .offset(x: X(CGFloat) = 0, y: Y(CGFloat) = 0)
 
-##### オフセットの種類(CGSize)
+##### CGSizeの使い方
 
 | 名前                                                   | 説明                         |
 | ---------------------------------------------------- | -------------------------- |
@@ -114,20 +114,20 @@ type-erasedの変遷
 
     .scale(scale: スケール(CGFloat), anchor: 開始位置(UnitPoint) = .center)
 
-##### 開始位置の種類(UnitPoint)
+##### UnitPointの使い方
 
 | 名前                                | 説明         |
 | --------------------------------- | ---------- |
-| bottom                            | 下          |
-| bottomLeading                     | 左下         |
-| bottomTrailing                    | 右下         |
-| center                            | 真ん中        |
-| leading                           | 左          |
-| top                               | 上          |
-| topLeading                        | 左上         |
-| topTrailing                       | 右上         |
-| trailing                          | 右          |
-| zero                              | 0          |
+| .bottom                           | 下          |
+| .bottomLeading                    | 左下         |
+| .bottomTrailing                   | 右下         |
+| .center                           | 中央         |
+| .leading                          | 左          |
+| .top                              | 上          |
+| .topLeading                       | 左上         |
+| .topTrailing                      | 右上         |
+| .trailing                         | 右          |
+| .zero                             | 0          |
 | UnitPoint()                       | 作成         |
 | UnitPoint(x: CGFloat, y: CGFloat) | xとyを指定して作成 |
 
@@ -158,7 +158,7 @@ type-erasedの変遷
 
 ##### 使い方
 
-    .combined(with: アニメーション(AnyTransition))
+    .combined(with: トランジション効果(AnyTransition))
 
 ##### 例
 

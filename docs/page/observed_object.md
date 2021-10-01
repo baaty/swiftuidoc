@@ -4,19 +4,17 @@ layout: page
 
 ### 説明
 
-オブザーバブル・オブジェクトを購読しオブザーバブル・オブジェクトが変更されるとビューを無効にするプロパティ・ラッパー型
+外部からのデータを管理するプロパティラッパー
 
 ### 使い方
 
-#### ラップされた初期値を持つ観測オブジェクトを作成
+#### 初期値なし
 
-    ObservedObject(wrappedValue: 初期値(ObjectType))
-        .メソッド
+    @ObservedObject var 変数名: 型
 
-#### 初期値を持つ観測オブジェクトを作成
+#### 初期値あり
 
-    ObservedObject(initialValue: 初期値(ObjectType))
-        .メソッド
+    @ObservedObject var 変数名: 型 = 初期値
 
 ### 例
 

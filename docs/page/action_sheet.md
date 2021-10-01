@@ -8,8 +8,7 @@ layout: page
 
 ### 使い方
 
-    ActionSheet(title: タイトル(Text), message: メッセージ(Text) = nil, buttons: 表示するボタン([ActionSheet.Button]) = [.cancel()])
-        .メソッド
+    ActionSheet(title: タイトル(Text), message: メッセージ(Text) = nil, buttons: 表示するボタンの配列([ActionSheet.Button]) = [.cancel()])
 
 ### 引数の使い方
 
@@ -21,10 +20,6 @@ layout: page
 | .cancel()                               | キャンセルを示すアラートボタンをシステムが提供するラベルで作成 |
 | .cancel(Text, action: (() -> Void)      | キャンセルを示すアラートボタンをカスタムラベル付きで作成    |
 | .destructive(Text, action: (() -> Void) | 破壊的な動作を示すスタイルのアラートボタンを作成        |
-
-### 宣言
-
-    struct ActionSheet
 
 ### 例
 
@@ -40,6 +35,10 @@ layout: page
                     ])
             }
     }
+
+### 宣言
+
+    struct ActionSheet
 
 ### 参考サイト
 

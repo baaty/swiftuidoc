@@ -161,12 +161,12 @@
 },
 {
   "url": "page/alert",
-  "title": "アラート",
+  "title": "アラートを定義",
   "method": "Alert"
 },
 {
   "url": "page/action_sheet",
-  "title": "アクションシート",
+  "title": "アクションシートを定義",
   "method": "ActionSheet"
 },
 {

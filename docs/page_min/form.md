@@ -79,4 +79,4 @@ layout: page
     
 ### 宣言
 
-    struct Form<Content> where Content : View
+    struct Form&lt;Content&gt; where Content : View

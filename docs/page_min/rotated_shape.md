@@ -44,7 +44,7 @@ layout: page
 
 ### 宣言
 
-    @frozen struct RotatedShape<Content> where Content : Shape
+    @frozen struct RotatedShape&lt;Content&gt; where Content : Shape
 
 ### プロパティ
 
@@ -52,5 +52,5 @@ layout: page
 | -------------- | ----------------------------------- | --------------- |
 | anchor         | UnitPoint                           | 開始位置            |
 | angle          | Angle                               | 角度              |
-| animatableData | ScaledShape<Content>.AnimatableData | アニメーションするためのデータ |
+| animatableData | ScaledShape&lt;Content&gt;.AnimatableData | アニメーションするためのデータ |
 | shape          | Content                             | 図形              |

@@ -81,7 +81,7 @@ SwiftUIのビュー階層をホストするAppKitのビューコントローラ�
 
 ### 宣言
 
-    class NSHostingController<Content> where Content : View
+    class NSHostingController&lt;Content&gt; where Content : View
 
 ### 参考サイト
 

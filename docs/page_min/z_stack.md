@@ -68,4 +68,4 @@ layout: page
 
 ### 宣言
 
-    @frozen struct ZStack<Content> where Content : View
+    @frozen struct ZStack&lt;Content&gt; where Content : View

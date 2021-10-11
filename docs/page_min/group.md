@@ -24,7 +24,7 @@ layout: page
 
 ### 宣言
 
-    @frozen struct Group<Content>
+    @frozen struct Group&lt;Content&gt;
 
 ### メソッド
 

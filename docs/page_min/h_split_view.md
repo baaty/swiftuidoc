@@ -22,4 +22,4 @@ layout: page
 
 ### 宣言
 
-    struct HSplitView<Content> where Content : View
+    struct HSplitView&lt;Content&gt; where Content : View

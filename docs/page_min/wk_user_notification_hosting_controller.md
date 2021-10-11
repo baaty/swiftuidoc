@@ -10,16 +10,6 @@ SwiftUIのビュー階層をホストするWatchKitのユーザー通知イン�
 
     WKUserNotificationHostingController()
 
-### 例
-
-#### 基本的な使い方
-
-    class NotificationController: WKUserNotificationHostingController<NotificationView> {
-        override var body: NotificationView {
-            return NotificationView()
-        }
-    }
-
 ### 宣言
 
     class WKUserNotificationHostingController<Body> where Body : View

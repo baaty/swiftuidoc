@@ -90,4 +90,4 @@ HStackとの違いは画面外にある子ビューは作成されないこと
 
 ### 宣言
 
-    struct LazyHStack<Content> where Content : View
+    struct LazyHStack&lt;Content&gt; where Content : View

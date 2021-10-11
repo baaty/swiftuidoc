@@ -36,7 +36,7 @@ layout: page
 
 | 名前           | 型                      | 説明                  |
 | ------------ | ---------------------- | ------------------- |
-| wrappedValue | FetchedResults<Result> | フェッチリクエストのフェッチされた結果 |
+| wrappedValue | FetchedResults&lt;Result&gt; | フェッチリクエストのフェッチされた結果 |
 
 ### メソッド
 

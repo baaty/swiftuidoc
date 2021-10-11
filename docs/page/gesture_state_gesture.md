@@ -31,7 +31,7 @@ layout: page
 | ----- | ----------------------------------------------------------------------------------- | ------------------------------------------------ |
 | base  | Base                                                                                | 発端となるジェスチャー                                      |
 | body  | (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void | 発信元のジェスチャーの値ジェスチャーの更新された状態およびトランザクションを含む更新ジェスチャー |
-| state | GestureState<State>                                                                 | ユーザーがジェスチャーを行うことで変化する値                           |
+| state | GestureState&lt;State&gt;                                                                 | ユーザーがジェスチャーを行うことで変化する値                           |
 
 ### メソッド
 
@@ -179,7 +179,7 @@ layout: page
 | .option                                       | Optionキー                 |
 | .shift                                        | Shiftキー                  |
 | EventModifiers()                              | 空のオプションセットを作成            |
-| EventModifiers<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
+| EventModifiers&lt;Sequence&gt;(Sequence)        | アイテムの有限のシーケンスから新しいセットを作成 |
 | EventModifiers(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成  |
 | EventModifiers(rawValue: Int)                 | 生の値から新しいセットを作成           |
 

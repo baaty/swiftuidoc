@@ -129,4 +129,4 @@ layout: page
 
 ### 宣言
 
-    struct LazyHGrid<Content> where Content : View
+    struct LazyHGrid&lt;Content&gt; where Content : View

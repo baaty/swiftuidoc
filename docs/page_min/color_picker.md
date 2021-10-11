@@ -58,8 +58,8 @@ layout: page
 | CGColor(genericGrayGamma2_2Gray: CGFloat, alpha: CGFloat)                                                 | ガンマランプが2.2のグレースケール |
 | CGColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)                                      | RGBカラースペース         |
 | CGColor(srgbRed: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)                                  | sRGBカラースペース        |
-| CGColor(colorSpace: CGColorSpace, components: UnsafePointer<CGFloat>)                                     | alpha値を含むカラー       |
-| CGColor(patternSpace: CGColorSpace, pattern: CGPattern, components: UnsafePointer<CGFloat>)               | アルファ値を含むリストパターン色空間 |
+| CGColor(colorSpace: CGColorSpace, components: UnsafePointer&lt;CGFloat&gt;)                                     | alpha値を含むカラー       |
+| CGColor(patternSpace: CGColorSpace, pattern: CGPattern, components: UnsafePointer&lt;CGFloat&gt;)               | アルファ値を含むリストパターン色空間 |
 
 ### 例
 

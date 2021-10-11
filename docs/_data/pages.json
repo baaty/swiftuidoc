@@ -465,7 +465,7 @@
   },
   "alert": {
     "category_id": 3,
-    "title": "アラート",
+    "title": "アラートを定義",
     "method": "Alert",
     "versions": [
       "iOS 13.0–15.0",
@@ -481,7 +481,7 @@
   },
   "action_sheet": {
     "category_id": 3,
-    "title": "アクションシート",
+    "title": "アクションシートを定義",
     "method": "ActionSheet",
     "versions": [
       "iOS 13.0–15.0",

@@ -24,14 +24,14 @@ AppKitからのデリゲートを提供するためにAppで使用されるプ�
 
 ### 宣言
 
-    @propertyWrapper struct NSApplicationDelegateAdaptor<DelegateType> where DelegateType : NSObject, DelegateType : NSApplicationDelegate
+    @propertyWrapper struct NSApplicationDelegateAdaptor&lt;DelegateType&gt; where DelegateType : NSObject, DelegateType : NSApplicationDelegate
 
 ### プロパティ
 
-| 名前             | 型                                    | 説明                                               |
-| -------------- | ------------------------------------ | ------------------------------------------------ |
-| projectedValue | ObservedObject<DelegateType>.Wrapper | 観測されたオブジェクトの投影で動的なメンバー検索を使用してそのプロパティへのバインディングを作成 |
-| wrappedValue   | DelegateType                         | 基礎となるデレゲート                                       |
+| 名前             | 型                                        | 説明                                               |
+| -------------- | ---------------------------------------- | ------------------------------------------------ |
+| projectedValue | ObservedObject&lt;DelegateType&gt;.Wrapper | 観測されたオブジェクトの投影で動的なメンバー検索を使用してそのプロパティへのバインディングを作成 |
+| wrappedValue   | DelegateType                             | 基礎となるデレゲート                                       |
 
 ### メソッド
 

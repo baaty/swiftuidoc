@@ -14,11 +14,11 @@ layout: page
 
 #### 基本的な使い方
 
-    FocusedValue<Value>
+    FocusedValue&lt;Value&gt;
 
 ### 宣言
 
-    @propertyWrapper struct FocusedValue<Value>
+    @propertyWrapper struct FocusedValue&lt;Value&gt;
 
 ### プロパティ
 

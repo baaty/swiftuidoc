@@ -94,4 +94,4 @@ layout: page
 
 ### 宣言
 
-    struct LazyVGrid<Content> where Content : View
+    struct LazyVGrid&lt;Content&gt; where Content : View

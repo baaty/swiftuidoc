@@ -30,7 +30,7 @@ layout: page
 | .bottom                           | 下          |
 | .bottomLeading                    | 左下         |
 | .bottomTrailing                   | 右下         |
-| .center                           | 中央        |
+| .center                           | 中央         |
 | .leading                          | 左          |
 | .top                              | 上          |
 | .topLeading                       | 左上         |
@@ -48,16 +48,16 @@ layout: page
 
 ### 宣言
 
-    @frozen struct ScaledShape<Content> where Content : Shape
+    @frozen struct ScaledShape&lt;Content&gt; where Content : Shape
 
 ### プロパティ
 
-| 名前             | 型                                   | 説明              |
-| -------------- | ----------------------------------- | --------------- |
-| anchor         | UnitPoint                           | 開始位置            |
-| animatableData | ScaledShape<Content>.AnimatableData | アニメーションするためのデータ |
-| scale          | CGSize                              | スケール            |
-| shape          | Content                             | 図形              |
+| 名前             | 型                                       | 説明              |
+| -------------- | --------------------------------------- | --------------- |
+| anchor         | UnitPoint                               | 開始位置            |
+| animatableData | ScaledShape&lt;Content&gt;.AnimatableData | アニメーションするためのデータ |
+| scale          | CGSize                                  | スケール            |
+| shape          | Content                                 | 図形              |
 
 ### ビュー共通メソッド
 
@@ -215,7 +215,7 @@ layout: page
 | contentShape                       | ヒットテストのコンテンツ形状を定義                                     |
 | actionSheet                        | アクションシートを表示                                           |
 | sheet                              | シートを表示                                                |
-| fullScreenCover                    | 指定したブール値へのバインディングがtrueの場合に画面をできるだけ多く覆うモーダルビューを提示      |
+| fullScreenCover                    | フルスクリーンのモーダルビューを表示                                    |
 | alert                              | ユーザーに警告を表示                                            |
 | popover                            | ポップオーバーを表示                                            |
 | fileExporter                       | メモリ内の文書をディスク上のファイルに書き出すためのシステムインターフェースを提供             |
@@ -475,7 +475,7 @@ layout: page
 | .bottom                           | 下          |
 | .bottomLeading                    | 左下         |
 | .bottomTrailing                   | 右下         |
-| .center                           | 中央        |
+| .center                           | 中央         |
 | .leading                          | 左          |
 | .top                              | 上          |
 | .topLeading                       | 左上         |
@@ -1017,9 +1017,9 @@ Smart Invert Colors設定を無視するかどうかを設定
 
 | 名前                                                                             | 説明                                      |
 | ------------------------------------------------------------------------------ | --------------------------------------- |
-| EdgeInsets()                                                                   | エッジインセットを作成                                        |
+| EdgeInsets()                                                                   | エッジインセットを作成                             |
 | EdgeInsets(NSDirectionalEdgeInsets)                                            | 同等のNSDirectionalEdgeInsetsからエッジインセットを作成 |
-| EdgeInsets(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) | エッジインセットを作成                                        |
+| EdgeInsets(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) | エッジインセットを作成                             |
 
 ##### 例
 
@@ -1427,8 +1427,8 @@ Tint効果を設定
 
 ##### datePickerStyleの使い方
 
-| 名前           | 説明                             |
-| ------------ | ------------------------------ |
+| 名前            | 説明                             |
+| ------------- | ------------------------------ |
 | .automatic    | デフォルトスタイル                      |
 | .compact      | コンパクトなテキスト形式で表示                |
 | .field        | 編集可能なフィールドに表示                  |
@@ -1815,19 +1815,19 @@ Tint効果を設定
 
 | 名前        | 説明  |
 | --------- | --- |
-| .center   | 中央 |
+| .center   | 中央  |
 | .leading  | 左   |
 | .trailing | 右   |
 
 ##### 配置方法(VerticalAlignment)
 
-| 名前                 | 説明  |
-| ------------------ | --- |
-| .bottom            | 下   |
-| .center            | 中   |
+| 名前                 | 説明          |
+| ------------------ | ----------- |
+| .bottom            | 下           |
+| .center            | 中           |
 | .firstTextBaseline | 先頭の行のベースライン |
 | .lastTextBaseline  | 最終の行のベースライン |
-| .top               | 上   |
+| .top               | 上           |
 
 ##### 例
 
@@ -1852,9 +1852,9 @@ Tint効果を設定
 
 | 名前                                                                             | 説明                                      |
 | ------------------------------------------------------------------------------ | --------------------------------------- |
-| EdgeInsets()                                                                   | エッジインセットを作成                                        |
+| EdgeInsets()                                                                   | エッジインセットを作成                             |
 | EdgeInsets(NSDirectionalEdgeInsets)                                            | 同等のNSDirectionalEdgeInsetsからエッジインセットを作成 |
-| EdgeInsets(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) | エッジインセットを作成                                        |
+| EdgeInsets(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) | エッジインセットを作成                             |
 
 ##### Edge.Setの使い方
 
@@ -2318,7 +2318,7 @@ Tint効果を設定
 | .bottom                           | 下          |
 | .bottomLeading                    | 左下         |
 | .bottomTrailing                   | 右下         |
-| .center                           | 中央        |
+| .center                           | 中央         |
 | .leading                          | 左          |
 | .top                              | 上          |
 | .topLeading                       | 左上         |
@@ -2421,7 +2421,7 @@ Tint効果を設定
 | .bottom                           | 下          |
 | .bottomLeading                    | 左下         |
 | .bottomTrailing                   | 右下         |
-| .center                           | 中央        |
+| .center                           | 中央         |
 | .leading                          | 左          |
 | .top                              | 上          |
 | .topLeading                       | 左上         |
@@ -2460,7 +2460,7 @@ Tint効果を設定
 | .bottom                           | 下          |
 | .bottomLeading                    | 左下         |
 | .bottomTrailing                   | 右下         |
-| .center                           | 中央        |
+| .center                           | 中央         |
 | .leading                          | 左          |
 | .top                              | 上          |
 | .topLeading                       | 左上         |
@@ -2855,20 +2855,20 @@ Tint効果を設定
 
 ##### Animationの使い方
 
-| 名前                                                                                                          | 説明       |
-| ----------------------------------------------------------------------------------------------------------- | -------- |
-| .default                                                                                                    | デフォルト    |
-| .easeIn                                                                                                     | 徐々に加速    |
-| .easeInOut                                                                                                  | 加速してから減速 |
-| .easeOut                                                                                                    | 徐々に減速    |
-| .linear                                                                                                     | 等速で変化    |
-| .easeIn(duration: Double)                                                                                   | 徐々に加速    |
-| .easeInOut(duration: Double)                                                                                | 加速してから減速 |
-| .easeOut(duration: Double)                                                                                  | 徐々に減速    |
-| .interactiveSpring(response: Double = 0.15, dampingFraction: Double = 0.86, blendDuration: Double = 0.25)   | レスポンス値の低いスプリング          |
-| .interpolatingSpring(mass: Double = 1.0, stiffness: Double, damping: Double, initialVelocity: Double = 0.0) | 補間スプリングアニメーション         |
-| .linear(duration: Double)                                                                                   | 等速で変化    |
-| .spring(response: Double = 0.55, dampingFraction: Double = 0.825, blendDuration: Double = 0)                | 永続的なスプリングアニメーション         |
+| 名前                                                                                                          | 説明               |
+| ----------------------------------------------------------------------------------------------------------- | ---------------- |
+| .default                                                                                                    | デフォルト            |
+| .easeIn                                                                                                     | 徐々に加速            |
+| .easeInOut                                                                                                  | 加速してから減速         |
+| .easeOut                                                                                                    | 徐々に減速            |
+| .linear                                                                                                     | 等速で変化            |
+| .easeIn(duration: Double)                                                                                   | 徐々に加速            |
+| .easeInOut(duration: Double)                                                                                | 加速してから減速         |
+| .easeOut(duration: Double)                                                                                  | 徐々に減速            |
+| .interactiveSpring(response: Double = 0.15, dampingFraction: Double = 0.86, blendDuration: Double = 0.25)   | レスポンス値の低いスプリング   |
+| .interpolatingSpring(mass: Double = 1.0, stiffness: Double, damping: Double, initialVelocity: Double = 0.0) | 補間スプリングアニメーション   |
+| .linear(duration: Double)                                                                                   | 等速で変化            |
+| .spring(response: Double = 0.55, dampingFraction: Double = 0.825, blendDuration: Double = 0)                | 永続的なスプリングアニメーション |
 | .timingCurve(Double, Double, Double, Double, duration: Double = 0.35)                                       | タイミングカーブ         |
 
 ##### 例
@@ -2894,9 +2894,8 @@ Tint効果を設定
 | .opacity                                                              | 挿入時には透明から不透明へ取り出し時には不透明から透明へと変化                        |
 | .scale                                                                |                                                        |
 | .slide                                                                | リーディングエッジからインすることで挿入しトレーリングエッジに向かってアウトすることで除去するトランジション |
-| .asymmetric(insertion: AnyTransition, removal: AnyTransition)         | 挿入と削除で異なるトランジションを使用する複合トランジション                                                       |
-| .modifier<ViewModifier>(active: ViewModifier, identity: ViewModifier) | アクティブモディファイアとアイデンティティモディファイアの間で定義されているトランジション                                                       |
-| .move(edge: Edge)                                                     | ビューの指定されたエッジに向かってビューを遠ざけるトランジション                                                       |
+| .asymmetric(insertion: AnyTransition, removal: AnyTransition)         | 挿入と削除で異なるトランジションを使用する複合トランジション                         |
+| .modifier&lt;ViewModifier&gt;(active: ViewModifier, identity: ViewModifier) | アクティブモディファイアとアイデンティティモディファイアの間で定義されているトランジション          || .move(edge: Edge)                                                     | ビューの指定されたエッジに向かってビューを遠ざけるトランジション                       |
 | .offset(CGSize)                                                       |                                                        |
 | .offset(x: CGFloat = 0, y: CGFloat = 0)                               |                                                        |
 | .scale(scale: CGFloat, anchor: UnitPoint = .center)                   |                                                        |
@@ -2924,7 +2923,7 @@ Tint効果を設定
 | .position                                                | ビューの位置をウィンドウ座標で表示        |
 | .size                                                    | ローカル座標でのビューのサイズ          |
 | MatchedGeometryProperties()                              | 空のオプションセットを作成            |
-| MatchedGeometryProperties<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
+| MatchedGeometryProperties&lt;Sequence&gt;(Sequence)        | アイテムの有限のシーケンスから新しいセットを作成 |
 | MatchedGeometryProperties(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成  |
 | MatchedGeometryProperties(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成 |
 
@@ -2935,7 +2934,7 @@ Tint効果を設定
 | .bottom                           | 下          |
 | .bottomLeading                    | 左下         |
 | .bottomTrailing                   | 右下         |
-| .center                           | 中央        |
+| .center                           | 中央         |
 | .leading                          | 左          |
 | .top                              | 上          |
 | .topLeading                       | 左上         |
@@ -3058,10 +3057,10 @@ Tint効果を設定
 
 | 名前                                                                                                                                                               | 説明                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| AnyGesture&lt;Gesture&gt;(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
 | DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
 | ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| GestureStateGesture(base: Base, state: GestureState&lt;State&gt;, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
 | LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
 | MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
 | RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
@@ -3078,7 +3077,7 @@ Tint効果を設定
 | .subviews                                  | サブビュー階層のすべてのジェスチャーを有効にし追加されたジェスチャーを無効 |
 | .none                                      | すべてのジェスチャーを無効                         |
 | GestureMask()                              | 空のオプションセットを作成                         |
-| GestureMask<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
+| GestureMask&lt;Sequence&gt;(Sequence)        | アイテムの有限のシーケンスから新しいセットを作成              |
 | GestureMask(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成               |
 | GestureMask(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成              |
 
@@ -3101,10 +3100,10 @@ Tint効果を設定
 
 | 名前                                                                                                                                                               | 説明                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| AnyGesture&lt;Gesture&gt;(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
 | DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
 | ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| GestureStateGesture(base: Base, state: GestureState&lt;State&gt;, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
 | LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
 | MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
 | RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
@@ -3121,7 +3120,7 @@ Tint効果を設定
 | .subviews                                  | サブビュー階層のすべてのジェスチャーを有効にし追加されたジェスチャーを無効 |
 | .none                                      | すべてのジェスチャーを無効                         |
 | GestureMask()                              | 空のオプションセットを作成                         |
-| GestureMask<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
+| GestureMask&lt;Sequence&gt;(Sequence)        | アイテムの有限のシーケンスから新しいセットを作成              |
 | GestureMask(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成               |
 | GestureMask(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成              |
 
@@ -3144,10 +3143,10 @@ Tint効果を設定
 
 | 名前                                                                                                                                                               | 説明                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| AnyGesture&lt;Gesture&gt;(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
 | DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
 | ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| GestureStateGesture(base: Base, state: GestureState&lt;State&gt;, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
 | LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
 | MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
 | RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
@@ -3164,7 +3163,7 @@ Tint効果を設定
 | .subviews                                  | サブビュー階層のすべてのジェスチャーを有効にし追加されたジェスチャーを無効 |
 | .none                                      | すべてのジェスチャーを無効                         |
 | GestureMask()                              | 空のオプションセットを作成                         |
-| GestureMask<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
+| GestureMask&lt;Sequence&gt;(Sequence)        | アイテムの有限のシーケンスから新しいセットを作成              |
 | GestureMask(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成               |
 | GestureMask(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成              |
 
@@ -3640,7 +3639,7 @@ URLを受信したときに起動するハンドラを登録
 | .option                                       | Optionキー                 |
 | .shift                                        | Shiftキー                  |
 | EventModifiers()                              | 空のオプションセットを作成            |
-| EventModifiers<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
+| EventModifiers&lt;Sequence&gt;(Sequence)        | アイテムの有限のシーケンスから新しいセットを作成 |
 | EventModifiers(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成  |
 | EventModifiers(rawValue: Int)                 | 生の値から新しいセットを作成           |
 
@@ -3893,7 +3892,7 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 意味
 
-指定したブール値へのバインディングがtrueの場合に画面をできるだけ多く覆うモーダルビューを提示
+フルスクリーンのモーダルビューを表示
 
 ##### 使い方
 
@@ -4492,7 +4491,7 @@ IDを指定されたプロキシ値にバインド
 | .bottom                           | 下          |
 | .bottomLeading                    | 左下         |
 | .bottomTrailing                   | 右下         |
-| .center                           | 中央        |
+| .center                           | 中央         |
 | .leading                          | 左          |
 | .top                              | 上          |
 | .topLeading                       | 左上         |

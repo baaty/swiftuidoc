@@ -121,6 +121,7 @@ article {
 }
 article p {
   margin-top: 4px;
+  word-break : break-all;
 }
 article pre {
   margin-top: 4px;

@@ -52,12 +52,30 @@ layout: page
         Text("ビュー10")
     }
 
-#### VStackの中にHStack
 
-    VStack {
-        Text("ビュ-")
-        HStack {
-            Text("子ビュ-")
+#### 10個以上配置
+
+    HStack {
+        Text("ビュー1")
+        Text("ビュー2")
+        Text("ビュー3")
+        Text("ビュー4")
+        Text("ビュー5")
+        Text("ビュー6")
+        Text("ビュー7")
+        Text("ビュー8")
+        Text("ビュー9")
+        Group {
+            Text("ビュー10")
+            Text("ビュー11")
+        }     
+    }
+
+#### 10個以上配置(ForEach)
+
+    HStack {
+        ForEach(1..<12) { count in
+            Txt("ビュー\(count)")
         }
     }
 
@@ -74,6 +92,15 @@ layout: page
         Text("ビュー2")
     }
 
+#### VStackの中にHStack
+
+    VStack {
+        Text("ビュ-")
+        HStack {
+            Text("子ビュ-")
+        }
+    }
+
 ### 宣言
 
-    @frozen struct HStack<Content> where Content : View
+    @frozen struct HStack&lt;Content&gt; where Content : View

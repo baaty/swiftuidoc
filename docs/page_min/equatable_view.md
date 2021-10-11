@@ -18,4 +18,4 @@ layout: page
 
 ### 宣言
 
-    @frozen struct EquatableView<Content> where Content : Equatable, Content : View
+    @frozen struct EquatableView&lt;Content&gt; where Content : Equatable, Content : View

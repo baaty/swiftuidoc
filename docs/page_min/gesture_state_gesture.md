@@ -31,7 +31,7 @@ layout: page
 | ----- | ----------------------------------------------------------------------------------- | ------------------------------------------------ |
 | base  | Base                                                                                | 発端となるジェスチャー                                      |
 | body  | (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void | 発信元のジェスチャーの値ジェスチャーの更新された状態およびトランザクションを含む更新ジェスチャー |
-| state | GestureState<State>                                                                 | ユーザーがジェスチャーを行うことで変化する値                           |
+| state | GestureState&lt;State&gt;                                                                 | ユーザーがジェスチャーを行うことで変化する値                           |
 
 ### メソッド
 

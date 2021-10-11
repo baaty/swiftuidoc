@@ -58,8 +58,8 @@ layout: page
 | CGColor(genericGrayGamma2_2Gray: CGFloat, alpha: CGFloat)                                                 | ガンマランプが2.2のグレースケール |
 | CGColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)                                      | RGBカラースペース         |
 | CGColor(srgbRed: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)                                  | sRGBカラースペース        |
-| CGColor(colorSpace: CGColorSpace, components: UnsafePointer<CGFloat>)                                     | alpha値を含むカラー       |
-| CGColor(patternSpace: CGColorSpace, pattern: CGPattern, components: UnsafePointer<CGFloat>)               | アルファ値を含むリストパターン色空間 |
+| CGColor(colorSpace: CGColorSpace, components: UnsafePointer&lt;CGFloat&gt;)                                     | alpha値を含むカラー       |
+| CGColor(patternSpace: CGColorSpace, pattern: CGPattern, components: UnsafePointer&lt;CGFloat&gt;)               | アルファ値を含むリストパターン色空間 |
 
 ### 例
 
@@ -241,7 +241,7 @@ layout: page
 | contentShape                       | ヒットテストのコンテンツ形状を定義                                     |
 | actionSheet                        | アクションシートを表示                                           |
 | sheet                              | シートを表示                                                |
-| fullScreenCover                    | 指定したブール値へのバインディングがtrueの場合に画面をできるだけ多く覆うモーダルビューを提示      |
+| fullScreenCover                    | フルスクリーンのモーダルビューを表示      |
 | alert                              | ユーザーに警告を表示                                            |
 | popover                            | ポップオーバーを表示                                            |
 | fileExporter                       | メモリ内の文書をディスク上のファイルに書き出すためのシステムインターフェースを提供             |
@@ -2907,7 +2907,7 @@ Tint効果を設定
 | .scale                                                                |                                                        |
 | .slide                                                                | リーディングエッジからインすることで挿入しトレーリングエッジに向かってアウトすることで除去するトランジション |
 | .asymmetric(insertion: AnyTransition, removal: AnyTransition)         | 挿入と削除で異なるトランジションを使用する複合トランジション                                                       |
-| .modifier<ViewModifier>(active: ViewModifier, identity: ViewModifier) | アクティブモディファイアとアイデンティティモディファイアの間で定義されているトランジション                                                       |
+| .modifier&lt;ViewModifier&gt;(active: ViewModifier, identity: ViewModifier) | アクティブモディファイアとアイデンティティモディファイアの間で定義されているトランジション                                                       |
 | .move(edge: Edge)                                                     | ビューの指定されたエッジに向かってビューを遠ざけるトランジション                                                       |
 | .offset(CGSize)                                                       |                                                        |
 | .offset(x: CGFloat = 0, y: CGFloat = 0)                               |                                                        |
@@ -2936,7 +2936,7 @@ Tint効果を設定
 | .position                                                | ビューの位置をウィンドウ座標で表示        |
 | .size                                                    | ローカル座標でのビューのサイズ          |
 | MatchedGeometryProperties()                              | 空のオプションセットを作成            |
-| MatchedGeometryProperties<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
+| MatchedGeometryProperties&lt;Sequence&gt;(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
 | MatchedGeometryProperties(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成  |
 | MatchedGeometryProperties(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成 |
 
@@ -3070,10 +3070,10 @@ Tint効果を設定
 
 | 名前                                                                                                                                                               | 説明                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| AnyGesture&lt;Gesture&gt;(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
 | DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
 | ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| GestureStateGesture(base: Base, state: GestureState&lt;State&gt;, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
 | LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
 | MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
 | RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
@@ -3090,7 +3090,7 @@ Tint効果を設定
 | .subviews                                  | サブビュー階層のすべてのジェスチャーを有効にし追加されたジェスチャーを無効 |
 | .none                                      | すべてのジェスチャーを無効                         |
 | GestureMask()                              | 空のオプションセットを作成                         |
-| GestureMask<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
+| GestureMask&lt;Sequence&gt;(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
 | GestureMask(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成               |
 | GestureMask(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成              |
 
@@ -3113,10 +3113,10 @@ Tint効果を設定
 
 | 名前                                                                                                                                                               | 説明                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| AnyGesture&lt;Gesture&gt;(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
 | DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
 | ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| GestureStateGesture(base: Base, state: GestureState&lt;State&gt;, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
 | LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
 | MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
 | RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
@@ -3133,7 +3133,7 @@ Tint効果を設定
 | .subviews                                  | サブビュー階層のすべてのジェスチャーを有効にし追加されたジェスチャーを無効 |
 | .none                                      | すべてのジェスチャーを無効                         |
 | GestureMask()                              | 空のオプションセットを作成                         |
-| GestureMask<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
+| GestureMask&lt;Sequence&gt;(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
 | GestureMask(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成               |
 | GestureMask(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成              |
 
@@ -3156,10 +3156,10 @@ Tint効果を設定
 
 | 名前                                                                                                                                                               | 説明                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| AnyGesture<Gesture>(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
+| AnyGesture&lt;Gesture&gt;(Gesture)                                                                                                                                     | 型抜きされたジェスチャー                          |
 | DragGesture(minimumDistance: CGFloat = 10, coordinateSpace: CoordinateSpace = .local)                                                                            | ドラッグ処理                                |
 | ExclusiveGesture(First, Second)                                                                                                                                  | 2つのジェスチャーで構成されたどちらか一方しか成功しないジェスチャー    |
-| GestureStateGesture(base: Base, state: GestureState<State>, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
+| GestureStateGesture(base: Base, state: GestureState&lt;State&gt;, body: @escaping (GestureStateGesture&lt;Base, State>.Value, inout State, inout Transaction) -> Void) | ジェスチャーの更新コールバックによって提供された状態を更新するジェスチャー |
 | LongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10)                                                                                   | ユーザーが長押しをすると成功するジェスチャー                |
 | MagnificationGesture(minimumScaleDelta: CGFloat = 0.01)                                                                                                          | 拡大動作を認識し拡大値を追跡するジェスチャー                |
 | RotationGesture(minimumAngleDelta: Angle = .degrees(1))                                                                                                          | 回転動作を認識しその回転角度を追跡するジェスチャー             |
@@ -3176,7 +3176,7 @@ Tint効果を設定
 | .subviews                                  | サブビュー階層のすべてのジェスチャーを有効にし追加されたジェスチャーを無効 |
 | .none                                      | すべてのジェスチャーを無効                         |
 | GestureMask()                              | 空のオプションセットを作成                         |
-| GestureMask<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
+| GestureMask&lt;Sequence&gt;(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成              |
 | GestureMask(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成               |
 | GestureMask(rawValue: UInt32)              | 与えられた生の値から新しいオプションセットを作成              |
 
@@ -3652,7 +3652,7 @@ URLを受信したときに起動するハンドラを登録
 | .option                                       | Optionキー                 |
 | .shift                                        | Shiftキー                  |
 | EventModifiers()                              | 空のオプションセットを作成            |
-| EventModifiers<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
+| EventModifiers&lt;Sequence&gt;(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
 | EventModifiers(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成  |
 | EventModifiers(rawValue: Int)                 | 生の値から新しいセットを作成           |
 
@@ -3905,7 +3905,7 @@ URLを受信したときに起動するハンドラを登録
 
 ##### 意味
 
-指定したブール値へのバインディングがtrueの場合に画面をできるだけ多く覆うモーダルビューを提示
+フルスクリーンのモーダルビューを表示
 
 ##### 使い方
 

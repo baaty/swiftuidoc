@@ -39,14 +39,14 @@ layout: page
 
 ### 宣言
 
-    @frozen @propertyWrapper @dynamicMemberLookup struct Binding<Value>
+    @frozen @propertyWrapper @dynamicMemberLookup struct Binding&lt;Value&gt;
 
 ### プロパティ
 
 | 名前             | 型              | 説明                  |
 | -------------- | -------------- | ------------------- |
 | wrappedValue   | Value          | バインディング変数が参照する基本的な値 |
-| projectedValue | Binding<Value> | バインディング値の投影でバインディング |
+| projectedValue | Binding&lt;Value&gt; | バインディング値の投影でバインディング |
 | transaction    | Transaction    | トランザクション            |
 
 ### メソッド

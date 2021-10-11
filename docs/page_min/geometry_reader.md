@@ -38,7 +38,7 @@ layout: page
 
 ### 宣言
 
-    @frozen struct GeometryReader<Content> where Content : View
+    @frozen struct GeometryReader&lt;Content&gt; where Content : View
 
 ### プロパティ
 

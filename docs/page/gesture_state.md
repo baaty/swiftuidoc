@@ -74,14 +74,14 @@ layout: page
 
 ### 宣言
 
-    @propertyWrapper @frozen struct GestureState<Value>
+    @propertyWrapper @frozen struct GestureState&lt;Value&gt;
 
 ### プロパティ
 
 | 名前             | 型                   | 説明                 |
 | -------------- | ------------------- | ------------------ |
 | wrappedValue   | Value               | プロパティで参照されるラップされた値 |
-| projectedValue | GestureState<Value> | ジェスチャーの状態を表すプロパティ  |
+| projectedValue | GestureState&lt;Value&gt; | ジェスチャーの状態を表すプロパティ  |
 
 ### メソッド
 

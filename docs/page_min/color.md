@@ -47,8 +47,8 @@ layout: page
 | CGColor(genericGrayGamma2_2Gray: CGFloat, alpha: CGFloat)                                            | ガンマランプが2.2のグレースケールの色を作成               |
 | CGColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)                                 | RGB色空間で色を作成                           |
 | CGColor(srgbRed: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)                             | sRGB色空間の色を作成                          |
-| CGColor(colorSpace: CGColorSpace, components: UnsafePointer<CGFloat>)                                | アルファを含む強度値のリストと関連する色空間を用いて色を作成        |
-| CGColor(patternSpace: CGColorSpace, pattern: CGPattern, components: UnsafePointer<CGFloat>)          | アルファを含む強度値のリストパターン色空間およびパターンを使用して色を作成 |
+| CGColor(colorSpace: CGColorSpace, components: UnsafePointer&lt;CGFloat&gt;)                                | アルファを含む強度値のリストと関連する色空間を用いて色を作成        |
+| CGColor(patternSpace: CGColorSpace, pattern: CGPattern, components: UnsafePointer&lt;CGFloat&gt;)          | アルファを含む強度値のリストパターン色空間およびパターンを使用して色を作成 |
 
 #### NSColor
 

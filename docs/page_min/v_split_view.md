@@ -24,4 +24,4 @@ layout: page
 
 ### 宣言
 
-    struct VSplitView<Content> where Content : View
+    struct VSplitView&lt;Content&gt; where Content : View

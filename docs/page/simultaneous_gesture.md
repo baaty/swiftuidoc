@@ -151,7 +151,7 @@ layout: page
 | .option                                       | Optionキー                 |
 | .shift                                        | Shiftキー                  |
 | EventModifiers()                              | 空のオプションセットを作成            |
-| EventModifiers<Sequence>(Sequence)            | アイテムの有限のシーケンスから新しいセットを作成 |
+| EventModifiers&lt;Sequence&gt;(Sequence)        | アイテムの有限のシーケンスから新しいセットを作成 |
 | EventModifiers(arrayLiteral: Self.Element...) | 与えられた配列リテラルの要素を含むセットを作成  |
 | EventModifiers(rawValue: Int)                 | 生の値から新しいセットを作成           |
 

@@ -36,7 +36,7 @@ URLに移動するためのコントロール
 | URL(fileURLWithPath: String, isDirectory: Bool)                                                                                         | ローカルのファイルやディレクトリを参照するファイルURLを作成                 |
 | URL(fileURLWithPath: String, relativeTo: URL?)                                                                                          | ベースURLからの相対パスでローカルのファイルまたはディレクトリを参照するファイルURLを作成 |
 | URL(fileURLWithPath: String, isDirectory: Bool, relativeTo: URL?)                                                                       | ベースURLからの相対パスでローカルのファイルまたはディレクトリを参照するファイルURLを作成 |
-| URL(fileURLWithFileSystemRepresentation: UnsafePointer<Int8>, isDirectory: Bool, relativeTo: URL?)                                      | パスのファイルシステム表現でローカルファイルまたはディレクトリを参照するURL         |
+| URL(fileURLWithFileSystemRepresentation: UnsafePointer&lt;Int8&gt;, isDirectory: Bool, relativeTo: URL?)                                      | パスのファイルシステム表現でローカルファイルまたはディレクトリを参照するURL         |
 | URL(fileReferenceLiteralResourceName: String)                                                                                           | プレイグラウンドファイルリテラルからURLを作成                        |
 | URL(resolvingBookmarkData: Data, options: URL.BookmarkResolutionOptions = \[], relativeTo: URL? = nil, bookmarkDataIsStale: inout Bool) | ブックマークデータを解決して指定された場所を参照するURLを作成                |
 | URL(resolvingAliasFileAt: URL, options: URL.BookmarkResolutionOptions = \[])                                                            | エイリアスファイルを解決して指定された場所を参照するURLを作成                |

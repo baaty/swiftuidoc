@@ -64,10 +64,10 @@ layout: page
 | font                                   | Font?                     | デフォルトフォント                          |
 | defaultWheelPickerItemHeight           | CGFloat                   | 日付ピッカーなどのホイールスタイルのピッカーの項目のデフォルトの高さ |
 | calendar                               | Calendar                  | ビューが日付を扱う際に使用する現在のカレンダー            |
-| editMode                               | Binding<EditMode>?        | 編集モード                              |
+| editMode                               | Binding&lt;EditMode&gt;?        | 編集モード                              |
 | isEnabled                              | Bool                      | この環境に関連付けられているビューが操作可能か            |
 | locale                                 | Locale                    | ビューが使用する現在のロケール                    |
-| presentationMode                       | Binding<PresentationMode> | プレゼンテーションモードで表示されているか              |
+| presentationMode                       | Binding&lt;PresentationMode&gt; | プレゼンテーションモードで表示されているか              |
 | timeZone                               | TimeZone                  | ビューが日付を扱う際に使用する現在のタイムゾーンを指定        |
 | redactionReasons                       | RedactionReasons          | ビュー階層に適用されているリダクションの理由             |
 | horizontalSizeClass                    | UserInterfaceSizeClass?   | この環境の水平方向のサイズクラス                   |

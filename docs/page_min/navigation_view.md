@@ -55,4 +55,4 @@ layout: page
 
 ### 宣言
 
-    struct NavigationView<Content> where Content : View
+    struct NavigationView&lt;Content&gt; where Content : View

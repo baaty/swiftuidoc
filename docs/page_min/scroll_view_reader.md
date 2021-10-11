@@ -73,7 +73,7 @@ layout: page
 
 ### 宣言
 
-    @frozen struct ScrollViewReader<Content> where Content : View
+    @frozen struct ScrollViewReader&lt;Content&gt; where Content : View
 
 ### プロパティ
 

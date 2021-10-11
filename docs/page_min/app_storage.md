@@ -24,14 +24,14 @@ UserDefaultsの値を反映しそのユーザーデフォルトの値が変更�
 
 ### 宣言
 
-    @frozen @propertyWrapper struct AppStorage<Value>
+    @frozen @propertyWrapper struct AppStorage&lt;Value&gt;
 
 ### プロパティ
 
 | 名前             | 型              | 説明                |
 | -------------- | -------------- | ----------------- |
 | wrappedValue   | Value          | 基本的な値             |
-| projectedValue | Binding<Value> | フォーカスキーのアンラップされた値 |
+| projectedValue | Binding&lt;Value&gt; | フォーカスキーのアンラップされた値 |
 
 ### メソッド
 

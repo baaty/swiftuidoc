@@ -42,14 +42,14 @@ SwiftUIで管理されている値を他のビューと双方向で読み書き�
 
 ### 宣言
 
-    @frozen @propertyWrapper struct State<Value>
+    @frozen @propertyWrapper struct State&lt;Value&gt;
 
 ### プロパティ
 
 | 名前             | 型              | 説明               |
 | -------------- | -------------- | ---------------- |
 | wrappedValue   | Value          | ステート変数が参照する基礎的な値 |
-| projectedValue | Binding<Value> | 状態の値へのバインディング    |
+| projectedValue | Binding&lt;Value&gt; | 状態の値へのバインディング    |
 
 ### メソッド
 

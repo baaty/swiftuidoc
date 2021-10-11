@@ -48,13 +48,13 @@ layout: page
 
 ### 宣言
 
-    @frozen struct ScaledShape<Content> where Content : Shape
+    @frozen struct ScaledShape&lt;Content&gt; where Content : Shape
 
 ### プロパティ
 
 | 名前             | 型                                   | 説明              |
 | -------------- | ----------------------------------- | --------------- |
 | anchor         | UnitPoint                           | 開始位置            |
-| animatableData | ScaledShape<Content>.AnimatableData | アニメーションするためのデータ |
+| animatableData | ScaledShape&lt;Content&gt;.AnimatableData | アニメーションするためのデータ |
 | scale          | CGSize                              | スケール            |
 | shape          | Content                             | 図形              |

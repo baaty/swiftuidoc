@@ -47,9 +47,9 @@ layout: page
 
 | 名前                                                                                                                                                                                                                                                              | 説明                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| CGImage(width: Int, height: Int, bitsPerComponent: Int, bitsPerPixel: Int, bytesPerRow: Int, space: CGColorSpace, bitmapInfo: CGBitmapInfo, provider: CGDataProvider, decode: UnsafePointer<CGFloat>?, shouldInterpolate: Bool, intent: CGColorRenderingIntent) | ビットマップイメージを作成                  |
-| CGImage(jpegDataProviderSource: CGDataProvider, decode: UnsafePointer<CGFloat>?, shouldInterpolate: Bool, intent: CGColorRenderingIntent)                                                                                                                       | JPEGエンコードされたデータを用いてビットマップ画像を作成 |
-| CGImage(pngDataProviderSource: CGDataProvider, decode: UnsafePointer<CGFloat>?, shouldInterpolate: Bool, intent: CGColorRenderingIntent)                                                                                                                        | PNGエンコードされたデータを用いてビットマップ画像を作成  |
+| CGImage(width: Int, height: Int, bitsPerComponent: Int, bitsPerPixel: Int, bytesPerRow: Int, space: CGColorSpace, bitmapInfo: CGBitmapInfo, provider: CGDataProvider, decode: UnsafePointer&lt;CGFloat&gt;?, shouldInterpolate: Bool, intent: CGColorRenderingIntent) | ビットマップイメージを作成                  |
+| CGImage(jpegDataProviderSource: CGDataProvider, decode: UnsafePointer&lt;CGFloat&gt;?, shouldInterpolate: Bool, intent: CGColorRenderingIntent)                                                                                                                       | JPEGエンコードされたデータを用いてビットマップ画像を作成 |
+| CGImage(pngDataProviderSource: CGDataProvider, decode: UnsafePointer&lt;CGFloat&gt;?, shouldInterpolate: Bool, intent: CGColorRenderingIntent)                                                                                                                        | PNGエンコードされたデータを用いてビットマップ画像を作成  |
 
 #### Image.Orientation
 

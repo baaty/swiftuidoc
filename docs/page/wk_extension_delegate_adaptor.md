@@ -18,13 +18,13 @@ WatchKitからのデリゲートを提供するためにAppで使用されるプ
 
 ### 宣言
 
-    @propertyWrapper struct WKExtensionDelegateAdaptor<DelegateType> where DelegateType : NSObject, DelegateType : WKExtensionDelegate
+    @propertyWrapper struct WKExtensionDelegateAdaptor&lt;DelegateType&gt; where DelegateType : NSObject, DelegateType : WKExtensionDelegate
 
 ### プロパティ
 
 | 名前             | 型                                    | 説明                                               |
 | -------------- | ------------------------------------ | ------------------------------------------------ |
-| projectedValue | ObservedObject<DelegateType>.Wrapper | 観測されたオブジェクトの投影で動的なメンバー検索を使用してそのプロパティへのバインディングを作成 |
+| projectedValue | ObservedObject&lt;DelegateType&gt;.Wrapper | 観測されたオブジェクトの投影で動的なメンバー検索を使用してそのプロパティへのバインディングを作成 |
 | wrappedValue   | DelegateType                         | 基礎となるデレゲート                                       |
 
 ### メソッド

@@ -39,8 +39,8 @@ FetchedResultsコレクションタイプはフェッチリクエストの実行
 | first               | Self.Element?                       | コレクションの最初の要素                                          |
 | isEmpty             | Bool                                | コレクションが空であるかどうか                                       |
 | last                | Self.Element?                       | コレクションの最後の要素                                          |
-| lazy                | LazySequence<Self>                  | このシーケンスと同じ要素を含むがmapやfilterなどのいくつかの操作が遅延的に実装されているシーケンス |
-| publisher           | Publishers.Sequence&lt;Self, Never> | パブリッシャー                                               |
+| lazy                | LazySequence&lt;Self&gt;                  | このシーケンスと同じ要素を含むがmapやfilterなどのいくつかの操作が遅延的に実装されているシーケンス |
+| publisher           | Publishers.Sequence&lt;Self, Never&gt; | パブリッシャー                                               |
 | startIndex          | Int                                 | 空ではないコレクションの最初の要素の位置                                  |
 | underestimatedCount | Int                                 | コレクションの要素数以下の値                                        |
 

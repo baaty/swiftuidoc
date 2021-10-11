@@ -23,7 +23,7 @@ layout: page
 
 ### 宣言
 
-    @frozen @propertyWrapper struct Environment<Value>
+    @frozen @propertyWrapper struct Environment&lt;Value&gt;
 
 ### プロパティ
 

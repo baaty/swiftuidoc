@@ -8,7 +8,7 @@ layout: page
 
 ### 宣言
 
-    @frozen struct Anchor<Value>
+    @frozen struct Anchor&lt;Value&gt;
 
 ### 参考サイト
 

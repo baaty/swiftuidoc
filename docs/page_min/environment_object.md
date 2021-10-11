@@ -18,14 +18,14 @@ layout: page
 
 ### 宣言
 
-    @frozen @propertyWrapper struct EnvironmentObject<ObjectType> where ObjectType : ObservableObject
+    @frozen @propertyWrapper struct EnvironmentObject&lt;ObjectType&gt; where ObjectType : ObservableObject
 
 ### プロパティ
 
 | 名前             | 型                                  | 説明                 |
 | -------------- | ---------------------------------- | ------------------ |
 | wrappedValue   | ObjectType                         | 環境オブジェクトが参照する基本的な値 |
-| projectedValue | ObservedObject<ObjectType>.Wrapper | プロパティへのバインディングを作成  |
+| projectedValue | ObservedObject&lt;ObjectType&gt;.Wrapper | プロパティへのバインディングを作成  |
 
 ### メソッド
 

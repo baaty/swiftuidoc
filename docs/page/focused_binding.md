@@ -8,17 +8,17 @@ layout: page
 
 ### 使い方
 
-    FocusedBinding(フォーカス値を読み取るためのキーパス(KeyPath<FocusedValues, Binding<Value>?>))
+    FocusedBinding(フォーカス値を読み取るためのキーパス(KeyPath<FocusedValues, Binding&lt;Value&gt;?>))
 
 ### 例
 
 #### 基本的な使い方
 
-    FocusedBinding<Value>
+    FocusedBinding&lt;Value&gt;
 
 ### 宣言
 
-    @propertyWrapper struct FocusedBinding<Value>
+    @propertyWrapper struct FocusedBinding&lt;Value&gt;
 
 ### プロパティ
 

@@ -24,14 +24,14 @@ layout: page
 
 ### 宣言
 
-    @propertyWrapper @frozen struct ObservedObject<ObjectType> where ObjectType : ObservableObject
+    @propertyWrapper @frozen struct ObservedObject&lt;ObjectType&gt; where ObjectType : ObservableObject
 
 ### プロパティ
 
 | 名前             | 型                                  | 説明                                               |
 | -------------- | ---------------------------------- | ------------------------------------------------ |
 | wrappedValue   | ObjectType                         | 観測されたオブジェクトが参照する基本的な値                            |
-| projectedValue | ObservedObject<ObjectType>.Wrapper | 観測されたオブジェクトの投影で動的なメンバー検索を使用してそのプロパティへのバインディングを作成 |
+| projectedValue | ObservedObject&lt;ObjectType&gt;.Wrapper | 観測されたオブジェクトの投影で動的なメンバー検索を使用してそのプロパティへのバインディングを作成 |
 
 ### メソッド
 

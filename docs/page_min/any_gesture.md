@@ -35,7 +35,7 @@ layout: page
 
 ### 宣言
 
-    @frozen struct AnyGesture<Value>
+    @frozen struct AnyGesture&lt;Value&gt;
 
 ### プロパティ
 

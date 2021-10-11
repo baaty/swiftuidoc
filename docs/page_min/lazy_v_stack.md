@@ -88,4 +88,4 @@ VStackとの違いは画面外にある子ビューは作成されないこと
 
 ### 宣言
 
-    struct LazyVStack<Content> where Content : View
+    struct LazyVStack&lt;Content&gt; where Content : View

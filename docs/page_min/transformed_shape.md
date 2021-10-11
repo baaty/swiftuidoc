@@ -18,13 +18,13 @@ layout: page
 
 ### 宣言
 
-    @frozen struct TransformedShape<Content> where Content : Shape
+    @frozen struct TransformedShape&lt;Content&gt; where Content : Shape
 
 ### プロパティ
 
 | 名前             | 型                                   | 説明              |
 | -------------- | ----------------------------------- | --------------- |
-| animatableData | ScaledShape<Content>.AnimatableData | アニメーションするためのデータ |
+| animatableData | ScaledShape&lt;Content&gt;.AnimatableData | アニメーションするためのデータ |
 | animatableData | EmptyAnimatableData                 | アニメーションするためのデータ |
 | shape          | Content                             | 図形              |
 | transform      | CGAffineTransform                   | トランスフォーム        |

@@ -47,7 +47,7 @@ layout: page
 
 ### 宣言
 
-    struct ScrollView<Content> where Content : View
+    struct ScrollView&lt;Content&gt; where Content : View
 
 ### プロパティ
 

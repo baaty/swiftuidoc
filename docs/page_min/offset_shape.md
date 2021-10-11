@@ -31,12 +31,12 @@ layout: page
 
 ### 宣言
 
-    @frozen struct OffsetShape<Content> where Content : Shape
+    @frozen struct OffsetShape&lt;Content&gt; where Content : Shape
 
 ### プロパティ
 
 | 名前             | 型                                   | 説明              |
 | -------------- | ----------------------------------- | --------------- |
-| animatableData | ScaledShape<Content>.AnimatableData | アニメーションするためのデータ |
+| animatableData | ScaledShape&lt;Content&gt;.AnimatableData | アニメーションするためのデータ |
 | offset         | CGSize                              | オフセット           |
 | shape          | Content                             | 図形              |

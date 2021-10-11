@@ -32,7 +32,7 @@ SwiftUIのビュー階層を管理するUIKitのビューコントローラー�
 
 ### 宣言
 
-    class UIHostingController<Content> where Content : View
+    class UIHostingController&lt;Content&gt; where Content : View
 
 ### プロパティ
 

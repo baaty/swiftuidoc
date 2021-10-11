@@ -18,14 +18,14 @@ observableオブジェクトをインスタンス化するプロパティラッ�
 
 ### 宣言
 
-    @frozen @propertyWrapper struct StateObject<ObjectType> where ObjectType : ObservableObject
+    @frozen @propertyWrapper struct StateObject&lt;ObjectType&gt; where ObjectType : ObservableObject
 
 ### プロパティ
 
 | 名前             | 型                                  | 説明                 |
 | -------------- | ---------------------------------- | ------------------ |
 | wrappedValue   | ObjectType                         | 環境オブジェクトが参照する基本的な値 |
-| projectedValue | ObservedObject<ObjectType>.Wrapper | プロパティへのバインディングを作成  |
+| projectedValue | ObservedObject&lt;ObjectType&gt;.Wrapper | プロパティへのバインディングを作成  |
 
 ### メソッド
 
